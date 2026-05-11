@@ -78,22 +78,21 @@ const technologyGroups = [
     ],
   },
 ];
-
 const projects = [
   {
     title: "Cobrança Inteligente",
-    desc: "Automação para priorizar títulos vencidos, gerar leitura executiva, alertas e base para régua de cobrança e score financeiro.",
+    desc: "Automação de leitura financeira com análise contextual, concentração de risco e monitoramento executivo.",
     problem:
-      "O processo de cobrança dependia de análise manual, baixa visibilidade executiva e dificuldade para priorizar clientes, valores e atrasos relevantes.",
+      "O financeiro precisava consolidar manualmente títulos vencidos, identificar exposição e interpretar cenários críticos.",
     solution:
-      "Criação de fluxo automatizado com leitura dos dados, interpretação contextual, classificação de prioridade e envio de alerta estruturado no Teams.",
+      "Criação de automação inteligente com SQL + n8n + Teams para leitura automática de contas vencidas e geração de insights.",
     impact:
-      "Mais velocidade na análise financeira, redução de retrabalho e base pronta para evolução com régua de cobrança, score e notificações automáticas.",
-    stack: "SQL Server • Power BI • n8n • Teams",
-    image: "/cases/n8n-cobranca-inteligente.png",
+      "Redução de tempo operacional, visão executiva imediata e aumento da capacidade de priorização financeira.",
+    stack: "SQL Server • n8n • Teams • BI Financeiro",
+    image: "/cases/cobranca-inteligente.png",
     gallery: [
-      "/cases/n8n-cobranca-inteligente.png",
-      "/cases/teams-cobranca-inteligente.png",
+      "/cases/cobranca-inteligente.png",
+      "/cases/cobranca-detalhe.png",
     ],
     icon: DollarSign,
   },
@@ -101,7 +100,7 @@ const projects = [
     title: "Cotações acima de R$35 mil",
     desc: "Monitoramento automático de oportunidades comerciais relevantes, com score, histórico e alerta executivo para tomada de ação.",
     problem:
-      "As cotações de menor valor performavam comercialmente, mas as oportunidades acima de R$35 mil tinham baixa conversão e muitas vezes      não recebiam priorização adequada do time comercial.",
+      "As cotações de menor valor performavam comercialmente, mas as oportunidades acima de R$35 mil tinham baixa conversão e muitas vezes não recebiam priorização adequada.",
     solution:
       "Automação para capturar cotações acima de R$35 mil, estruturar contexto, gerar leitura comercial e enviar alerta no Teams.",
     impact:
@@ -109,7 +108,7 @@ const projects = [
     stack: "SQL Server • n8n • Teams • BI Comercial",
     image: "/cases/n8n-cotacao-35k.png",
     gallery: [
-      "/cases/n8n-cotacao-35k.png",      
+      "/cases/n8n-cotacao-35k.png",
       "/cases/teams-cotacoes-35.png",
       "/cases/teams-cotacoes-35-detalhe.png",
     ],
@@ -126,7 +125,10 @@ const projects = [
       "Mais controle sobre pedidos pendentes, redução de gargalos e melhor acompanhamento do fluxo comercial e operacional.",
     stack: "SAP B1 • SQL Server • n8n • Power BI",
     image: "/cases/pbi-pedidos-48h.png",
-    gallery: ["/cases/pbi-pedidos-48h.png", "/cases/n8n-pedidos-48h.png"],
+    gallery: [
+      "/cases/pbi-pedidos-48h.png",
+      "/cases/n8n-pedidos-48h.png",
+    ],
     icon: Bot,
   },
   {
@@ -137,42 +139,16 @@ const projects = [
     solution:
       "Redesenho dos layouts no Crystal Reports com identidade visual, melhor hierarquia da informação e padrão comercial mais limpo.",
     impact:
-      "Melhor percepção profissional nos documentos enviados a clientes e mais consistência visual nos processos comerciais.",
-    stack: "SAP B1 • Crystal Reports • SQL",
-    image: "/cases/cotacao-layout-novo.png",
-    gallery: ["/cases/cotacao-layout-antigo.png", "/cases/cotacao-layout-novo.png"],
+      "Melhoria na percepção profissional da empresa e aumento da qualidade visual dos documentos enviados.",
+    stack: "SAP B1 • Crystal Reports • SQL Server",
+    image: "/cases/crystal-layout.png",
+    gallery: [
+      "/cases/crystal-layout.png",
+      "/cases/crystal-layout-2.png",
+    ],
     icon: FileText,
   },
-  {
-    title: "Consultas SQL e camada de dados",
-    desc: "Views, queries e estruturação de dados corporativos para BI, automações, APIs e análises executivas.",
-    problem:
-      "Dados espalhados precisavam virar base confiável para relatórios, automações, APIs e análises executivas.",
-    solution:
-      "Criação de queries, views e consultas estruturadas no SQL Server para alimentar painéis, integrações e rotinas automatizadas.",
-    impact:
-      "Base de dados mais confiável, reutilizável e preparada para inteligência de negócio.",
-    stack: "SQL Server • Views • BI • APIs",
-    image: "/cases/query-sql-server.png",
-    gallery: ["/cases/query-sql-server.png"],
-    icon: Database,
-  },
-  {
-    title: "Alertas executivos no Teams",
-    desc: "Mensagens automáticas com resumo, contexto e indicadores para acelerar decisões comerciais, financeiras e operacionais.",
-    problem:
-      "Informações relevantes ficavam presas em relatórios ou consultas, sem chegar rapidamente aos responsáveis.",
-    solution:
-      "Criação de alertas automáticos no Teams com mensagens estruturadas, contexto do evento e dados para decisão.",
-    impact:
-      "Comunicação mais rápida, redução de dependência manual e melhoria no acompanhamento executivo.",
-    stack: "Teams • n8n • SQL Server • BI",
-    image: "/cases/teams-cotacoes-35.png",
-    gallery: ["/cases/teams-cotacoes-35.png", "/cases/teams-cotacoes-35-detalhe.png"],
-    icon: Network,
-  },
 ];
-
 const capabilities = [
   "BI executivo e dashboards gerenciais",
   "Automação com n8n e Power Automate",
@@ -198,8 +174,8 @@ function Brand({ footer = false }: { footer?: boolean }) {
         height={footer ? 180 : 150}
         className={
           footer
-            ? "h-auto w-full max-w-[300px] object-contain object-left"
-            : "h-auto w-[170px] object-contain object-left md:w-[220px]"
+            ? "h-auto w-full max-w-[220px] object-contain object-left md:max-w-[300px]"
+            : "h-auto w-[112px] object-contain object-left sm:w-[135px] md:w-[220px]"
         }
         priority
       />
@@ -216,8 +192,11 @@ export default function Home() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll);
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -225,7 +204,8 @@ export default function Home() {
     setSelectedCase(project);
     setSelectedImage(project.image);
   }
-    return (
+
+  return (
     <main
       className="min-h-screen overflow-hidden bg-[var(--base-dark)] text-white"
       style={
@@ -241,8 +221,13 @@ export default function Home() {
       }
     >
       <style>{`
-        html { scroll-behavior: smooth; }
-        section { scroll-margin-top: 120px; }
+        html {
+          scroll-behavior: smooth;
+        }
+
+        section {
+          scroll-margin-top: 120px;
+        }
 
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
@@ -254,8 +239,13 @@ export default function Home() {
           50% { opacity: .82; }
         }
 
-        .float { animation: float 5s ease-in-out infinite; }
-        .glowPulse { animation: glow 4s ease-in-out infinite; }
+        .float {
+          animation: float 5s ease-in-out infinite;
+        }
+
+        .glowPulse {
+          animation: glow 4s ease-in-out infinite;
+        }
       `}</style>
 
       <header
@@ -265,22 +255,26 @@ export default function Home() {
             : "bg-[#020D1F]"
         }`}
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-8 px-6 py-2.5 md:py-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-2 md:gap-8 md:px-6 md:py-3">
           <Brand />
 
           <nav className="hidden justify-center gap-10 text-[15px] font-semibold text-[#E0E1DD] md:flex">
             <a href="#solucoes" className="transition hover:text-[#00B4D8]">
               Soluções
             </a>
+
             <a href="#tecnologias" className="transition hover:text-[#00B4D8]">
               Tecnologias
             </a>
+
             <a href="#projetos" className="transition hover:text-[#00B4D8]">
               Projetos
             </a>
+
             <a href="#sobre" className="transition hover:text-[#00B4D8]">
               Sobre
             </a>
+
             <a href="#contato" className="transition hover:text-[#00B4D8]">
               Contato
             </a>
@@ -290,25 +284,24 @@ export default function Home() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-[#00B4D8] px-5 py-2.5 text-sm font-bold text-[#020D1F] transition hover:bg-[#2EC4B6] hover:shadow-[0_12px_35px_rgba(0,180,216,0.28)]"
+            className="rounded-full bg-[#00B4D8] px-4 py-2 text-xs font-bold text-[#020D1F] transition hover:bg-[#2EC4B6] hover:shadow-[0_12px_35px_rgba(0,180,216,0.28)] md:px-5 md:py-2.5 md:text-sm"
           >
             WhatsApp
           </a>
         </div>
       </header>
-
-      <section className="relative bg-[#0A1628] pt-[145px] md:pt-[160px]">
+            <section className="relative bg-[#0A1628] pt-[115px] md:pt-[160px]">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
         <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
         <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-100px)] max-w-7xl items-center gap-12 px-6 pb-24 md:grid-cols-2">
+        <div className="relative mx-auto grid min-h-[calc(100vh-90px)] max-w-7xl items-center gap-10 px-4 pb-32 sm:px-6 md:grid-cols-2 md:pb-24">
           <div className="relative z-10">
             <div className="mb-7 inline-flex rounded-full border border-[#00B4D8]/35 bg-[#0D1B2A]/70 px-4 py-2 text-sm font-semibold text-[#00B4D8]">
               BI • Automação • APIs • Inteligência de Negócio
             </div>
 
-            <h1 className="max-w-4xl font-black leading-[1.05] tracking-tight text-white [font-size:clamp(2.4rem,4.6vw,4.6rem)]">
+            <h1 className="max-w-4xl font-black leading-[1.08] tracking-tight text-white [font-size:clamp(2.45rem,11vw,4.6rem)] md:leading-[1.05] md:[font-size:clamp(2.4rem,4.6vw,4.6rem)]">
               Transforme seus dados em{" "}
               <span className="text-[#00B4D8]">decisões reais</span>
             </h1>
@@ -464,27 +457,27 @@ export default function Home() {
               <div key={group.title}>
                 <div className="mb-6 flex items-center gap-3">
                   <div className="h-px flex-1 bg-[#00B4D8]/20" />
-                  <h3 className="text-sm font-black uppercase tracking-[0.24em] text-[#00B4D8]">
+                  <h3 className="text-center text-sm font-black uppercase tracking-[0.18em] text-[#00B4D8] md:tracking-[0.24em]">
                     {group.title}
                   </h3>
                   <div className="h-px flex-1 bg-[#00B4D8]/20" />
                 </div>
 
-                <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-5 lg:grid-cols-5">
                   {group.items.map((tech) => (
                     <div
                       key={tech.name}
-                      className="group flex min-h-[150px] flex-col items-center justify-center rounded-3xl border border-[#00B4D8]/10 bg-[#1B263B]/60 p-5 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8]/50 hover:shadow-2xl hover:shadow-cyan-500/10"
+                      className="group flex min-h-[124px] flex-col items-center justify-center rounded-3xl border border-[#00B4D8]/10 bg-[#1B263B]/60 p-4 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8]/50 hover:shadow-2xl hover:shadow-cyan-500/10 md:min-h-[150px] md:p-5"
                     >
                       <Image
                         src={tech.logo}
                         alt={tech.name}
                         width={72}
                         height={72}
-                        className="h-16 w-16 object-contain transition duration-300 group-hover:scale-110"
+                        className="h-14 w-14 object-contain transition duration-300 group-hover:scale-110 md:h-16 md:w-16"
                       />
 
-                      <p className="mt-4 text-sm font-bold text-[#E0E1DD]">
+                      <p className="mt-4 text-xs font-bold text-[#E0E1DD] md:text-sm">
                         {tech.name}
                       </p>
                     </div>
@@ -506,7 +499,7 @@ export default function Home() {
             Cases reais de automação, integração e inteligência operacional.
           </h2>
 
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#E0E1DD]">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-[#E0E1DD] md:text-lg">
             Clique em qualquer case para abrir a solução completa, visualizar as
             telas em tamanho maior e entender o problema, a solução aplicada e o
             impacto gerado.
@@ -520,9 +513,9 @@ export default function Home() {
                 <article
                   key={project.title}
                   onClick={() => openCase(project)}
-                  className="group cursor-pointer overflow-hidden rounded-3xl border border-[#00B4D8]/20 bg-[#1B263B] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8] hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group cursor-pointer overflow-hidden rounded-3xl border border-[#00B4D8]/20 bg-[#1B263B] p-5 transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8] hover:shadow-2xl hover:shadow-cyan-500/10 md:p-6"
                 >
-                  <div className="relative mb-8 h-64 overflow-hidden rounded-2xl border border-[#00B4D8]/20 bg-[#0A1628]">
+                  <div className="relative mb-7 h-56 overflow-hidden rounded-2xl border border-[#00B4D8]/20 bg-[#0A1628] md:mb-8 md:h-64">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -532,7 +525,7 @@ export default function Home() {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#020D1F]/80 via-transparent to-transparent" />
 
-                    <div className="absolute left-4 top-4 rounded-full border border-[#00B4D8]/30 bg-[#020D1F]/80 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#00B4D8] backdrop-blur">
+                    <div className="absolute left-4 top-4 rounded-full border border-[#00B4D8]/30 bg-[#020D1F]/80 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#00B4D8] backdrop-blur md:px-4 md:py-2 md:text-xs">
                       {project.gallery.length} tela(s)
                     </div>
 
@@ -562,14 +555,14 @@ export default function Home() {
       </section>
             {selectedCase && (
         <div
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/85 px-4 py-8 backdrop-blur-md"
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/85 px-3 py-4 backdrop-blur-md md:px-4 md:py-8"
           onClick={() => {
             setSelectedCase(null);
             setSelectedImage(null);
           }}
         >
           <div
-            className="relative max-h-[92vh] w-full max-w-7xl overflow-y-auto rounded-[36px] border border-[#00B4D8]/25 bg-[#0A1628] p-5 shadow-2xl shadow-cyan-500/20 md:p-8"
+            className="relative max-h-[94vh] w-full max-w-7xl overflow-y-auto rounded-[28px] border border-[#00B4D8]/25 bg-[#0A1628] p-4 shadow-2xl shadow-cyan-500/20 md:rounded-[36px] md:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -577,39 +570,39 @@ export default function Home() {
                 setSelectedCase(null);
                 setSelectedImage(null);
               }}
-              className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-[#00B4D8] hover:text-[#00B4D8]"
+              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-[#00B4D8] hover:text-[#00B4D8] md:right-5 md:top-5 md:h-11 md:w-11"
               aria-label="Fechar"
             >
               <X size={20} />
             </button>
 
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
               <div>
-                <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden rounded-3xl border border-[#00B4D8]/20 bg-[#020D1F] p-4">
+                <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden rounded-3xl border border-[#00B4D8]/20 bg-[#020D1F] p-3 md:min-h-[520px] md:p-4">
                   <Image
                     src={selectedImage || selectedCase.image}
                     alt={selectedCase.title}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-3 md:p-4"
                   />
                 </div>
 
-                <div className="mt-5 flex items-center justify-between gap-4">
+                <div className="mt-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                   <p className="text-sm font-bold text-[#E0E1DD]">
-                    Clique nas miniaturas abaixo para trocar a tela exibida.
+                    Toque nas miniaturas abaixo para trocar a tela exibida.
                   </p>
 
-                  <span className="rounded-full border border-[#00B4D8]/20 bg-[#00B4D8]/5 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#00B4D8]">
+                  <span className="w-fit rounded-full border border-[#00B4D8]/20 bg-[#00B4D8]/5 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#00B4D8]">
                     Galeria do case
                   </span>
                 </div>
 
-                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="mt-5 grid grid-cols-2 gap-3 md:gap-4">
                   {selectedCase.gallery.map((img) => (
                     <button
                       key={img}
                       onClick={() => setSelectedImage(img)}
-                      className={`relative h-44 overflow-hidden rounded-2xl border bg-[#020D1F] transition hover:-translate-y-1 hover:border-[#00B4D8] ${
+                      className={`relative h-28 overflow-hidden rounded-2xl border bg-[#020D1F] transition hover:-translate-y-1 hover:border-[#00B4D8] md:h-44 ${
                         selectedImage === img
                           ? "border-[#00B4D8] shadow-lg shadow-cyan-500/20"
                           : "border-[#00B4D8]/20"
@@ -641,7 +634,7 @@ export default function Home() {
                   {selectedCase.title}
                 </h3>
 
-                <p className="mt-5 text-lg leading-relaxed text-[#E0E1DD]">
+                <p className="mt-5 text-base leading-relaxed text-[#E0E1DD] md:text-lg">
                   {selectedCase.desc}
                 </p>
 
@@ -708,8 +701,8 @@ export default function Home() {
 
           <div className="space-y-5 text-lg leading-relaxed text-[#E0E1DD]">
             <p>
-              A Mota Inteligência de Negócio foi criada para ajudar empresas que já
-              possuem dados, sistemas e processos, mas ainda não conseguem
+              A Mota Inteligência de Negócio foi criada para ajudar empresas que
+              já possuem dados, sistemas e processos, mas ainda não conseguem
               transformar isso em decisão, eficiência e resultado.
             </p>
 
@@ -769,7 +762,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-[#00B4D8]/10 bg-[#020D1F] px-6 py-14">
+      <footer className="border-t border-[#00B4D8]/10 bg-[#020D1F] px-6 py-12 md:py-14">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Brand footer />
