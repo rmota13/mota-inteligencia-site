@@ -109,8 +109,7 @@ const projects = [
     stack: "SQL Server • n8n • Teams • BI Comercial",
     image: "/cases/n8n-cotacao-35k.png",
     gallery: [
-      "/cases/n8n-cotacao-35k.png",
-      "/cases/n8n-report-diretoria.png",
+      "/cases/n8n-cotacao-35k.png",      
       "/cases/teams-cotacoes-35.png",
       "/cases/teams-cotacoes-35-detalhe.png",
     ],
