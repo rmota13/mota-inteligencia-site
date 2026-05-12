@@ -89,11 +89,11 @@ const projects = [
     impact:
       "Redução de tempo operacional, visão executiva imediata e aumento da capacidade de priorização financeira.",
     stack: "SQL Server • n8n • Teams • BI Financeiro",
-    image: "/cases/cobranca-inteligente.png",
-    gallery: [
-      "/cases/cobranca-inteligente.png",
-      "/cases/cobranca-detalhe.png",
-    ],
+    image: "/cases/n8n-cobranca-inteligente.png",
+  gallery: [
+  "/cases/n8n-cobranca-inteligente.png",
+  "/cases/teams-cobranca-inteligente.png",
+],
     icon: DollarSign,
   },
   {
@@ -141,11 +141,11 @@ const projects = [
     impact:
       "Melhoria na percepção profissional da empresa e aumento da qualidade visual dos documentos enviados.",
     stack: "SAP B1 • Crystal Reports • SQL Server",
-    image: "/cases/crystal-layout.png",
-    gallery: [
-      "/cases/crystal-layout.png",
-      "/cases/crystal-layout-2.png",
-    ],
+    image: "/cases/cotacao-layout-novo.png",
+  gallery: [
+  "/cases/cotacao-layout-antigo.png",
+  "/cases/cotacao-layout-novo.png",
+],
     icon: FileText,
   },
 ];
