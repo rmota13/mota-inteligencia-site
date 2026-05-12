@@ -6,8 +6,10 @@ export const metadata: Metadata = {
   description:
     "BI, automação, integração ERP, APIs e inteligência operacional para empresas.",
   icons: {
-    icon: "/favicon.ico",
-  },
+  icon: "/favicon.png",
+  shortcut: "/favicon.png",
+  apple: "/favicon.png",
+},
   openGraph: {
     title: "Mota Inteligência de Negócio",
     description:
