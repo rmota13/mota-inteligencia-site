@@ -5,8 +5,7 @@ export const metadata: Metadata = {
   title: "Mota Inteligência de Negócio",
   description:
     "BI, automação, integração ERP, APIs e inteligência operacional para empresas.",
-
-},
+ 
   openGraph: {
     title: "Mota Inteligência de Negócio",
     description:
