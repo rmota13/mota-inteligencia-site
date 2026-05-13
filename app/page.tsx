@@ -290,7 +290,7 @@ export default function Home() {
           </a>
         </div>
       </header>
-            <section className="relative bg-[#0A1628] pt-[115px] md:pt-[160px]">
+            <section className="relative bg-[#0A1628] pt-[208px] md:pt-[220px]">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
         <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
         <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
