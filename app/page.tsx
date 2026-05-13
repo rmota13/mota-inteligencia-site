@@ -204,6 +204,17 @@ export default function Home() {
     setSelectedCase(project);
     setSelectedImage(project.image);
   }
+const dashboardStack = [
+  { name: "SAP B1", logo: "/logos/sap-b1.svg" },
+  { name: "SQL Server", logo: "/logos/sql-server.svg" },
+  { name: "n8n", logo: "/logos/n8n.svg" },
+  { name: "Power BI", logo: "/logos/power-bi.svg" },
+  { name: "Teams", logo: "/logos/teams.svg" },
+  { name: "Power Automate", logo: "/logos/power-automate.svg" },
+  { name: "SharePoint", logo: "/logos/sharepoint.svg" },
+  { name: "Power Apps", logo: "/logos/power-apps.svg" },
+  { name: "APIs", logo: "/logos/rest-api.svg" },
+];
 
   return (
     <main
@@ -377,26 +388,25 @@ export default function Home() {
                   </p>
 
                   <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
-                    {[
-                      "SAP B1",
-                      "SQL Server",
-                      "n8n",
-                      "Power BI",
-                      "Teams",
-                      "Power Automate",
-                      "SharePoint",
-                      "Power Apps",
-                      "APIs",
-                    ].map((item, index, arr) => (
-                      <div key={item} className="flex items-center gap-3">
-                        <span className="rounded-xl border border-[#00B4D8]/10 bg-[#1B263B] px-4 py-2">
-                          {item}
-                        </span>
-                        {index < arr.length - 1 && (
-                          <span className="text-[#00B4D8]">→</span>
-                        )}
-                      </div>
-                    ))}
+                   {dashboardStack.map((item, index) => (
+                 <div key={item.name} className="flex items-center gap-3">
+                 <span className="flex items-center gap-2 rounded-xl border border-[#00B4D8]/10 bg-[#1B263B] px-4 py-2">
+                  <Image
+                   src={item.logo}
+                   alt={item.name}
+                   width={20}
+                   height={20}
+                   className="object-contain"
+                 />
+
+                 {item.name}
+              </span>
+
+               {index < dashboardStack.length - 1 && (
+                <span className="text-[#00B4D8]">→</span>
+                )}
+              </div>
+             ))}
                   </div>
                 </div>
               </div>

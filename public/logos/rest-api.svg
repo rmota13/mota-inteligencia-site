@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Nuvem -->
+  <path d="M80,55 C88,55 95,48 95,40 C95,32 88,25 80,25 C78,25 76,25 74,26 C70,16 60,10 50,10 C40,10 31,16 27,25 C25,25 23,25 21,25 C12,25 5,32 5,40 C5,48 12,55 21,55" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <!-- Engrenagem -->
+  <g transform="translate(65, 25) scale(0.6)" fill="white">
+    <path d="M20,10 L24,10 L25,14 C26,14.5 27,15 28,16 L31,14 L34,17 L32,20 C33,21 33.5,22 34,23 L38,24 L38,28 L34,29 C33.5,30 33,31 32,32 L34,35 L31,38 L28,36 C27,37 26,37.5 25,38 L24,42 L20,42 L19,38 C18,37.5 17,37 16,36 L13,38 L10,35 L12,32 C11,31 10.5,30 10,29 L6,28 L6,24 L10,23 C10.5,22 11,21 12,20 L10,17 L13,14 L16,16 C17,15 18,14.5 19,14 L20,10 Z M22,31 C25.3,31 28,28.3 28,25 C28,21.7 25.3,19 22,19 C18.7,19 16,21.7 16,25 C16,28.3 18.7,31 22,31 Z"/>
+  </g>
+  <!-- Texto REST API -->
+  <text x="50" y="65" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">REST</text>
+  <text x="50" y="85" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">API</text>
+</svg>
