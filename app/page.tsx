@@ -301,15 +301,15 @@ const dashboardStack = [
           </a>
         </div>
       </header>
-            <section className="relative bg-[#0A1628] pt-[208px] md:pt-[220px]">
+            <section className="relative bg-[#0A1628] pt-[clamp(190px,18vw,245px)] md:pt-[clamp(180px,14vw,230px)]">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
         <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
         <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
 
         <div className="relative mx-auto grid min-h-[calc(100vh-90px)] max-w-7xl items-center gap-10 px-4 pb-32 sm:px-6 md:grid-cols-2 md:pb-24">
           <div className="relative z-10">
-            <div className="mb-7 inline-flex rounded-full border border-[#00B4D8]/35 bg-[#0D1B2A]/70 px-4 py-2 text-sm font-semibold text-[#00B4D8]">
-              BI • Automação • APIs • Inteligência de Negócio
+            <div className="mb-7 inline-flex w-fit max-w-full rounded-full border border-[#00B4D8]/35 bg-[#0D1B2A]/80 px-4 py-2 text-xs font-bold leading-relaxed text-[#00B4D8] shadow-[0_0_24px_rgba(0,180,216,0.12)] backdrop-blur sm:text-sm">
+              BI • Automação • APIs • Deploy  • Inteligência de Negócio
             </div>
 
             <h1 className="max-w-4xl font-black leading-[1.08] tracking-tight text-white [font-size:clamp(2.45rem,11vw,4.6rem)] md:leading-[1.05] md:[font-size:clamp(2.4rem,4.6vw,4.6rem)]">
