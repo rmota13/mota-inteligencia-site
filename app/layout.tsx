@@ -2,26 +2,90 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mota Inteligência de Negócio",
+  metadataBase: new URL("https://motainteligencia.com.br"),
+
+  title: {
+    default: "Mota Inteligência de Negócio",
+    template: "%s | Mota Inteligência de Negócio",
+  },
+
   description:
-    "BI, automação, integração ERP, APIs e inteligência operacional para empresas.",
- 
+    "Especialista em BI, automação corporativa, Power BI, SAP Business One, APIs REST, integração ERP, Microsoft 365, Docker, Linux e deploy de aplicações empresariais.",
+
+  keywords: [
+    "Power BI",
+    "BI",
+    "Business Intelligence",
+    "Automação",
+    "n8n",
+    "Power Automate",
+    "SAP Business One",
+    "Integração ERP",
+    "SQL Server",
+    "Dashboards",
+    "APIs REST",
+    "FastAPI",
+    "Docker",
+    "Linux",
+    "Deploy de aplicações",
+    "Cloudflare",
+    "Traefik",
+    "Power Apps",
+    "SharePoint",
+    "Microsoft Teams",
+    "Automação financeira",
+    "Inteligência financeira",
+    "Aplicações web",
+    "Landing pages",
+  ],
+
+  authors: [{ name: "Rodrigo Mota" }],
+  creator: "Rodrigo Mota",
+  publisher: "Mota Inteligência de Negócio",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+
   openGraph: {
     title: "Mota Inteligência de Negócio",
     description:
-      "Transforme dados, sistemas e processos em decisões reais.",
+      "BI, automação corporativa, integração ERP, APIs, Power BI, SAP Business One e deploy de aplicações empresariais.",
     url: "https://motainteligencia.com.br",
     siteName: "Mota Inteligência de Negócio",
+    locale: "pt_BR",
+    type: "website",
+
     images: [
       {
         url: "/logo-mota.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Mota Inteligência de Negócio",
       },
     ],
-    locale: "pt_BR",
-    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mota Inteligência de Negócio",
+    description:
+      "BI, automação corporativa, integração ERP e deploy de aplicações empresariais.",
+    images: ["/logo-mota.png"],
   },
 };
 

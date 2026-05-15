@@ -62,7 +62,7 @@ const technologyGroups = [
       { name: "Power Apps", logo: "/logos/power_apps.png" },
       { name: "SharePoint", logo: "/logos/sharepoint.png" },
       { name: "Microsoft Teams", logo: "/logos/teams.png" },
-      { name: "Process Automation", logo: "/logos/process_automation.png" },
+      
     ],
   },
   {
@@ -166,7 +166,13 @@ const capabilities = [
 
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
-    <div className={footer ? "flex w-full flex-col gap-5" : "flex items-center"}>
+    <div 
+     className={
+      footer 
+      ? "flex w-full flex-col gap-5" 
+      : "flex items-center"
+     }
+    >
       <Image
         src="/logo-mota.png"
         alt="Mota Inteligência de Negócio"
@@ -174,7 +180,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
         height={footer ? 180 : 150}
         className={
           footer
-            ? "h-auto w-full max-w-[220px] object-contain object-left md:max-w-[300px]"
+            ? "h-auto w-full max-w-[220px] object-contain md:max-w-[300px]"
             : "h-auto w-[112px] object-contain object-left sm:w-[135px] md:w-[220px]"
         }
         priority
@@ -182,6 +188,59 @@ function Brand({ footer = false }: { footer?: boolean }) {
     </div>
   );
 }
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+
+  name: "Mota Inteligência de Negócio",
+
+  url: "https://motainteligencia.com.br",
+
+  logo: "https://motainteligencia.com.br/logo-mota.png",
+
+  image: "https://motainteligencia.com.br/logo-mota.png",
+
+  description:
+    "Especialista em BI, automação corporativa, integração ERP, Power BI, SAP Business One, APIs REST, Microsoft 365, Docker, Linux e deploy de aplicações empresariais.",
+
+  areaServed: "Brasil",
+
+  founder: {
+    "@type": "Person",
+    name: "Rodrigo Mota",
+  },
+
+  serviceType: [
+    "Business Intelligence",
+    "Power BI",
+    "Automação Corporativa",
+    "Integração ERP",
+    "SAP Business One",
+    "APIs REST",
+    "Deploy de Aplicações",
+    "Docker",
+    "Linux",
+    "Microsoft 365",
+    "Power Automate",
+    "n8n",
+    "SharePoint",
+    "Power Apps",
+  ],
+
+  knowsAbout: [
+    "SQL Server",
+    "Dashboards",
+    "Indicadores",
+    "Automação Financeira",
+    "Cloudflare",
+    "Traefik",
+    "FastAPI",
+    "APIs",
+    "ERP",
+    "Business Intelligence",
+  ],
+};
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -301,15 +360,15 @@ const dashboardStack = [
           </a>
         </div>
       </header>
-            <section className="relative bg-[#0A1628] pt-[clamp(190px,18vw,245px)] md:pt-[clamp(180px,14vw,230px)]">
+            <section className="relative bg-[#0A1628] pt-[208px] md:pt-[220px]">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
         <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
         <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
 
         <div className="relative mx-auto grid min-h-[calc(100vh-90px)] max-w-7xl items-center gap-10 px-4 pb-32 sm:px-6 md:grid-cols-2 md:pb-24">
           <div className="relative z-10">
-            <div className="mb-7 inline-flex w-fit max-w-full rounded-full border border-[#00B4D8]/35 bg-[#0D1B2A]/80 px-4 py-2 text-xs font-bold leading-relaxed text-[#00B4D8] shadow-[0_0_24px_rgba(0,180,216,0.12)] backdrop-blur sm:text-sm">
-              BI • Automação • APIs • Deploy  • Inteligência de Negócio
+           <div className="mb-7 inline-flex rounded-full border border-[#00B4D8]/35 bg-[#0D1B2A]/70 px-4 py-2 text-sm font-semibold text-[#00B4D8] shadow-[0_0_28px_rgba(0,180,216,0.18)] backdrop-blur-md">
+              BI • Automação • APIs • Deploy • Inteligência de Negócio
             </div>
 
             <h1 className="max-w-4xl font-black leading-[1.08] tracking-tight text-white [font-size:clamp(2.45rem,11vw,4.6rem)] md:leading-[1.05] md:[font-size:clamp(2.4rem,4.6vw,4.6rem)]">
@@ -318,9 +377,7 @@ const dashboardStack = [
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#E0E1DD] md:text-xl">
-              Automatizo processos, conecto sistemas e construo inteligência de
-              negócio para empresas que precisam de controle, clareza e
-              eficiência operacional.
+              Especialista em BI, automação corporativa, integração ERP, APIs, Power BI, SAP Business One, Microsoft 365 e deploy de         aplicações empresariais.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-bold text-[#E0E1DD]">
