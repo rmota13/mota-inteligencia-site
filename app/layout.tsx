@@ -129,14 +129,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
+  <html lang="pt-BR">
+  <head>
+    <meta
+      name="msvalidate.01"
+      content="5674226CB9CDE7C1A05CD689CAC4A25B"
+    />
+  </head>
+
+  <body>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData),
+      }}
+    />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GKDVFR37K4"
