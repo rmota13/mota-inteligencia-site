@@ -373,9 +373,9 @@ const dashboardStack = [
         </div>
       </header>
             <section className="relative bg-[#0A1628] pt-[260px] sm:pt-[250px] md:pt-[245px] lg:pt-[230px] xl:pt-[220px] 2xl:pt-[210px]">
-        <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
-        <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
-        <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
+        <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-2xl" />
+        <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-2xl glowPulse" />
+        <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-2xl glowPulse" />
 
         <div className="relative mx-auto grid min-h-[calc(100vh-90px)] max-w-7xl items-center gap-10 px-4 pb-32 sm:px-6 md:grid-cols-2 md:pb-24">
           <div className="relative z-10">
@@ -434,7 +434,7 @@ const dashboardStack = [
 
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl bg-[#0A1628] p-5">
-                  <p className="text-sm text-[#6C757D]">
+                  <p className="text-sm text-[#AEB8C2]">
                     Recebimentos monitorados
                   </p>
                   <h3 className="mt-2 text-3xl font-black text-[#00B4D8]">
@@ -443,7 +443,7 @@ const dashboardStack = [
                 </div>
 
                 <div className="rounded-2xl bg-[#0A1628] p-5">
-                  <p className="text-sm text-[#6C757D]">
+                  <p className="text-sm text-[#AEB8C2]">
                     Alertas automáticos
                   </p>
                   <h3 className="mt-2 text-3xl font-black text-[#2EC4B6]">
@@ -452,7 +452,7 @@ const dashboardStack = [
                 </div>
 
                 <div className="rounded-2xl bg-[#0A1628] p-5 md:col-span-2">
-                  <p className="mb-4 text-sm text-[#6C757D]">
+                  <p className="mb-4 text-sm text-[#AEB8C2]">
                     Fluxo de automação
                   </p>
 
@@ -512,7 +512,7 @@ const dashboardStack = [
                     {item.title}
                   </p>
 
-                  <p className="mt-3 text-sm leading-relaxed text-[#6C757D]">
+                  <p className="mt-3 text-sm leading-relaxed text-[#AEB8C2]">
                     {item.desc}
                   </p>
                 </div>
@@ -915,7 +915,7 @@ const dashboardStack = [
           </div>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-7xl flex-col justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#6C757D] md:flex-row">
+        <div className="mx-auto mt-10 flex max-w-7xl flex-col justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#AEB8C2] md:flex-row">
           <p>
             © 2026 Mota Inteligência de Negócio. Todos os direitos reservados.
           </p>
