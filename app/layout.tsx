@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 const structuredData = {
@@ -136,6 +137,22 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GKDVFR37K4"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GKDVFR37K4');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
