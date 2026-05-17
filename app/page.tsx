@@ -13,6 +13,8 @@ import {
   Workflow,
   X,
   ArrowRight,
+  Server,
+  Globe,
 } from "lucide-react";
 
 const whatsappUrl =
@@ -22,24 +24,34 @@ const email = "contato@motainteligencia.com.br";
 
 const solutions = [
   {
-    title: "Inteligência financeira e visão de caixa",
-    desc: "Leitura executiva de recebimentos, vencimentos, exposição financeira e alertas de risco.",
-    icon: DollarSign,
+    title: "BI executivo e dashboards gerenciais",
+    desc: "Construção de dashboards estratégicos, indicadores e análises para diretoria, financeiro, comercial e operação.",
+    icon: BarChart3,
   },
   {
-    title: "Automação de cobranças, alertas e rotinas",
-    desc: "Fluxos automáticos para reduzir retrabalho, acelerar decisões e padronizar processos.",
+    title: "Automação corporativa e workflows",
+    desc: "Automação de processos empresariais com n8n, Power Automate, Teams e integrações entre sistemas.",
     icon: Bot,
   },
   {
-    title: "Integração entre ERP, BI, APIs e sistemas",
-    desc: "Conexão entre SAP, SQL Server, Power BI, n8n, Teams, SharePoint e aplicações internas.",
+    title: "Integração ERP, APIs e sistemas",
+    desc: "Integração entre SAP Business One, SQL Server, APIs REST, Power BI, aplicações web e plataformas corporativas.",
     icon: Workflow,
   },
   {
-    title: "Dashboards executivos para decisão rápida",
-    desc: "Indicadores visuais, objetivos e acionáveis para diretoria, comercial, financeiro e operação.",
-    icon: BarChart3,
+    title: "Infraestrutura, deploy e servidores",
+    desc: "Deploy de aplicações empresariais com Docker, Linux, VPS, Cloudflare, Traefik e ambientes self-hosted.",
+    icon: Server,
+  },
+  {
+    title: "Aplicações web e portais corporativos",
+    desc: "Criação de landing pages, aplicações internas, intranet, SharePoint e ferramentas operacionais empresariais.",
+    icon: Globe,
+  },
+  {
+    title: "Inteligência financeira e operacional",
+    desc: "Leitura estratégica de caixa, cobranças, exposição financeira, alertas críticos e apoio à tomada de decisão.",
+    icon: DollarSign,
   },
 ];
 
@@ -360,7 +372,7 @@ const dashboardStack = [
           </a>
         </div>
       </header>
-            <section className="relative bg-[#0A1628] pt-[208px] md:pt-[220px]">
+            <section className="relative bg-[#0A1628] pt-[260px] sm:pt-[250px] md:pt-[245px] lg:pt-[230px] xl:pt-[220px] 2xl:pt-[210px]">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-[#00B4D8]/5 blur-3xl" />
         <div className="absolute -right-40 top-52 h-96 w-96 rounded-full bg-[#00B4D8]/20 blur-3xl glowPulse" />
         <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2EC4B6]/10 blur-3xl glowPulse" />
@@ -480,17 +492,17 @@ const dashboardStack = [
           </p>
 
           <h2 className="mt-4 max-w-3xl text-3xl font-black md:text-5xl">
-            Menos operação manual. Mais controle, dados e ação.
+            Soluções empresariais para automação, integração e inteligência operacional.
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {solutions.map((item) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.title}
-                  className="group rounded-3xl border border-[#00B4D8]/20 bg-[#0A1628] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8] hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group rounded-3xl border border-[#00B4D8]/15 bg-[#0A1628]/90 p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#00B4D8]/60 hover:shadow-[0_0_40px_rgba(0,180,216,0.12)]"
                 >
                   <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#00B4D8]/10 text-[#00B4D8] shadow-lg shadow-cyan-500/10 transition-all duration-300 group-hover:bg-[#00B4D8]/20 group-hover:shadow-cyan-500/30">
                     <Icon size={28} strokeWidth={2.2} />
@@ -515,8 +527,8 @@ const dashboardStack = [
             Tecnologias e plataformas
           </p>
 
-          <h2 className="mt-4 max-w-4xl text-3xl font-black md:text-5xl">
-            Stack real para integrar ERP, dados, automação e decisão.
+          <h2 className="mt-6 max-w-4xl text-base leading-relaxed text-[#E0E1DD] md:text-lg">
+              Estruturo soluções completas envolvendo BI, automação corporativa,  integração ERP, APIs, Microsoft 365, infraestrutura,      deploy de aplicações e desenvolvimento de ferramentas empresariais.
           </h2>
 
           <div className="mt-14 space-y-12">
