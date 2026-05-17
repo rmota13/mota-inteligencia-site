@@ -1,6 +1,39 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Mota Inteligência de Negócio",
+  url: "https://motainteligencia.com.br",
+  logo: "https://motainteligencia.com.br/logo-mota.png",
+  image: "https://motainteligencia.com.br/logo-mota.png",
+  description:
+    "Especialista em BI, automação corporativa, integração ERP, Power BI, SAP Business One, APIs REST, Microsoft 365, Docker, Linux e deploy de aplicações empresariais.",
+  areaServed: "Brasil",
+  founder: {
+    "@type": "Person",
+    name: "Rodrigo Mota",
+  },
+  serviceType: [
+    "Business Intelligence",
+    "Power BI",
+    "Automação Corporativa",
+    "Integração ERP",
+    "SAP Business One",
+    "APIs REST",
+    "Deploy de Aplicações",
+    "Docker",
+    "Linux",
+    "Microsoft 365",
+    "Power Automate",
+    "n8n",
+    "SharePoint",
+    "Power Apps",
+    "Criação de Sites",
+    "Landing Pages",
+    "Portais Corporativos",
+  ],
+};
 export const metadata: Metadata = {
   metadataBase: new URL("https://motainteligencia.com.br"),
 
@@ -96,7 +129,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
