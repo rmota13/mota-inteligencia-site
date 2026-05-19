@@ -15,6 +15,7 @@ import {
   ArrowRight,
   Server,
   Globe,
+  Activity,
 } from "lucide-react";
 
 const whatsappUrl =
@@ -92,6 +93,24 @@ const technologyGroups = [
 ];
 const projects = [
   {
+    title: "Gestão Inteligente de Pedidos em Aberto",
+    desc: "Dashboard operacional integrado ao SAP Business One para acompanhamento completo da carteira de pedidos em aberto, identificando gargalos, pedidos sem atividade, riscos financeiros e prioridades comerciais.",
+    problem:
+      "A operação possuía baixa visibilidade sobre pedidos em aberto, ausência de priorização operacional e dificuldade em identificar rapidamente pedidos parados, sem atividade comercial ou aguardando financeiro.",
+    solution:
+      "Desenvolvimento de dashboard operacional em Power BI integrado ao SAP Business One, consolidando indicadores críticos da carteira de pedidos.",
+    impact:
+      "Maior visibilidade operacional, redução de gargalos comerciais, acompanhamento contínuo da carteira e aumento da capacidade de tomada de decisão baseada em dados.",
+    stack:
+      "Power BI • SAP Business One • SQL Server • n8n • Power Automate • Teams • ETL • APIs",
+    image: "/cases/pbi-pedidos-abertos.png",
+    gallery: [
+      "/cases/pbi-pedidos-abertos.png",
+    ],
+    icon: Activity,
+  },
+
+  {
     title: "Cobrança Inteligente",
     desc: "Automação de leitura financeira com análise contextual, concentração de risco e monitoramento executivo.",
     problem:
@@ -102,13 +121,12 @@ const projects = [
       "Redução de tempo operacional, visão executiva imediata e aumento da capacidade de priorização financeira.",
     stack: "SQL Server • n8n • Teams • BI Financeiro",
     image: "/cases/n8n-cobranca-inteligente.png",
-  gallery: [
-  "/cases/n8n-cobranca-inteligente.png",
-  "/cases/teams-cobranca-inteligente.png",
-],
+    gallery: [
+      "/cases/n8n-cobranca-inteligente.png",
+      "/cases/teams-cobranca-inteligente.png",
+    ],
     icon: DollarSign,
-  },
-  {
+  },  {
     title: "Cotações acima de R$35 mil",
     desc: "Monitoramento automático de oportunidades comerciais relevantes, com score, histórico e alerta executivo para tomada de ação.",
     problem:
