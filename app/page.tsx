@@ -337,7 +337,7 @@ const dashboardStack = [
             : "bg-[#020D1F]"
         }`}
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-2 md:gap-8 md:px-6 md:py-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-1 md:gap-8 md:px-6 md:py-1">
           <Brand />
 
           <nav className="hidden justify-center gap-10 text-[15px] font-semibold text-[#E0E1DD] md:flex">
