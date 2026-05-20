@@ -355,10 +355,13 @@ const dashboardStack = [
             : "bg-[#020D1F]"
         }`}
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-1 md:gap-8 md:px-6 md:py-1">
-          <Brand />
+        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 pt-1 pb-0 md:gap-8 md:px-6 md:pt-1 md:pb-0">
 
-          <nav className="hidden justify-center gap-10 text-[15px] font-semibold text-[#E0E1DD] md:flex">
+  <div className="-translate-y-2">
+    <Brand />
+  </div>
+
+  <nav className="hidden justify-center gap-10 text-[15px] font-semibold text-[#E0E1DD] md:flex">
             <a href="#solucoes" className="transition hover:text-[#00B4D8]">
               Soluções
             </a>
