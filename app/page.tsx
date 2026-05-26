@@ -788,43 +788,118 @@ const dashboardStack = [
         </div>
       )}
 
-      <section id="sobre" className="bg-[#1B263B] px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.3em] text-[#00B4D8]">
-              Sobre
-            </p>
-            <h2 className="mt-4 text-3xl font-black md:text-5xl">
-              Tecnologia aplicada ao negócio, não só painel bonito.
-            </h2>
-          </div>
+     <section id="sobre" className="bg-[#1B263B] px-6 py-24">
+  <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
+    <div>
+      <p className="text-sm font-black uppercase tracking-[0.3em] text-[#00B4D8]">
+        Sobre
+      </p>
 
-          <div className="space-y-5 text-lg leading-relaxed text-[#E0E1DD]">
-            <p>
-              A Mota Inteligência de Negócio foi criada para ajudar empresas que
-              já possuem dados, sistemas e processos, mas ainda não conseguem
-              transformar isso em decisão, eficiência e resultado.
-            </p>
+      <h2 className="mt-4 text-3xl font-black md:text-5xl">
+        Tecnologia aplicada ao negócio, não só painel bonito.
+      </h2>
 
-            <p>
-              O foco é unir BI, automação, integração de sistemas e inteligência
-              operacional para reduzir retrabalho, melhorar controles e acelerar
-              decisões.
-            </p>
+      <div className="relative mt-10 overflow-hidden rounded-[32px] border border-[#00B4D8]/20 bg-[#020D1F]/80 p-8 shadow-[0_0_60px_rgba(0,180,216,0.10)] backdrop-blur">
+        <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[#00B4D8]/10 blur-3xl" />
 
-            <div className="grid gap-3 pt-4 sm:grid-cols-2">
-              {capabilities.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-[#00B4D8]/10 bg-[#0A1628] px-4 py-3 text-sm font-semibold text-[#E0E1DD]"
-                >
-                  {item}
-                </div>
-              ))}
+        <div className="relative z-10">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/linkedin-rodrigo.png"
+                alt="Rodrigo Mota"
+                width={72}
+                height={72}
+                className="h-16 w-16 rounded-full border-2 border-[#00B4D8]/40 object-cover shadow-[0_0_24px_rgba(0,180,216,0.22)]"
+              />
+
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.24em] text-[#00B4D8]">
+                  LinkedIn
+                </p>
+
+                <h3 className="mt-1 text-2xl font-black leading-tight text-white">
+                  Rodrigo Mota
+                </h3>
+              </div>
+            </div>
+
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0A66C2] text-xl font-black text-white shadow-[0_0_24px_rgba(10,102,194,0.35)]">
+              in
             </div>
           </div>
+
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-[#E0E1DD]/90">
+            Especialista em BI, automação corporativa, integração ERP,
+            Power BI, SAP Business One, APIs, Microsoft 365 e soluções
+            orientadas à eficiência operacional.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "SAP B1",
+              "Power BI",
+              "SQL Server",
+              "n8n",
+              "FastAPI",
+              "Microsoft 365",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-[#00B4D8]/20 bg-[#00B4D8]/5 px-3 py-1 text-xs font-bold text-[#00B4D8]"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center justify-between gap-4">
+            <div>
+              <p className="text-3xl font-black text-white">415+</p>
+              <p className="text-sm text-[#E0E1DD]/70">
+                conexões profissionais
+              </p>
+            </div>
+
+            <a
+              href="https://br.linkedin.com/in/rodrigo-mota-2619b422"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-xl bg-[#00B4D8] px-6 py-3 text-sm font-black text-[#020D1F] transition hover:bg-[#2EC4B6]"
+            >
+              Ver perfil
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="space-y-5 text-lg leading-relaxed text-[#E0E1DD]">
+      <p>
+        A Mota Inteligência de Negócio foi criada para ajudar empresas que
+        já possuem dados, sistemas e processos, mas ainda não conseguem
+        transformar isso em decisão, eficiência e resultado.
+      </p>
+
+      <p>
+        O foco é unir BI, automação, integração de sistemas e inteligência
+        operacional para reduzir retrabalho, melhorar controles e acelerar
+        decisões.
+      </p>
+
+      <div className="grid gap-3 pt-4 sm:grid-cols-2">
+        {capabilities.map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl border border-[#00B4D8]/10 bg-[#0A1628] px-4 py-3 text-sm font-semibold text-[#E0E1DD]"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section
         id="contato"
