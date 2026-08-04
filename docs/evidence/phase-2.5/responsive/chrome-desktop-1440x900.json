@@ -1,0 +1,15 @@
+{
+  "browser": "chrome",
+  "label": "desktop-1440x900",
+  "width": 1440,
+  "height": 900,
+  "metrics": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "scrollWidth": 1425,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": false
+  },
+  "errors": []
+}

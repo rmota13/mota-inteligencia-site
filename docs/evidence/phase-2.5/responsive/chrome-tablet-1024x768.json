@@ -1,0 +1,15 @@
+{
+  "browser": "chrome",
+  "label": "tablet-1024x768",
+  "width": 1024,
+  "height": 768,
+  "metrics": {
+    "innerWidth": 1024,
+    "innerHeight": 768,
+    "scrollWidth": 1009,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": false
+  },
+  "errors": []
+}

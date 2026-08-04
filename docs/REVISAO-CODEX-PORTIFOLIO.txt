@@ -1,0 +1,523 @@
+Diagnóstico aprovado com ajustes obrigatórios antes da implementação.
+
+A análise técnica está consistente, mas quero que o plano final incorpore as seguintes decisões de arquitetura, conteúdo e posicionamento.
+
+Não altere arquivos ainda. Primeiro atualize o plano com estas definições e apresente a versão consolidada.
+
+==================================================
+1. USAR “PROJETOS”, NÃO “CASES”, NAS ROTAS PÚBLICAS
+==================================================
+
+A comunicação institucional deve utilizar prioritariamente:
+
+- Projetos;
+- Projetos de Engenharia;
+- Projetos selecionados;
+- Projeto em destaque.
+
+“Case” pode aparecer pontualmente no texto como estudo de caso, mas não deve ser a nomenclatura principal da navegação ou das rotas.
+
+Alterar a proposta de:
+
+/cases
+/cases/[slug]
+
+para:
+
+/projetos
+/projetos/[slug]
+
+A rota principal deve ser:
+
+/projetos/sap-commerce-integration-platform
+
+Motivo:
+
+“Projetos” é mais natural em português, mais institucional e representa melhor a profundidade das entregas.
+
+==================================================
+2. ESTRUTURA PRINCIPAL DE NAVEGAÇÃO
+==================================================
+
+A navegação principal inicial deve ser:
+
+- Início;
+- Projetos;
+- Soluções;
+- Insights;
+- Sobre;
+- Contato.
+
+Tecnologias não precisa obrigatoriamente ser uma página principal do menu. Pode existir como seção, página de apoio ou conteúdo contextual ligado a projetos e soluções.
+
+Evitar um menu excessivamente extenso.
+
+==================================================
+3. PÁGINA DE TECNOLOGIAS
+==================================================
+
+Não criar uma simples “parede de logos”.
+
+Caso a rota /tecnologias seja mantida, ela deverá explicar:
+
+- em quais contextos cada tecnologia é usada;
+- qual papel ela desempenha;
+- quais projetos a utilizam;
+- como se integra às demais camadas;
+- qual problema ajuda a resolver.
+
+As tecnologias devem ser agrupadas por capacidade:
+
+- ERP e plataformas;
+- integrações e APIs;
+- dados e analytics;
+- automação;
+- infraestrutura e observabilidade;
+- Microsoft 365;
+- IA aplicada.
+
+==================================================
+4. GITHUB E PORTFÓLIO TÉCNICO
+==================================================
+
+Não criar obrigatoriamente uma rota /github nesta primeira implementação.
+
+Criar inicialmente uma seção institucional de GitHub e portfólio técnico na Home e/ou na página Sobre, com:
+
+- perfil público;
+- projeto principal;
+- repositórios selecionados;
+- descrição do que é público e verificável;
+- CTA para o GitHub.
+
+A arquitetura deve permitir uma futura página de projetos open source, mas não deve depender de consultas em tempo real à API do GitHub nesta fase.
+
+Não exibir estrelas, datas ou métricas dinâmicas sem necessidade.
+
+==================================================
+5. METODOLOGIA DE ENTREGA
+==================================================
+
+Incluir uma seção chamada:
+
+“Como trabalho”
+
+ou:
+
+“Da arquitetura à operação”
+
+Ela deve representar o ciclo:
+
+1. Diagnóstico;
+2. entendimento do processo;
+3. arquitetura;
+4. modelagem;
+5. implementação;
+6. integração;
+7. deploy;
+8. observabilidade;
+9. sustentação;
+10. evolução.
+
+Essa seção pode inicialmente existir na Home ou em Sobre.
+
+Não criar uma rota própria /metodologia na primeira fase, salvo justificativa clara.
+
+==================================================
+6. HERO E POSICIONAMENTO
+==================================================
+
+O Hero não deve mais ter Power BI como elemento central.
+
+Mensagem principal preferencial:
+
+“Arquitetura de integrações, automação e dados para empresas que querem escalar.”
+
+Submensagem:
+
+“Projetamos soluções que conectam ERP, APIs, marketplaces, Microsoft 365, dados e inteligência artificial para eliminar processos manuais, reduzir riscos e aumentar a eficiência operacional.”
+
+O Hero deve comunicar imediatamente:
+
+- arquitetura;
+- integrações;
+- automação;
+- ERP;
+- APIs;
+- dados;
+- plataformas;
+- IA aplicada.
+
+Power BI continua presente, mas como parte da capacidade de dados e analytics.
+
+==================================================
+7. ELEMENTO VISUAL DO HERO
+==================================================
+
+O dashboard ilustrativo atual não deve ser removido de forma precipitada.
+
+Primeiro:
+
+- verificar se ele ainda comunica valor;
+- preservar sua força visual;
+- evitar perda da identidade já validada.
+
+Avaliar sua evolução para uma representação arquitetural baseada no projeto principal, por exemplo:
+
+Marketplace
+→ Webhook
+→ Fila
+→ n8n
+→ FastAPI
+→ SAP Business One
+→ Módulo financeiro
+→ Conciliação
+
+Essa representação deve ser visualmente sofisticada, mas não pode:
+
+- expor endpoints;
+- inventar dados;
+- parecer um diagrama técnico cru;
+- prejudicar mobile;
+- usar animações excessivas.
+
+A substituição deve ser apresentada como proposta visual antes de remover o dashboard atual.
+
+==================================================
+8. ESTRUTURA DOS PROJETOS
+==================================================
+
+Cada página de projeto deve ter estrutura modular e editorial, adaptada ao conteúdo disponível:
+
+1. Hero;
+2. resumo executivo;
+3. contexto;
+4. problema;
+5. relevância para o negócio;
+6. papel desempenhado;
+7. arquitetura;
+8. fluxo;
+9. decisões de engenharia;
+10. tecnologias;
+11. segurança e governança;
+12. observabilidade;
+13. resultados comprováveis;
+14. limitações;
+15. status atual;
+16. roadmap;
+17. galeria sanitizada;
+18. repositório público, quando houver;
+19. projetos relacionados;
+20. CTA.
+
+Nem todos os projetos terão todas as seções.
+
+Não criar blocos vazios ou conteúdo artificial apenas para manter uma estrutura rígida.
+
+==================================================
+9. CATEGORIAS DE PROJETOS
+==================================================
+
+Organizar os projetos em categorias coerentes:
+
+- Plataformas e integrações;
+- SAP Business One;
+- Automação corporativa;
+- Dados e analytics;
+- Aplicações empresariais;
+- Infraestrutura e observabilidade;
+- Operação industrial.
+
+Permitir que um projeto possua mais de uma categoria.
+
+Filtros só devem ser criados quando houver volume suficiente de projetos. Evitar complexidade prematura.
+
+==================================================
+10. MODELAGEM DO CONTEÚDO
+==================================================
+
+Retirar o conteúdo do app/page.tsx e criar uma fonte tipada.
+
+Cada projeto deve possuir campos semelhantes a:
+
+- slug;
+- title;
+- shortTitle;
+- summary;
+- description;
+- status;
+- featured;
+- categories;
+- technologies;
+- problem;
+- context;
+- role;
+- solution;
+- architecture;
+- engineeringDecisions;
+- results;
+- limitations;
+- roadmap;
+- gallery;
+- repositoryUrl;
+- publishedAt;
+- updatedAt;
+- seo.
+
+Não é obrigatório preencher todos os campos em todos os projetos.
+
+Não usar um único arquivo gigante caso a quantidade de conteúdo torne a manutenção ruim. Avaliar um arquivo por projeto ou agrupamento coerente.
+
+==================================================
+11. SCHEMA.ORG E IDENTIDADE JURÍDICA
+==================================================
+
+Evitar declarar de forma contraditória que a Mota Inteligência de Negócio é uma organização empresarial formal.
+
+Neste momento, priorizar:
+
+- Person para Rodrigo Mota;
+- ProfessionalService para a atuação e marca profissional;
+- WebSite;
+- WebPage;
+- BreadcrumbList;
+- TechArticle ou Article para conteúdos técnicos;
+- ItemList para listagem de projetos;
+- SoftwareSourceCode quando houver repositório público;
+- CreativeWork quando for semanticamente mais adequado.
+
+Organization somente poderá ser adotado se houver coerência real com a apresentação jurídica e institucional.
+
+Criar um único grafo JSON-LD consistente e evitar duplicações.
+
+==================================================
+12. ARTIGOS E INSIGHTS
+==================================================
+
+Artigos e Insights podem compartilhar a mesma infraestrutura editorial.
+
+Diferença:
+
+- Artigos: conteúdos aprofundados e evergreen;
+- Insights: notas técnicas menores, aprendizados e decisões.
+
+Não criar páginas vazias em produção.
+
+Se não houver conteúdo publicado no lançamento:
+
+- preparar a arquitetura;
+- não incluir rotas vazias no menu;
+- não incluir drafts no sitemap;
+- não apresentar seções sem conteúdo.
+
+==================================================
+13. PRIVACIDADE E CONSENTIMENTO
+==================================================
+
+A recomendação de privacidade foi aceita, mas a implementação deve ser proporcional.
+
+Antes de criar um banner de cookies complexo:
+
+1. identificar exatamente quais cookies e mecanismos são utilizados;
+2. revisar GA4 e Microsoft Clarity;
+3. avaliar requisitos aplicáveis ao contexto brasileiro;
+4. criar uma política de privacidade clara;
+5. propor um mecanismo de consentimento simples e tecnicamente correto.
+
+Não instalar uma plataforma pesada de consentimento sem necessidade.
+
+Não remover analytics antes da aprovação.
+
+==================================================
+14. SEGURANÇA DOS ASSETS
+==================================================
+
+A auditoria dos arquivos em public/ passa a ser prioridade zero.
+
+Antes de publicar páginas detalhadas:
+
+- gerar inventário dos assets sensíveis;
+- indicar quais possuem nomes, valores, documentos, URLs, SQL ou contexto identificável;
+- não excluir automaticamente;
+- criar uma lista de ações:
+  - manter;
+  - sanitizar;
+  - substituir;
+  - mover para fora de public;
+  - remover após aprovação.
+
+Arquivos em public/ continuam acessíveis mesmo quando não estão referenciados pela interface.
+
+Nenhuma remoção deve ocorrer sem relatório prévio.
+
+==================================================
+15. MÉTRICAS ILUSTRATIVAS
+==================================================
+
+Revisar:
+
+- números do dashboard da Hero;
+- contagem de conexões no LinkedIn;
+- valores, percentuais e indicadores nos projetos.
+
+Cada número deverá ser classificado como:
+
+- dado real validado;
+- dado ilustrativo claramente identificado;
+- informação a remover.
+
+Não apresentar um número ilustrativo como resultado real.
+
+A contagem fixa de conexões do LinkedIn deve ser removida ou substituída por uma descrição não perecível, como:
+
+“Perfil profissional e projetos técnicos no LinkedIn.”
+
+==================================================
+16. PERFORMANCE
+==================================================
+
+A otimização de assets deve incluir:
+
+- favicon;
+- logo principal;
+- logos de tecnologias;
+- imagens dos projetos;
+- imagens Open Graph;
+- uso correto de sizes;
+- priority somente acima da dobra;
+- formatos adequados;
+- dimensões reais;
+- compressão sem perda visual relevante.
+
+Não substituir imagens em massa sem comparação visual.
+
+Preservar a qualidade das capturas técnicas legíveis.
+
+==================================================
+17. HEADER E HERO
+==================================================
+
+O problema do selo atrás do Header é uma regressão conhecida e deve fazer parte da Fundação.
+
+A solução deve ser estrutural.
+
+Avaliar:
+
+- Header com altura explícita ou mensurável;
+- variável CSS compartilhada, como --header-height;
+- Hero com padding-top calculado a partir da altura real;
+- evitar transformações negativas;
+- evitar escadas arbitrárias de seis breakpoints;
+- considerar Windows com escala 125% e 150%;
+- garantir que o selo permaneça no fluxo normal;
+- testar menu mobile.
+
+Não reduzir a logo arbitrariamente.
+
+Antes e depois devem ser documentados com screenshots nas resoluções definidas.
+
+==================================================
+18. HOME
+==================================================
+
+A Home deve ser institucional, mas objetiva.
+
+Ordem aprovada:
+
+1. Hero;
+2. proposta de valor;
+3. ecossistemas e operações conectáveis;
+4. projeto principal;
+5. projetos selecionados;
+6. capacidades empresariais;
+7. stack contextualizada;
+8. método de trabalho;
+9. perfil profissional;
+10. GitHub e portfólio técnico;
+11. insights recentes, somente quando existirem;
+12. CTA.
+
+Evitar repetir o mesmo conteúdo em várias seções.
+
+==================================================
+19. PRIMEIRA FASE DE IMPLEMENTAÇÃO
+==================================================
+
+A primeira fase não deve reconstruir a Home nem mudar a narrativa completa.
+
+Escopo da Fase 1:
+
+- criar snapshot e inventário;
+- preservar comportamento atual;
+- criar tokens e configurações centrais;
+- extrair Header;
+- extrair Footer;
+- extrair componentes estruturais essenciais;
+- separar interatividade em Client Components;
+- manter conteúdo institucional em Server Components quando possível;
+- extrair conteúdo para fonte tipada;
+- corrigir estruturalmente Header/Hero;
+- corrigir menu mobile;
+- corrigir acessibilidade básica dos modais;
+- remover imports e structured data duplicados;
+- manter visual atual;
+- não substituir ainda o Hero;
+- não reescrever ainda todos os textos;
+- não criar ainda todas as novas páginas.
+
+Ao final da Fase 1:
+
+- executar lint;
+- executar typecheck;
+- executar build;
+- mostrar git diff;
+- listar arquivos criados e modificados;
+- mostrar screenshots das resoluções principais;
+- parar;
+- não fazer commit;
+- não fazer push;
+- aguardar aprovação para a Fase 2.
+
+==================================================
+20. DECISÕES DE ESCOPO
+==================================================
+
+Não implementar agora, salvo justificativa e aprovação:
+
+- integração dinâmica com API do GitHub;
+- CMS externo;
+- banco de dados;
+- sistema de comentários;
+- busca global;
+- filtros complexos;
+- animações arquiteturais complexas;
+- formulário com backend;
+- plataforma pesada de cookies;
+- dependências novas sem necessidade.
+
+Priorizar uma base estática, rápida, segura, indexável e fácil de manter.
+
+==================================================
+21. SAÍDA SOLICITADA AGORA
+==================================================
+
+Ainda não altere arquivos.
+
+Entregue uma versão revisada do plano contendo:
+
+1. arquitetura final de rotas usando /projetos;
+2. estrutura inicial do menu;
+3. arquitetura de componentes da Fase 1;
+4. modelagem tipada dos projetos;
+5. estratégia Server/Client Components;
+6. solução proposta para Header/Hero;
+7. plano de auditoria e sanitização de assets;
+8. schemas aprovados;
+9. escopo exato da Fase 1;
+10. critérios de aceite da Fase 1;
+11. arquivos previstos para criação e alteração;
+12. riscos da modularização;
+13. sequência de execução;
+14. itens explicitamente adiados.
+
+Após apresentar essa versão revisada, aguarde minha aprovação.

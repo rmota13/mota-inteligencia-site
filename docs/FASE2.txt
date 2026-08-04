@@ -1,0 +1,512 @@
+# FASE 2 — Evolução Institucional e Posicionamento Estratégico
+
+Status: Aguardando início
+
+Dependência:
+- Fase 1 concluída
+- Build aprovado
+- Validação visual concluída
+- Aprovação manual
+
+---
+
+# Objetivo
+
+Transformar o site da Mota Inteligência de Negócio de um portfólio técnico para uma plataforma institucional de autoridade, capaz de representar Rodrigo Mota como arquiteto de integrações, plataformas empresariais e automação corporativa.
+
+A Fase 2 concentra-se exclusivamente na evolução da experiência do usuário, da comunicação, da arquitetura de informação e da preparação para crescimento do conteúdo.
+
+Não alterar a fundação criada na Fase 1 sem justificativa técnica.
+
+---
+
+# Objetivos Estratégicos
+
+O visitante deve compreender em menos de 30 segundos que:
+
+• Rodrigo projeta plataformas corporativas.
+
+• Atua ponta a ponta:
+    Diagnóstico
+    Arquitetura
+    Desenvolvimento
+    Integração
+    Deploy
+    Observabilidade
+    Evolução
+
+• BI é apenas uma das competências.
+
+• SAP Business One é uma especialidade.
+
+• Integra ERP, APIs, Marketplaces, Microsoft 365 e IA.
+
+• Possui projetos públicos verificáveis.
+
+• Possui engenharia própria.
+
+---
+
+# Prioridade da Home
+
+A Home deixa de vender serviços.
+
+Ela passa a apresentar capacidade de engenharia.
+
+Nova ordem:
+
+1 Hero
+
+2 Proposta de Valor
+
+3 Ecossistemas Integráveis
+
+4 Projeto Principal
+
+5 Projetos Selecionados
+
+6 Capacidades Empresariais
+
+7 Stack Tecnológica
+
+8 Como Trabalho
+
+9 Perfil Profissional
+
+10 GitHub
+
+11 CTA
+
+12 Footer
+
+---
+
+# Hero
+
+Substituir gradualmente o posicionamento.
+
+Mensagem principal:
+
+Arquitetura de Integrações, Automação e Dados para empresas que querem escalar.
+
+Mensagem secundária:
+
+Projetamos soluções que conectam ERP, APIs, Marketplaces, Microsoft 365, Dados e Inteligência Artificial para eliminar processos manuais, reduzir riscos e aumentar eficiência operacional.
+
+Não utilizar linguagem de marketing exagerada.
+
+Evitar:
+
+"Transformação Digital"
+
+"Revolucionamos"
+
+"Soluções disruptivas"
+
+---
+
+# Dashboard
+
+Antes de remover o dashboard atual:
+
+Apresentar proposta visual.
+
+Objetivo:
+
+Representar arquitetura.
+
+Exemplo:
+
+Mercado Livre
+
+↓
+
+Webhook
+
+↓
+
+Fila Redis
+
+↓
+
+n8n
+
+↓
+
+FastAPI
+
+↓
+
+SAP Business One
+
+↓
+
+Financeiro
+
+↓
+
+Conciliação
+
+Não utilizar diagramas técnicos excessivamente complexos.
+
+Deve parecer uma plataforma empresarial.
+
+---
+
+# Projeto Principal
+
+Criar destaque institucional para:
+
+SAP Commerce Integration Platform
+
+Não utilizar modal.
+
+Criar página própria.
+
+Estrutura:
+
+Hero
+
+Resumo Executivo
+
+Problema
+
+Contexto
+
+Arquitetura
+
+Fluxo
+
+Tecnologias
+
+Fase Comercial
+
+Fase Financeira
+
+Conciliação
+
+Engenharia
+
+Observabilidade
+
+Roadmap
+
+GitHub
+
+CTA
+
+---
+
+# Projetos
+
+Criar rota:
+
+/projetos
+
+Organizar por categorias:
+
+• Plataformas
+
+• SAP Business One
+
+• Automação
+
+• Dados
+
+• Infraestrutura
+
+• Aplicações
+
+Cada projeto possuirá:
+
+slug
+
+status
+
+categorias
+
+stack
+
+problema
+
+solução
+
+papel desempenhado
+
+arquitetura
+
+roadmap
+
+galeria
+
+repositório
+
+SEO próprio
+
+---
+
+# Soluções
+
+Transformar serviços em capacidades.
+
+Não vender tecnologia.
+
+Mostrar problemas resolvidos.
+
+Capacidades:
+
+Integração ERP
+
+Automação
+
+APIs
+
+Dados
+
+BI
+
+Power Platform
+
+Infraestrutura
+
+IA
+
+Observabilidade
+
+Arquitetura
+
+---
+
+# Método de Trabalho
+
+Nova seção.
+
+Fluxo:
+
+Diagnóstico
+
+↓
+
+Arquitetura
+
+↓
+
+Implementação
+
+↓
+
+Integração
+
+↓
+
+Deploy
+
+↓
+
+Monitoramento
+
+↓
+
+Evolução
+
+Representar visualmente.
+
+---
+
+# GitHub
+
+Adicionar seção institucional.
+
+Não consumir API nesta fase.
+
+Apresentar:
+
+Perfil
+
+Projeto Principal
+
+Projetos Públicos
+
+Botão para GitHub
+
+---
+
+# LinkedIn
+
+Atualizar comunicação.
+
+Remover número fixo de conexões.
+
+Utilizar:
+
+Perfil Profissional
+
+Projetos Técnicos
+
+Arquitetura
+
+Integrações
+
+---
+
+# SEO
+
+Implementar:
+
+Metadata específica
+
+Open Graph por página
+
+Twitter Cards
+
+Schema.org
+
+Breadcrumb
+
+Internal Linking
+
+Canonical
+
+Projeto Principal com SEO dedicado.
+
+---
+
+# Schema.org
+
+Priorizar:
+
+Person
+
+ProfessionalService
+
+WebSite
+
+WebPage
+
+BreadcrumbList
+
+ItemList
+
+SoftwareSourceCode
+
+TechArticle
+
+Evitar Organization neste momento.
+
+---
+
+# Insights
+
+Criar estrutura.
+
+Não publicar conteúdo vazio.
+
+Preparar:
+
+/insights
+
+Template de artigo
+
+Template de insight
+
+Não incluir no menu caso esteja vazio.
+
+---
+
+# Assets
+
+Continuar inventário.
+
+Substituir somente após aprovação.
+
+Não remover assets antigos automaticamente.
+
+---
+
+# Responsividade
+
+Validar:
+
+360x800
+
+390x844
+
+768
+
+1366x768
+
+1440x900
+
+1920x1080
+
+125%
+
+150%
+
+---
+
+# Critérios de Aceite
+
+✓ Hero atualizado
+
+✓ Projeto Principal em destaque
+
+✓ Nova arquitetura da Home
+
+✓ GitHub integrado visualmente
+
+✓ Método de Trabalho criado
+
+✓ Nova organização dos projetos
+
+✓ SEO preservado
+
+✓ Analytics preservado
+
+✓ Clarity preservado
+
+✓ Performance igual ou melhor
+
+✓ Lighthouse ≥ 90 (Performance, Best Practices e SEO, quando viável)
+
+✓ Build aprovado
+
+✓ Typecheck aprovado
+
+✓ Lint aprovado
+
+✓ Sem regressões
+
+✓ Sem commit
+
+✓ Sem push
+
+---
+
+# Entrega Esperada
+
+Ao final da Fase 2 apresentar:
+
+• Lista completa de arquivos alterados
+
+• Git Diff resumido
+
+• Screenshots Desktop
+
+• Screenshots Mobile
+
+• Comparativo Antes x Depois
+
+• Resultado de Build
+
+• Resultado de Typecheck
+
+• Resultado de Lint
+
+• Pendências
+
+• Riscos
+
+• Próximas recomendações
+
+Parar e aguardar aprovação antes da Fase 3.

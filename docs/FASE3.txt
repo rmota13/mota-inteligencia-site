@@ -1,0 +1,550 @@
+# FASE 3 — Plataforma de Conteúdo, SEO e Autoridade Técnica
+
+Status: Planejada
+
+Pré-requisitos:
+
+- Fase 1 concluída
+- Fase 2 aprovada
+- Projeto SAP Commerce Integration Platform publicado
+- Arquitetura modular consolidada
+
+---
+
+# Objetivo
+
+Transformar o site da Mota Inteligência de Negócio em uma referência técnica para:
+
+• Empresas
+
+• Recrutadores
+
+• Arquitetos
+
+• Desenvolvedores
+
+• Sistemas de IA
+
+• Motores de busca
+
+O objetivo deixa de ser apenas apresentar projetos.
+
+O site passa a gerar autoridade continuamente através de conteúdo técnico.
+
+---
+
+# Objetivos Estratégicos
+
+Criar uma plataforma capaz de:
+
+- gerar tráfego orgânico;
+- aumentar autoridade;
+- responder perguntas técnicas;
+- demonstrar capacidade de engenharia;
+- fortalecer marca pessoal;
+- gerar oportunidades comerciais;
+- servir como referência pública dos projetos.
+
+---
+
+# Estrutura Editorial
+
+Criar uma arquitetura composta por:
+
+/projetos
+
+/insights
+
+/guias
+
+/artigos
+
+Cada área possui finalidade própria.
+
+---
+
+# Projetos
+
+Projetos representam entregas reais.
+
+Cada projeto possui:
+
+• problema
+
+• contexto
+
+• arquitetura
+
+• tecnologias
+
+• decisões
+
+• roadmap
+
+• GitHub
+
+• galeria
+
+• CTA
+
+Não misturar projetos com artigos.
+
+---
+
+# Insights
+
+Conteúdo curto.
+
+Objetivo:
+
+Compartilhar aprendizados.
+
+Exemplos:
+
+Como resolvi um problema de performance SQL.
+
+Por que utilizei Redis.
+
+Quando utilizar FastAPI.
+
+Problemas encontrados em produção.
+
+Decisões arquiteturais.
+
+Extensão sugerida:
+
+500 a 1200 palavras.
+
+---
+
+# Guias
+
+Conteúdo evergreen.
+
+Objetivo:
+
+Ensinar.
+
+Exemplos:
+
+Integração SAP Business One com APIs.
+
+Como estruturar um middleware.
+
+Boas práticas em n8n.
+
+Arquitetura de automações corporativas.
+
+FastAPI para integrações.
+
+Service Layer na prática.
+
+Extensão:
+
+2000+ palavras.
+
+---
+
+# Artigos
+
+Conteúdo analítico.
+
+Exemplos:
+
+Quando uma automação vira uma plataforma.
+
+Como evitar retrabalho em integrações.
+
+Arquitetura orientada a eventos.
+
+Integrações resilientes.
+
+Idempotência.
+
+Retry.
+
+Observabilidade.
+
+---
+
+# Calendário Editorial
+
+Preparar estrutura.
+
+Não gerar automaticamente.
+
+Categorias:
+
+SAP
+
+Integrações
+
+FastAPI
+
+SQL
+
+Power BI
+
+n8n
+
+IA
+
+Arquitetura
+
+Infraestrutura
+
+Automação
+
+Microsoft 365
+
+---
+
+# Busca
+
+Preparar arquitetura.
+
+Não implementar engine de busca nesta fase.
+
+Permitir futura indexação local.
+
+---
+
+# SEO Avançado
+
+Implementar:
+
+Metadata dinâmica.
+
+Open Graph específico.
+
+Twitter Cards.
+
+Canonical.
+
+Breadcrumb.
+
+Internal Linking.
+
+JSON-LD.
+
+Sitemap automático.
+
+Robots.
+
+RSS Feed.
+
+---
+
+# IA
+
+O conteúdo deve ser facilmente compreendido por:
+
+ChatGPT
+
+Claude
+
+Gemini
+
+Copilot
+
+Perplexity
+
+Google AI Overviews
+
+Bing Copilot
+
+Utilizar:
+
+HTML semântico.
+
+Heading hierarchy.
+
+Structured Data.
+
+Parágrafos claros.
+
+Resumo executivo.
+
+Perguntas frequentes.
+
+---
+
+# FAQ
+
+Cada projeto poderá possuir FAQ.
+
+Exemplo:
+
+Como funciona?
+
+Por que FastAPI?
+
+Por que Redis?
+
+Como ocorre retry?
+
+Como evitar duplicidade?
+
+Como funciona a quarentena?
+
+---
+
+# GitHub
+
+Criar integração visual.
+
+Cada projeto poderá exibir:
+
+Nome
+
+Descrição
+
+Tecnologias
+
+Link
+
+Não consumir API nesta fase.
+
+---
+
+# LinkedIn
+
+Adicionar links cruzados.
+
+Projeto → LinkedIn
+
+LinkedIn → Projeto
+
+---
+
+# Open Graph
+
+Cada projeto deve possuir imagem própria.
+
+Cada artigo deve possuir imagem própria.
+
+Cada insight deve possuir imagem própria.
+
+Seguir identidade visual da marca.
+
+---
+
+# Imagens
+
+Criar padrão institucional.
+
+Projeto
+
+Artigo
+
+Insight
+
+Guia
+
+Open Graph
+
+Twitter
+
+---
+
+# Componentes
+
+Criar componentes reutilizáveis.
+
+ArticleCard
+
+ProjectCard
+
+AuthorCard
+
+ShareButtons
+
+ReadingTime
+
+RelatedProjects
+
+RelatedArticles
+
+Breadcrumb
+
+CTA
+
+---
+
+# Analytics
+
+Criar eventos para:
+
+Leitura de artigo.
+
+Clique GitHub.
+
+Clique LinkedIn.
+
+Download futuro.
+
+Contato.
+
+Projetos.
+
+---
+
+# Lighthouse
+
+Meta:
+
+Performance ≥ 95
+
+Accessibility ≥ 95
+
+Best Practices ≥ 95
+
+SEO ≥ 100
+
+---
+
+# Segurança
+
+Sanitizar:
+
+imagens
+
+prints
+
+SQL
+
+nomes internos
+
+URLs
+
+tokens
+
+IPs
+
+clientes
+
+pedidos
+
+---
+
+# Performance
+
+Lazy loading.
+
+next/image.
+
+Prefetch inteligente.
+
+Cache.
+
+Compressão.
+
+---
+
+# Acessibilidade
+
+Todos os artigos:
+
+Heading correta.
+
+Contraste.
+
+Links.
+
+Focus.
+
+ARIA.
+
+Alt Text.
+
+Reduced Motion.
+
+---
+
+# Conteúdo Inicial
+
+Preparar estrutura para os primeiros conteúdos.
+
+Sugestões:
+
+Como integrar Marketplaces ao SAP Business One.
+
+Quando uma automação vira uma plataforma.
+
+Arquitetura do SAP Commerce Integration Platform.
+
+FastAPI como camada de integração.
+
+Idempotência em integrações.
+
+Observabilidade em n8n.
+
+Como proteger um ERP de cargas analíticas.
+
+Arquitetura da conciliação financeira.
+
+Power BI em ambientes corporativos.
+
+SQL Server para BI sem impactar o ERP.
+
+---
+
+# Critérios de Aceite
+
+✓ Estrutura editorial criada
+
+✓ Templates prontos
+
+✓ SEO preservado
+
+✓ Schema validado
+
+✓ Open Graph individual
+
+✓ RSS preparado
+
+✓ Navegação pronta
+
+✓ Lighthouse mantido
+
+✓ Analytics preservado
+
+✓ Performance preservada
+
+✓ Sem regressões
+
+✓ Sem dependências desnecessárias
+
+✓ Build aprovado
+
+✓ Typecheck aprovado
+
+✓ Lint aprovado
+
+✓ Sem commit
+
+✓ Sem push
+
+---
+
+# Entrega Esperada
+
+Ao final da Fase 3 apresentar:
+
+• Arquitetura editorial
+
+• Estrutura de rotas
+
+• Templates criados
+
+• Componentes reutilizáveis
+
+• Estratégia SEO
+
+• Estratégia IA
+
+• Estratégia de conteúdo
+
+• Roadmap para Fase 4
+
+Parar e aguardar aprovação.

@@ -1,0 +1,165 @@
+# FASE 2.6 — Refinos de Identidade Visual
+
+Status:
+Aguardando execução.
+
+Pré-requisitos:
+
+- Fase 2 concluída
+- Fase 2.5 em andamento ou aguardando fechamento
+- Site validado localmente
+
+---
+
+# Objetivo
+
+Aplicar refinamentos visuais pontuais antes da Fase 3, sem alterar a arquitetura, o posicionamento ou a estrutura já aprovados.
+
+Esta fase deve preservar:
+
+- layout atual;
+- responsividade;
+- acessibilidade;
+- SEO;
+- Analytics;
+- Clarity;
+- rotas;
+- conteúdo;
+- performance.
+
+Não realizar redesign.
+
+---
+
+# 1. Card do LinkedIn
+
+Localizar o card de perfil profissional que contém a foto de Rodrigo Mota.
+
+Ajuste solicitado:
+
+- manter a foto circular;
+- manter a borda circular;
+- remover qualquer moldura, card interno ou fundo quadrado atrás da foto;
+- preservar o recorte redondo;
+- preservar sombra ou glow discreto, caso exista;
+- não alterar o tamanho da foto sem necessidade;
+- não alterar o restante do card.
+
+Resultado esperado:
+
+A foto deve parecer integrada ao card, com apenas o avatar circular visível, sem uma caixa quadrada de fundo.
+
+---
+
+# 2. Identidade visual do LinkedIn
+
+Nas áreas relacionadas ao LinkedIn:
+
+- utilizar o ícone oficial ou visualmente reconhecível do LinkedIn;
+- manter o ícone coerente com o design do site;
+- evitar apenas texto “in” quando houver componente vetorial disponível;
+- preservar acessibilidade com aria-label ou texto associado;
+- não carregar script externo do LinkedIn;
+- não usar badge incorporado.
+
+Preferir ícone vetorial leve, compatível com a biblioteca já utilizada no projeto.
+
+---
+
+# 3. Identidade visual do GitHub
+
+Nas seções relacionadas ao GitHub:
+
+- adicionar o ícone reconhecível do GitHub;
+- usar o ícone junto ao título, CTA ou card institucional;
+- evitar ícones genéricos quando o contexto for GitHub;
+- preservar a linguagem visual do site;
+- manter contraste adequado;
+- adicionar aria-hidden quando decorativo;
+- adicionar aria-label quando for o único elemento identificador.
+
+Aplicar onde houver:
+
+- seção institucional do GitHub;
+- botão para perfil;
+- botão para repositório;
+- links do projeto principal;
+- footer, se houver menção direta ao GitHub.
+
+Não adicionar ícones em excesso.
+
+---
+
+# 4. Consistência Visual
+
+Validar:
+
+- LinkedIn usa identidade visual reconhecível;
+- GitHub usa identidade visual reconhecível;
+- ambos mantêm coerência com azul-marinho, ciano e fundo escuro;
+- não introduzir cores fora da identidade sem necessidade;
+- o ícone do LinkedIn pode usar azul institucional de forma discreta;
+- o ícone do GitHub deve permanecer monocromático ou adaptado ao tema escuro;
+- manter foco visual no conteúdo, não nos ícones.
+
+---
+
+# 5. Acessibilidade
+
+Garantir:
+
+- ícones decorativos com `aria-hidden="true"`;
+- links com texto compreensível;
+- foco visível;
+- contraste adequado;
+- avatar com alt descritivo;
+- nenhuma perda de navegação por teclado.
+
+---
+
+# 6. Responsividade
+
+Validar:
+
+- 360 × 800;
+- 390 × 844;
+- 768 × 1024;
+- 1366 × 768;
+- 1440 × 900;
+- 1920 × 1080.
+
+Confirmar:
+
+- avatar não deforma;
+- ícones não quebram alinhamento;
+- CTAs continuam legíveis;
+- nenhum overflow horizontal;
+- cards permanecem equilibrados.
+
+---
+
+# 7. Validações
+
+Ao final, executar:
+
+- lint;
+- typecheck;
+- build;
+- git diff --check.
+
+Apresentar:
+
+- arquivos alterados;
+- resumo visual das mudanças;
+- screenshots desktop e mobile;
+- confirmação de que não houve regressão;
+- git status;
+- git diff resumido.
+
+Não realizar commit.
+
+Não realizar push.
+
+Não abrir Pull Request.
+
+Parar e aguardar aprovação.

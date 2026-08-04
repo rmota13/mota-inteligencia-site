@@ -1,0 +1,18 @@
+{
+  "browser": "chrome",
+  "label": "tablet-768x1024",
+  "width": 768,
+  "height": 1024,
+  "metrics": {
+    "innerWidth": 768,
+    "innerHeight": 1024,
+    "scrollWidth": 768,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": true,
+    "mobileMenuOpens": true,
+    "closed": true,
+    "focusReturned": true
+  },
+  "errors": []
+}

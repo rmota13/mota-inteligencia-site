@@ -1,0 +1,18 @@
+{
+  "browser": "edge",
+  "label": "mobile-360x800",
+  "width": 360,
+  "height": 800,
+  "metrics": {
+    "innerWidth": 360,
+    "innerHeight": 800,
+    "scrollWidth": 360,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": true,
+    "mobileMenuOpens": true,
+    "closed": true,
+    "focusReturned": true
+  },
+  "errors": []
+}

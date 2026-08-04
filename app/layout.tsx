@@ -1,82 +1,43 @@
-import Script from "next/script";
 import type { Metadata } from "next";
+import Script from "next/script";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
+import { siteConfig } from "@/config/site";
+import {
+  globalStructuredData,
+  serializeStructuredData,
+} from "@/lib/structured-data";
 import "./globals.css";
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Mota Inteligência de Negócio",
-  url: "https://motainteligencia.com.br",
-  logo: "https://motainteligencia.com.br/logo-mota.png",
-  image: "https://motainteligencia.com.br/logo-mota.png",
-  description:
-    "Especialista em BI, automação corporativa, integração ERP, Power BI, SAP Business One, APIs REST, Microsoft 365, Docker, Linux e deploy de aplicações empresariais.",
-  areaServed: "Brasil",
-  founder: {
-    "@type": "Person",
-    name: "Rodrigo Mota",
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Arquitetura, Integrações e Automação | Mota Inteligência",
+    template: "%s | Mota Inteligência de Negócio",
   },
-  serviceType: [
-    "Business Intelligence",
-    "Power BI",
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: [
+    "Arquitetura de Integrações",
     "Automação Corporativa",
     "Integração ERP",
     "SAP Business One",
-    "APIs REST",
-    "Deploy de Aplicações",
-    "Docker",
-    "Linux",
-    "Microsoft 365",
-    "Power Automate",
-    "n8n",
-    "SharePoint",
-    "Power Apps",
-    "Criação de Sites",
-    "Landing Pages",
-    "Portais Corporativos",
-  ],
-};
-export const metadata: Metadata = {
-  metadataBase: new URL("https://motainteligencia.com.br"),
-
-  title: {
-    default: "Mota Inteligência de Negócio",
-    template: "%s | Mota Inteligência de Negócio",
-  },
-
-  description:
-    "Especialista em BI, automação corporativa, Power BI, SAP Business One, APIs REST, integração ERP, Microsoft 365, Docker, Linux e deploy de aplicações empresariais.",
-
-  keywords: [
-    "Power BI",
-    "BI",
-    "Business Intelligence",
-    "Automação",
-    "n8n",
-    "Power Automate",
-    "SAP Business One",
-    "Integração ERP",
-    "SQL Server",
-    "Dashboards",
+    "Service Layer",
     "APIs REST",
     "FastAPI",
+    "n8n",
+    "SQL Server",
+    "Business Intelligence",
+    "Engenharia de Dados",
+    "Microsoft 365",
+    "Inteligência Artificial aplicada",
+    "Observabilidade",
     "Docker",
     "Linux",
-    "Deploy de aplicações",
-    "Cloudflare",
-    "Traefik",
-    "Power Apps",
-    "SharePoint",
-    "Microsoft Teams",
-    "Automação financeira",
-    "Inteligência financeira",
-    "Aplicações web",
-    "Landing pages",
   ],
-
   authors: [{ name: "Rodrigo Mota" }],
   creator: "Rodrigo Mota",
   publisher: "Mota Inteligência de Negócio",
-
   robots: {
     index: true,
     follow: true,
@@ -88,38 +49,28 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
-
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Mota Inteligência de Negócio",
-    description:
-      "BI, automação corporativa, integração ERP, APIs, Power BI, SAP Business One e deploy de aplicações empresariais.",
-    url: "https://motainteligencia.com.br",
+    title: "Arquitetura, Integrações e Automação | Mota Inteligência",
+    description: siteConfig.description,
+    url: siteConfig.url,
     siteName: "Mota Inteligência de Negócio",
     locale: "pt_BR",
     type: "website",
-
     images: [
       {
-        url: "/logo-mota.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Mota Inteligência de Negócio",
+        alt: "Mota Inteligência de Negócio — arquitetura, integrações, automação e dados",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Mota Inteligência de Negócio",
-    description:
-      "BI, automação corporativa, integração ERP e deploy de aplicações empresariais.",
-    images: ["/logo-mota.png"],
+    title: "Arquitetura, Integrações e Automação | Mota Inteligência",
+    description: siteConfig.description,
+    images: ["/opengraph-image"],
   },
 };
 
@@ -129,48 +80,47 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="pt-BR">
-  <head>
-    <meta
-      name="msvalidate.01"
-      content="5674226CB9CDE7C1A05CD689CAC4A25B"
-    />
-  </head>
-
-  <body>
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData),
-      }}
-    />
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GKDVFR37K4"
-          strategy="afterInteractive"
+    <html lang="pt-BR">
+      <head>
+        <meta
+          name="msvalidate.01"
+          content={siteConfig.analytics.microsoftValidation}
+        />
+      </head>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeStructuredData(globalStructuredData),
+          }}
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analytics.googleAnalyticsId}`}
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-GKDVFR37K4');
+            gtag('config', '${siteConfig.analytics.googleAnalyticsId}');
           `}
         </Script>
-
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        <Script id="microsoft-clarity" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "wsm484ezzp");
+            })(window, document, "clarity", "script", "${siteConfig.analytics.clarityId}");
           `}
         </Script>
 
+        <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

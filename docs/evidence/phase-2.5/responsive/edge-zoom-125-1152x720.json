@@ -1,0 +1,15 @@
+{
+  "browser": "edge",
+  "label": "zoom-125-1152x720",
+  "width": 1152,
+  "height": 720,
+  "metrics": {
+    "innerWidth": 1152,
+    "innerHeight": 720,
+    "scrollWidth": 1137,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": false
+  },
+  "errors": []
+}

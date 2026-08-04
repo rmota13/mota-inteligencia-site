@@ -1,0 +1,64 @@
+Plano revisado aprovado.
+
+Pode iniciar a Fase 1 — Fundação Arquitetural, seguindo estritamente o escopo consolidado.
+
+Regras obrigatórias desta fase:
+
+1. Não reescrever ainda o posicionamento completo da Home.
+2. Não substituir ainda o Hero ou o dashboard visual atual.
+3. Não criar ainda todas as novas páginas institucionais.
+4. Não remover nenhum asset sem apresentar antes o inventário e a justificativa.
+5. Não alterar Analytics, Clarity, WhatsApp, sitemap, robots ou metadados de produção além do necessário para corrigir duplicações e preservar funcionamento.
+6. Não instalar dependências novas sem necessidade comprovada e aprovação.
+7. Não fazer commit, push ou Pull Request.
+8. Preservar a identidade visual atual.
+
+Escopo autorizado:
+
+- registrar o estado atual do projeto;
+- criar configuração central da marca e tokens reutilizáveis;
+- extrair Header e Footer;
+- extrair componentes estruturais essenciais;
+- separar Server Components e Client Components;
+- retirar conteúdo e arrays do app/page.tsx para uma fonte tipada;
+- preservar os projetos e funcionalidades atuais;
+- corrigir estruturalmente o problema entre Header e Hero;
+- implementar navegação mobile funcional;
+- melhorar a acessibilidade básica dos cards, modal e galeria;
+- remover imports não utilizados;
+- remover structured data duplicado e não utilizado;
+- manter a aparência e o conteúdo atuais, salvo ajustes estritamente necessários;
+- não excluir imagens públicas nesta fase.
+
+Para a correção Header/Hero:
+
+- não usar translate negativo;
+- não usar margin negativa;
+- não usar uma sequência arbitrária de muitos breakpoints;
+- manter a logo no tamanho visual atual;
+- usar uma solução estrutural, preferencialmente com altura compartilhada do Header ou CSS custom property;
+- garantir que o selo permaneça no fluxo do documento;
+- testar 1366x768, 1440x900, 1920x1080 e mobile;
+- considerar escala do Windows e zoom do navegador.
+
+Antes de cada alteração relevante:
+
+- explique brevemente o que será feito;
+- informe os arquivos envolvidos;
+- preserve o comportamento existente.
+
+Ao finalizar a Fase 1:
+
+1. Execute lint.
+2. Execute typecheck.
+3. Execute build.
+4. Apresente o resultado dos comandos.
+5. Mostre git status.
+6. Mostre um resumo do git diff.
+7. Liste todos os arquivos criados, alterados, movidos ou removidos.
+8. Explique como a arquitetura ficou dividida.
+9. Informe como testar o Header/Hero.
+10. Informe riscos ou pendências restantes.
+11. Pare e aguarde minha aprovação.
+
+Não faça commit nem push.

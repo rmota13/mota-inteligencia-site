@@ -1,0 +1,564 @@
+# FASE 2.5 — Hardening, Produção e Autoridade
+
+Status:
+Aguardando início.
+
+Pré-requisitos:
+
+- Fase 1 concluída
+- Fase 2 aprovada
+- Build aprovado
+- Site publicado em produção
+
+---
+
+# Objetivo
+
+Esta fase não adiciona novas funcionalidades.
+
+Seu objetivo é elevar o nível de qualidade da aplicação antes da expansão de conteúdo da Fase 3.
+
+Todo o foco está em:
+
+- estabilidade;
+- SEO;
+- performance;
+- indexação;
+- segurança;
+- qualidade visual;
+- confiabilidade.
+
+A Fase 3 somente poderá iniciar após esta validação.
+
+---
+
+# Escopo
+
+## 1. Produção
+
+Comparar ambiente local e produção.
+
+Validar:
+
+- Home;
+- Projetos;
+- Projeto SAP Commerce Integration Platform;
+- robots.txt;
+- sitemap.xml;
+- Open Graph;
+- favicon;
+- imagens sociais.
+
+Confirmar que não existe diferença entre ambiente local e produção.
+
+---
+
+## 2. SEO
+
+Executar auditoria completa.
+
+Validar:
+
+✓ Title
+
+✓ Description
+
+✓ Canonical
+
+✓ H1
+
+✓ Hierarquia de headings
+
+✓ Robots
+
+✓ Sitemap
+
+✓ Open Graph
+
+✓ Twitter Cards
+
+✓ JSON-LD
+
+✓ Breadcrumbs
+
+✓ Links internos
+
+✓ Links quebrados
+
+✓ Redirecionamentos
+
+✓ Status HTTP
+
+---
+
+## 3. Google Search Console
+
+Preparar integração.
+
+Confirmar:
+
+- sitemap enviado;
+
+- páginas indexáveis;
+
+- canonical correto;
+
+- cobertura;
+
+- páginas excluídas;
+
+- erros;
+
+- warnings.
+
+Não alterar indexação manualmente sem aprovação.
+
+---
+
+## 4. Bing Webmaster
+
+Validar:
+
+- Sitemap;
+
+- robots;
+
+- validação do domínio;
+
+- indexação.
+
+---
+
+## 5. Rich Results
+
+Validar todos os Schemas.
+
+Ferramentas sugeridas:
+
+Google Rich Results Test
+
+Schema Validator
+
+Todos os JSON-LD devem validar sem erro.
+
+---
+
+## 6. Open Graph
+
+Testar:
+
+LinkedIn
+
+Facebook
+
+Discord
+
+WhatsApp
+
+Twitter/X
+
+Verificar:
+
+imagem
+
+título
+
+descrição
+
+URL
+
+---
+
+## 7. Lighthouse
+
+Executar novamente.
+
+Meta:
+
+Performance ≥ 95
+
+Accessibility ≥ 100
+
+SEO ≥ 100
+
+Best Practices ≥ 90
+
+Caso Best Practices permaneça abaixo por causa do Clarity:
+
+registrar justificativa.
+
+Não remover Clarity.
+
+---
+
+## 8. Core Web Vitals
+
+Validar:
+
+LCP
+
+CLS
+
+INP
+
+TBT
+
+TTFB
+
+Registrar resultados.
+
+---
+
+## 9. Responsividade
+
+Revalidar:
+
+360
+
+390
+
+768
+
+1024
+
+1366
+
+1440
+
+1920
+
+125%
+
+150%
+
+Windows
+
+Chrome
+
+Edge
+
+Firefox
+
+---
+
+## 10. Assets Públicos
+
+Executar auditoria completa.
+
+Para cada asset em public:
+
+Classificar:
+
+✓ manter
+
+✓ substituir
+
+✓ sanitizar
+
+✓ remover
+
+Nenhum arquivo poderá ser removido automaticamente.
+
+---
+
+## 11. Segurança
+
+Revisar:
+
+prints
+
+SQL
+
+clientes
+
+URLs
+
+tokens
+
+nomes internos
+
+imagens
+
+diagramas
+
+documentos
+
+Nenhuma informação interna deve permanecer pública.
+
+---
+
+## 12. Analytics
+
+Validar:
+
+Google Analytics
+
+Microsoft Clarity
+
+Eventos
+
+Page View
+
+Projeto
+
+GitHub
+
+LinkedIn
+
+Contato
+
+Não criar novos eventos.
+
+Somente validar.
+
+---
+
+## 13. Consentimento
+
+Estudar:
+
+LGPD
+
+Google Analytics
+
+Microsoft Clarity
+
+Definir estratégia.
+
+Ainda não implementar.
+
+Entregar proposta.
+
+---
+
+## 14. Performance de Imagens
+
+Validar:
+
+next/image
+
+compressão
+
+favicon
+
+logos
+
+Open Graph
+
+peso
+
+lazy loading
+
+priority
+
+dimensions
+
+---
+
+## 15. GitHub
+
+Conferir:
+
+todos os links;
+
+repositórios;
+
+README;
+
+licença;
+
+visibilidade;
+
+descrições;
+
+links quebrados.
+
+---
+
+## 16. LinkedIn
+
+Validar:
+
+links;
+
+imagem;
+
+Open Graph;
+
+SEO;
+
+CTA;
+
+GitHub;
+
+site.
+
+---
+
+## 17. Conteúdo
+
+Revisar:
+
+ortografia;
+
+padronização;
+
+consistência;
+
+datas;
+
+roadmaps;
+
+status;
+
+tecnologias.
+
+Não alterar posicionamento.
+
+---
+
+## 18. Deploy
+
+Executar:
+
+build
+
+typecheck
+
+lint
+
+Confirmar:
+
+sem erros;
+
+sem warnings.
+
+---
+
+## 19. Auditoria Técnica
+
+Executar:
+
+npm audit
+
+Dependências desatualizadas
+
+Pacotes obsoletos
+
+Licenças
+
+Não atualizar automaticamente.
+
+Entregar relatório.
+
+---
+
+## 20. Critérios de Aceite
+
+✓ Build aprovado
+
+✓ Typecheck aprovado
+
+✓ Lint aprovado
+
+✓ Lighthouse validado
+
+✓ SEO validado
+
+✓ Open Graph validado
+
+✓ Rich Results válidos
+
+✓ Sitemap válido
+
+✓ Robots válido
+
+✓ Assets classificados
+
+✓ Analytics preservado
+
+✓ Clarity preservado
+
+✓ Sem regressões
+
+✓ Sem informações sensíveis
+
+✓ Sem links quebrados
+
+✓ Sem warnings críticos
+
+✓ Nenhum commit
+
+✓ Nenhum push
+
+---
+
+# Entrega Esperada
+
+Ao final da Fase 2.5 apresentar:
+
+## Produção
+
+Checklist completo.
+
+## SEO
+
+Checklist completo.
+
+## Performance
+
+Checklist completo.
+
+## Segurança
+
+Checklist completo.
+
+## Assets
+
+Inventário final.
+
+## Analytics
+
+Validação.
+
+## GitHub
+
+Validação.
+
+## LinkedIn
+
+Validação.
+
+## Lighthouse
+
+Resultados.
+
+## Rich Results
+
+Resultados.
+
+## Core Web Vitals
+
+Resultados.
+
+## Pendências
+
+Lista priorizada.
+
+## Recomendações
+
+Curto prazo
+
+Médio prazo
+
+Longo prazo
+
+Parar.
+
+Aguardar aprovação antes da Fase 3.
+
+Não realizar commit.
+
+Não realizar push.
+
+Não abrir Pull Request.

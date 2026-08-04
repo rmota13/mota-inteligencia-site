@@ -1,0 +1,15 @@
+{
+  "browser": "edge",
+  "label": "desktop-1920x1080",
+  "width": 1920,
+  "height": 1080,
+  "metrics": {
+    "innerWidth": 1920,
+    "innerHeight": 1080,
+    "scrollWidth": 1905,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": false
+  },
+  "errors": []
+}

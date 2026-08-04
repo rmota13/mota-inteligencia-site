@@ -1,0 +1,15 @@
+{
+  "browser": "chrome",
+  "label": "desktop-1366x768",
+  "width": 1366,
+  "height": 768,
+  "metrics": {
+    "innerWidth": 1366,
+    "innerHeight": 768,
+    "scrollWidth": 1351,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "mobileMenuButtonVisible": false
+  },
+  "errors": []
+}
