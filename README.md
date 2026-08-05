@@ -1,87 +1,154 @@
-# Mota Inteligência de Negócio
+<p align="center">
+
+<img src="public/logo-mota.png" alt="Mota Inteligência de Negócio" width="240"/>
+
+</p>
+
+<h1 align="center">
+Mota Inteligência de Negócio
+</h1>
 
 <p align="center">
-  <img src="public/logo.png" alt="Mota Inteligência de Negócio" width="180">
+
+Arquitetura de Software • Integrações Corporativas • Automação • Dados • Inteligência Artificial
+
 </p>
 
 <p align="center">
 
-Site institucional e portfólio profissional desenvolvido para apresentar projetos de arquitetura de software, integrações corporativas, Business Intelligence, automação de processos e soluções empresariais.
+<a href="https://motainteligencia.com.br">
+<img src="https://img.shields.io/badge/Site-Online-00B4D8?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>
 
-**https://motainteligencia.com.br**
+<a href="https://github.com/rmota13">
+<img src="https://img.shields.io/badge/GitHub-rmota13-181717?style=for-the-badge&logo=github">
+</a>
+
+<a href="https://www.linkedin.com/in/rodrigo-mota-2619b422/">
+<img src="https://img.shields.io/badge/LinkedIn-Rodrigo%20Mota-0077B5?style=for-the-badge&logo=linkedin">
+</a>
 
 </p>
 
 ---
 
-# Visão Geral
+<p align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+![SEO](https://img.shields.io/badge/SEO-100-brightgreen?style=flat-square)
+![Lighthouse](https://img.shields.io/badge/Lighthouse-100-7E57C2?style=flat-square)
+![License](https://img.shields.io/badge/License-Portfolio-blue?style=flat-square)
+
+</p>
+
+---
+
+# Transformando tecnologia em vantagem competitiva
 
 Este repositório contém o código-fonte oficial do site da **Mota Inteligência de Negócio**.
 
-O objetivo do projeto é apresentar cases reais de engenharia de software, arquitetura de integrações, plataformas corporativas e soluções desenvolvidas para ambientes empresariais.
+Mais do que um portfólio, esta é uma plataforma institucional criada para apresentar soluções de arquitetura de software, integração de sistemas, automação corporativa, Business Intelligence e Inteligência Artificial aplicada aos negócios.
 
-Mais do que um portfólio, este projeto funciona como uma plataforma de documentação técnica e posicionamento profissional.
+O projeto foi desenvolvido com foco em:
+
+- Arquitetura corporativa
+- Performance
+- SEO avançado
+- Acessibilidade
+- Conteúdo técnico
+- Engenharia de Software
+- Escalabilidade
 
 ---
 
-# Principais características
+## Preview
 
-- Site desenvolvido em Next.js 16
-- Arquitetura modular
-- SEO avançado
-- Open Graph dinâmico
-- JSON-LD (Schema.org)
-- Sitemap automático
-- RSS Feed
-- Lighthouse otimizado
-- Design responsivo
-- Acessibilidade (WCAG)
-- Conteúdo técnico indexável
-- Estrutura preparada para evolução contínua
+<p align="center">
+
+<img src="public/readme/home-preview.png" width="100%"/>
+
+</p>
 
 ---
 
 # Tecnologias
 
-### Front-end
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-
-### SEO
-
-- Metadata API
-- Open Graph
-- Twitter Cards
-- JSON-LD
-- Canonical URLs
-- Sitemap
-- Robots
-
-### Conteúdo
-
-- Articles
-- Guides
-- Insights
-- Projects
-
-### Analytics
-
-- Google Analytics 4
-- Microsoft Clarity
-
-### Hospedagem
-
-- Vercel
-- GitHub
+| Front-end | Arquitetura | Integração | Observabilidade |
+|------------|-------------|------------|-----------------|
+| Next.js | TypeScript | REST APIs | Google Analytics |
+| React | Server Components | SAP Business One | Microsoft Clarity |
+| Tailwind | Modular Architecture | FastAPI | JSON-LD |
+| Metadata API | SEO | n8n | RSS |
 
 ---
 
-# Estrutura do projeto
+# Destaques
 
-```
+✅ Arquitetura modular
+
+✅ Plataforma editorial
+
+✅ SAP Commerce Integration Platform
+
+✅ Cases técnicos
+
+✅ Open Graph
+
+✅ RSS Feed
+
+✅ Schema.org
+
+✅ Lighthouse otimizado
+
+✅ Responsividade
+
+✅ Acessibilidade
+
+---
+
+# Projeto em Destaque
+
+## SAP Commerce Integration Platform
+
+Integração entre:
+
+- Mercado Livre
+- Shopee
+- Nuvemshop
+
+↓
+
+FastAPI
+
+↓
+
+n8n
+
+↓
+
+Redis
+
+↓
+
+SAP Business One
+
+↓
+
+SQL Server
+
+↓
+
+Observabilidade
+
+---
+
+# Estrutura
+
+```text
 app/
 components/
 config/
@@ -94,130 +161,46 @@ types/
 
 ---
 
-# Projetos em destaque
-
-## SAP Commerce Integration Platform
-
-Arquitetura de integração entre Marketplaces e SAP Business One utilizando:
-
-- SAP Business One
-- Service Layer
-- FastAPI
-- n8n
-- Redis
-- SQL Server
-- APIs REST
-- Docker
-
-Projeto completo disponível em:
-
-https://github.com/rmota13/sap-business-one-integration-platform
-
----
-
-## Conteúdo Técnico
-
-Além dos projetos, o site possui uma plataforma editorial composta por:
-
-- Guias
-- Artigos
-- Insights
-- Estudos de arquitetura
-- Documentação técnica
-
-Todo o conteúdo é produzido a partir de experiências práticas em projetos reais.
-
----
-
-# Objetivo
-
-Construir soluções que unam:
-
-- Dados
-- Integrações
-- Automação
-- Inteligência Artificial
-- ERP
-- Arquitetura de Software
-
-para transformar processos operacionais em plataformas escaláveis.
-
----
-
-# Executando localmente
-
-Clone o projeto
+# Executando
 
 ```bash
 git clone https://github.com/rmota13/mota-inteligencia-site.git
-```
 
-Entre na pasta
-
-```bash
 cd mota-inteligencia-site
-```
 
-Instale as dependências
-
-```bash
 npm install
-```
 
-Execute
-
-```bash
 npm run dev
-```
-
-Abra
-
-```
-http://localhost:3000
 ```
 
 ---
 
 # Roadmap
 
-- [x] Nova arquitetura modular
-- [x] Plataforma de projetos
-- [x] Plataforma editorial
-- [x] SEO avançado
-- [x] Schema.org
-- [x] RSS Feed
-- [x] Open Graph dinâmico
-- [x] SAP Commerce Integration Platform
-- [ ] Novos estudos de arquitetura
-- [ ] Biblioteca técnica
-- [ ] Dashboard público de projetos
+- ✅ Plataforma institucional
+- ✅ SEO Enterprise
+- ✅ SAP Commerce Integration Platform
+- ✅ Plataforma Editorial
+- 🔄 Biblioteca Técnica
+- 🔄 Estudos de Arquitetura
+- 🔄 Novos Cases Corporativos
 
 ---
 
-# Autor
+# Sobre
 
-## Rodrigo Mota
+<p align="center">
 
-Business Systems • Enterprise Integration • SAP Business One • Business Intelligence • APIs • Automação Corporativa • Arquitetura de Software
+<img src="public/logo-mota.png" width="120"/>
 
-LinkedIn
+</p>
 
-https://www.linkedin.com/in/rodrigo-mota-2619b422/
+**Rodrigo Mota**
 
-GitHub
+Business Systems • Enterprise Integration • SAP Business One • BI • APIs • Automação Corporativa • Arquitetura de Software
 
-https://github.com/rmota13
+🌐 https://motainteligencia.com.br
 
-Site
+💼 https://www.linkedin.com/in/rodrigo-mota-2619b422/
 
-https://motainteligencia.com.br
-
----
-
-## Licença
-
-Este projeto é disponibilizado para fins de demonstração profissional.
-
-Todo o conteúdo, identidade visual e documentação pertencem à Mota Inteligência de Negócio.
-
-© Rodrigo Mota
+🐙 https://github.com/rmota13
