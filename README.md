@@ -1,36 +1,223 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mota Inteligência de Negócio
 
-## Getting Started
+<p align="center">
+  <img src="public/logo.png" alt="Mota Inteligência de Negócio" width="180">
+</p>
 
-First, run the development server:
+<p align="center">
+
+Site institucional e portfólio profissional desenvolvido para apresentar projetos de arquitetura de software, integrações corporativas, Business Intelligence, automação de processos e soluções empresariais.
+
+**https://motainteligencia.com.br**
+
+</p>
+
+---
+
+# Visão Geral
+
+Este repositório contém o código-fonte oficial do site da **Mota Inteligência de Negócio**.
+
+O objetivo do projeto é apresentar cases reais de engenharia de software, arquitetura de integrações, plataformas corporativas e soluções desenvolvidas para ambientes empresariais.
+
+Mais do que um portfólio, este projeto funciona como uma plataforma de documentação técnica e posicionamento profissional.
+
+---
+
+# Principais características
+
+- Site desenvolvido em Next.js 16
+- Arquitetura modular
+- SEO avançado
+- Open Graph dinâmico
+- JSON-LD (Schema.org)
+- Sitemap automático
+- RSS Feed
+- Lighthouse otimizado
+- Design responsivo
+- Acessibilidade (WCAG)
+- Conteúdo técnico indexável
+- Estrutura preparada para evolução contínua
+
+---
+
+# Tecnologias
+
+### Front-end
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### SEO
+
+- Metadata API
+- Open Graph
+- Twitter Cards
+- JSON-LD
+- Canonical URLs
+- Sitemap
+- Robots
+
+### Conteúdo
+
+- Articles
+- Guides
+- Insights
+- Projects
+
+### Analytics
+
+- Google Analytics 4
+- Microsoft Clarity
+
+### Hospedagem
+
+- Vercel
+- GitHub
+
+---
+
+# Estrutura do projeto
+
+```
+app/
+components/
+config/
+content/
+docs/
+lib/
+public/
+types/
+```
+
+---
+
+# Projetos em destaque
+
+## SAP Commerce Integration Platform
+
+Arquitetura de integração entre Marketplaces e SAP Business One utilizando:
+
+- SAP Business One
+- Service Layer
+- FastAPI
+- n8n
+- Redis
+- SQL Server
+- APIs REST
+- Docker
+
+Projeto completo disponível em:
+
+https://github.com/rmota13/sap-business-one-integration-platform
+
+---
+
+## Conteúdo Técnico
+
+Além dos projetos, o site possui uma plataforma editorial composta por:
+
+- Guias
+- Artigos
+- Insights
+- Estudos de arquitetura
+- Documentação técnica
+
+Todo o conteúdo é produzido a partir de experiências práticas em projetos reais.
+
+---
+
+# Objetivo
+
+Construir soluções que unam:
+
+- Dados
+- Integrações
+- Automação
+- Inteligência Artificial
+- ERP
+- Arquitetura de Software
+
+para transformar processos operacionais em plataformas escaláveis.
+
+---
+
+# Executando localmente
+
+Clone o projeto
+
+```bash
+git clone https://github.com/rmota13/mota-inteligencia-site.git
+```
+
+Entre na pasta
+
+```bash
+cd mota-inteligencia-site
+```
+
+Instale as dependências
+
+```bash
+npm install
+```
+
+Execute
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+- [x] Nova arquitetura modular
+- [x] Plataforma de projetos
+- [x] Plataforma editorial
+- [x] SEO avançado
+- [x] Schema.org
+- [x] RSS Feed
+- [x] Open Graph dinâmico
+- [x] SAP Commerce Integration Platform
+- [ ] Novos estudos de arquitetura
+- [ ] Biblioteca técnica
+- [ ] Dashboard público de projetos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Autor
 
-## Deploy on Vercel
+## Rodrigo Mota
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Business Systems • Enterprise Integration • SAP Business One • Business Intelligence • APIs • Automação Corporativa • Arquitetura de Software
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LinkedIn
+
+https://www.linkedin.com/in/rodrigo-mota-2619b422/
+
+GitHub
+
+https://github.com/rmota13
+
+Site
+
+https://motainteligencia.com.br
+
+---
+
+## Licença
+
+Este projeto é disponibilizado para fins de demonstração profissional.
+
+Todo o conteúdo, identidade visual e documentação pertencem à Mota Inteligência de Negócio.
+
+© Rodrigo Mota
