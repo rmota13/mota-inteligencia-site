@@ -7,7 +7,13 @@ type BrandProps = {
 
 export function Brand({ footer = false, priority = false }: BrandProps) {
   return (
-    <div className={footer ? "flex w-full flex-col gap-5" : "flex items-center"}>
+    <div
+      className={
+        footer
+          ? "flex w-full flex-col gap-5"
+          : "h-[var(--site-header-height)] w-[100px] overflow-hidden sm:w-[116px] lg:w-[150px]"
+      }
+    >
       <Image
         src="/logo-mota.png"
         alt="Mota Inteligência de Negócio"
@@ -21,7 +27,7 @@ export function Brand({ footer = false, priority = false }: BrandProps) {
         className={
           footer
             ? "h-auto w-full max-w-[220px] object-contain md:max-w-[300px]"
-            : "h-auto w-[100px] object-contain object-left sm:w-[116px] lg:w-[150px]"
+            : "h-auto w-full object-contain object-left-top"
         }
         priority={priority}
       />

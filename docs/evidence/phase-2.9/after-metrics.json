@@ -1,0 +1,602 @@
+[
+  {
+    "label": "mobile-390x844",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 390,
+      "bottom": 96,
+      "width": 390,
+      "height": 96
+    },
+    "logo": {
+      "left": 16,
+      "top": -0.5,
+      "right": 116,
+      "bottom": 99.5,
+      "width": 100,
+      "height": 100
+    },
+    "logoFrame": {
+      "left": 16,
+      "top": -0.5,
+      "right": 116,
+      "bottom": 95.5,
+      "width": 100,
+      "height": 96
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 16,
+      "top": 152,
+      "right": 374,
+      "bottom": 202,
+      "width": 358,
+      "height": 50
+    },
+    "badgeLines": 2,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 16,
+      "top": 948.63,
+      "right": 374,
+      "bottom": 1868.13,
+      "width": 358,
+      "height": 919.5
+    },
+    "panelRightMargin": 16,
+    "operation": {
+      "left": 37,
+      "top": 1522.63,
+      "right": 353,
+      "bottom": 1717.63,
+      "width": 316,
+      "height": 195
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 336,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 330,
+      "top": 25.5,
+      "right": 374,
+      "bottom": 69.5,
+      "width": 44,
+      "height": 44
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 390,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "desktop-1024x768",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 136,
+      "width": 1024,
+      "height": 136
+    },
+    "logo": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 24,
+      "top": 216,
+      "right": 537.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 471.36,
+      "top": 362.73,
+      "right": 1000,
+      "bottom": 827.23,
+      "width": 528.64,
+      "height": 464.5
+    },
+    "panelRightMargin": 24,
+    "operation": {
+      "left": 816.86,
+      "top": 489.73,
+      "right": 983,
+      "bottom": 728.73,
+      "width": 166.14,
+      "height": 239
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 970,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1024,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "desktop-1152x720",
+    "viewport": {
+      "width": 1152,
+      "height": 720
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1152,
+      "bottom": 136,
+      "width": 1152,
+      "height": 136
+    },
+    "logo": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 24,
+      "top": 216,
+      "right": 537.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 527.67,
+      "top": 372.47,
+      "right": 1128,
+      "bottom": 816.97,
+      "width": 600.33,
+      "height": 444.5
+    },
+    "panelRightMargin": 24,
+    "operation": {
+      "left": 917.7,
+      "top": 509.47,
+      "right": 1111,
+      "bottom": 708.47,
+      "width": 193.3,
+      "height": 199
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 1098,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1152,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "desktop-1366x768",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1366,
+      "bottom": 136,
+      "width": 1366,
+      "height": 136
+    },
+    "logo": {
+      "left": 67,
+      "top": -0.5,
+      "right": 217,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 67,
+      "top": -0.5,
+      "right": 217,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 67,
+      "top": 216,
+      "right": 580.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 659.63,
+      "top": 375.19,
+      "right": 1299,
+      "bottom": 843.69,
+      "width": 639.38,
+      "height": 468.5
+    },
+    "panelRightMargin": 67,
+    "operation": {
+      "left": 1081.05,
+      "top": 510.19,
+      "right": 1274,
+      "bottom": 737.19,
+      "width": 192.95,
+      "height": 227
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 1257,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1366,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "desktop-1440x900",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1440,
+      "bottom": 136,
+      "width": 1440,
+      "height": 136
+    },
+    "logo": {
+      "left": 104,
+      "top": -0.5,
+      "right": 254,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 104,
+      "top": -0.5,
+      "right": 254,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 104,
+      "top": 216,
+      "right": 617.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 696.63,
+      "top": 384.42,
+      "right": 1336,
+      "bottom": 852.92,
+      "width": 639.38,
+      "height": 468.5
+    },
+    "panelRightMargin": 104,
+    "operation": {
+      "left": 1118.05,
+      "top": 519.42,
+      "right": 1311,
+      "bottom": 746.42,
+      "width": 192.95,
+      "height": 227
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 1294,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1440,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "desktop-1920x1080",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1920,
+      "bottom": 136,
+      "width": 1920,
+      "height": 136
+    },
+    "logo": {
+      "left": 344,
+      "top": -0.5,
+      "right": 494,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 344,
+      "top": -0.5,
+      "right": 494,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 344,
+      "top": 216,
+      "right": 857.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 936.63,
+      "top": 386.95,
+      "right": 1576,
+      "bottom": 855.45,
+      "width": 639.38,
+      "height": 468.5
+    },
+    "panelRightMargin": 344,
+    "operation": {
+      "left": 1358.05,
+      "top": 521.95,
+      "right": 1551,
+      "bottom": 748.95,
+      "width": 192.95,
+      "height": 227
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 1534,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1920,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "zoom-125-equivalent-1152x720",
+    "viewport": {
+      "width": 1152,
+      "height": 720
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 1152,
+      "bottom": 136,
+      "width": 1152,
+      "height": 136
+    },
+    "logo": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 149.5,
+      "width": 150,
+      "height": 150
+    },
+    "logoFrame": {
+      "left": 24,
+      "top": -0.5,
+      "right": 174,
+      "bottom": 135.5,
+      "width": 150,
+      "height": 136
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 24,
+      "top": 216,
+      "right": 537.38,
+      "bottom": 254,
+      "width": 513.38,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 527.67,
+      "top": 372.47,
+      "right": 1128,
+      "bottom": 816.97,
+      "width": 600.33,
+      "height": 444.5
+    },
+    "panelRightMargin": 24,
+    "operation": {
+      "left": 917.7,
+      "top": 509.47,
+      "right": 1111,
+      "bottom": 708.47,
+      "width": 193.3,
+      "height": 199
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 1098,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "width": 0,
+      "height": 0
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 1152,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  },
+  {
+    "label": "zoom-150-equivalent-960x600",
+    "viewport": {
+      "width": 960,
+      "height": 600
+    },
+    "header": {
+      "left": 0,
+      "top": 0,
+      "right": 960,
+      "bottom": 112,
+      "width": 960,
+      "height": 112
+    },
+    "logo": {
+      "left": 24,
+      "top": -0.5,
+      "right": 140,
+      "bottom": 115.5,
+      "width": 116,
+      "height": 116
+    },
+    "logoFrame": {
+      "left": 24,
+      "top": -0.5,
+      "right": 140,
+      "bottom": 111.5,
+      "width": 116,
+      "height": 112
+    },
+    "logoCrossesHeader": true,
+    "visibleLogoCrossesHeader": false,
+    "badge": {
+      "left": 24,
+      "top": 168,
+      "right": 583.17,
+      "bottom": 206,
+      "width": 559.17,
+      "height": 38
+    },
+    "badgeLines": 1,
+    "badgeTextFits": true,
+    "panel": {
+      "left": 128,
+      "top": 699.56,
+      "right": 832,
+      "bottom": 1566.06,
+      "width": 704,
+      "height": 866.5
+    },
+    "panelRightMargin": 128,
+    "operation": {
+      "left": 153,
+      "top": 1285.56,
+      "right": 807,
+      "bottom": 1492.56,
+      "width": 654,
+      "height": 207
+    },
+    "operationWithinPanel": true,
+    "operationContentRight": 790,
+    "operationContentWithinPanel": true,
+    "mobileMenuButton": {
+      "left": 892,
+      "top": 33.5,
+      "right": 936,
+      "bottom": 77.5,
+      "width": 44,
+      "height": 44
+    },
+    "horizontalOverflow": false,
+    "documentWidth": 960,
+    "runtimeErrors": [],
+    "consoleErrors": []
+  }
+]

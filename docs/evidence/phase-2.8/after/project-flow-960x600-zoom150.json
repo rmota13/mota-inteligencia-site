@@ -1,0 +1,69 @@
+{
+  "url": "http://127.0.0.1:3100/projetos/sap-commerce-integration-platform",
+  "selector": "#fluxo-integracao",
+  "width": 960,
+  "height": 600,
+  "metrics": {
+    "innerWidth": 960,
+    "innerHeight": 600,
+    "documentWidth": 960,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "target": {
+      "top": 112,
+      "width": 912,
+      "height": 1264,
+      "clippedLeft": false,
+      "clippedRight": false
+    },
+    "flowOrientation": "vertical",
+    "stageWidths": [
+      862,
+      862,
+      862,
+      862,
+      862,
+      862
+    ],
+    "clippedChips": [],
+    "unnamedFocusables": 0,
+    "reducedMotion": false,
+    "movingTokens": 0,
+    "avatar": null,
+    "linkedinBrandIcons": 0,
+    "githubBrandIcons": 4,
+    "title": "SAP Commerce Integration Platform | Mota Inteligência de Negócio",
+    "offscreenAnimationPaused": true,
+    "keyboardFocus": [
+      {
+        "selector": "a[href*=\"linkedin\"]",
+        "found": false
+      },
+      {
+        "selector": "a[href*=\"github.com\"]",
+        "found": true,
+        "text": "Repositório público",
+        "focusVisible": true,
+        "hasVisibleIndicator": true
+      },
+      {
+        "selector": "#fluxo-integracao a[href]",
+        "found": false
+      }
+    ],
+    "mobileMenu": {
+      "opened": {
+        "available": true,
+        "expanded": "false",
+        "panelVisible": false
+      },
+      "closed": {
+        "expanded": "false",
+        "panelVisible": false,
+        "focusReturned": true
+      }
+    }
+  },
+  "errors": [],
+  "consoleErrors": []
+}

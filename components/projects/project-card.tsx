@@ -62,6 +62,9 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
 
       <Link
         href={`/projetos/${project.slug}`}
+        data-analytics-event="projects_click"
+        data-analytics-category="project_card"
+        data-analytics-label={project.slug}
         className="absolute inset-0 rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-inset"
         aria-label={`Conhecer o projeto ${project.title}`}
       />

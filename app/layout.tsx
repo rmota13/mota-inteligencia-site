@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { AnalyticsEvents } from "@/components/analytics/analytics-events";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { siteConfig } from "@/config/site";
@@ -49,7 +50,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
   openGraph: {
     title: "Arquitetura, Integrações e Automação | Mota Inteligência",
     description: siteConfig.description,
@@ -117,6 +121,8 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "${siteConfig.analytics.clarityId}");
           `}
         </Script>
+
+        <AnalyticsEvents />
 
         <SiteHeader />
         {children}

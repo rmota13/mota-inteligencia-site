@@ -49,6 +49,63 @@ Resultado esperado:
 
 A foto deve parecer integrada ao card, com apenas o avatar circular visível, sem uma caixa quadrada de fundo.
 
+# Animação da arquitetura de integração
+
+Criar uma animação vetorial e responsiva para explicar visualmente o funcionamento da SAP Commerce Integration Platform.
+
+Não utilizar GIF tradicional ou vídeo pesado.
+
+Implementar preferencialmente com SVG, CSS e React, sem adicionar dependências.
+
+## Versão da Home
+
+Criar uma versão resumida mostrando:
+
+Marketplaces
+→ Recebimento do pedido
+→ Orquestração
+→ SAP Business One
+→ Financeiro e monitoramento
+
+A animação deve funcionar como introdução ao projeto principal e possuir CTA para:
+
+/projetos/sap-commerce-integration-platform
+
+## Versão da página do projeto
+
+Criar uma versão detalhada mostrando:
+
+- Mercado Livre, Nuvemshop e Shopee;
+- webhook e polling;
+- normalização;
+- validação;
+- fila;
+- idempotência;
+- processamento;
+- SAP Business One;
+- Pedido de Venda;
+- módulo financeiro;
+- observabilidade;
+- quarentena;
+- conciliação em desenvolvimento.
+
+## Comportamento
+
+- animar o deslocamento de um pedido entre as camadas;
+- destacar visualmente cada etapa ativa;
+- apresentar estado de sucesso;
+- demonstrar desvio para quarentena em uma segunda passagem;
+- manter linguagem compreensível para público não técnico;
+- não exibir dados internos ou métricas inventadas;
+- usar orientação horizontal no desktop e vertical no mobile;
+- respeitar prefers-reduced-motion;
+- fornecer alternativa textual acessível;
+- pausar ou reduzir animação quando fora da viewport;
+- preservar a identidade visual atual.
+
+Antes de implementar, apresente a estrutura visual proposta e os arquivos que serão criados.
+Não faça commit ou push.
+
 ---
 
 # 2. Identidade visual do LinkedIn

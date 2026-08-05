@@ -63,6 +63,11 @@ export function SiteFooter() {
             <li className="font-semibold text-[#00B4D8]">
               motainteligencia.com.br
             </li>
+            <li>
+              <a href="/feed.xml" className="hover:text-[#00B4D8]">
+                Feed RSS
+              </a>
+            </li>
           </ul>
         </div>
       </Container>

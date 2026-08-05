@@ -1,4 +1,6 @@
 import { siteConfig } from "@/config/site";
+import { editorialKindConfig, getEditorialPath } from "@/lib/editorial";
+import type { EditorialFaq, Insight } from "@/types/insight";
 import type { Project } from "@/types/project";
 
 const personId = `${siteConfig.url}/#rodrigo-mota`;
@@ -152,6 +154,65 @@ export function createProjectStructuredData(project: Project) {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     ...shared,
+  };
+}
+
+export function createEditorialListStructuredData(content: Insight[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Conteúdo técnico da Mota Inteligência de Negócio",
+    itemListElement: content.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.title,
+      url: `${siteConfig.url}${getEditorialPath(item)}`,
+    })),
+  };
+}
+
+export function createEditorialStructuredData(content: Insight) {
+  const path = getEditorialPath(content);
+  const url = `${siteConfig.url}${path}`;
+  const image = content.seo?.image ?? `${url}/opengraph-image`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    headline: content.title,
+    description: content.seo?.description ?? content.description,
+    articleSection: editorialKindConfig[content.kind].label,
+    keywords: content.topics.join(", "),
+    datePublished: content.publishedAt,
+    dateModified: content.updatedAt ?? content.publishedAt,
+    inLanguage: "pt-BR",
+    url,
+    image,
+    author: { "@id": personId },
+    publisher: { "@id": serviceId },
+    about: content.relatedProjectSlugs.map((slug) => ({
+      "@id": `${siteConfig.url}/projetos/${slug}#project`,
+    })),
+    citation: content.sources.map((source) => source.url),
+  };
+}
+
+export function createFaqStructuredData(content: { faq?: EditorialFaq[] }) {
+  if (!content.faq || content.faq.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }
 

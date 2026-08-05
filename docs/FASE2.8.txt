@@ -1,0 +1,358 @@
+# FASE 2.8 — Ajustes Finos e Polimento Visual
+
+Status:
+Concluída no escopo local — aguardando revisão.
+
+Pré-requisitos:
+
+- Fase 2 concluída;
+- Fase 2.5 concluída no escopo local;
+- Fase 2.6 revisada e aprovada;
+- build, lint e typecheck aprovados;
+- evidências visuais da Fase 2.6 disponíveis para comparação.
+
+---
+
+# Objetivo
+
+Executar uma rodada curta de ajustes finos após a revisão visual da Fase 2.6.
+
+Esta fase não deve criar novas páginas, alterar o posicionamento institucional ou realizar redesign.
+
+O objetivo é aprimorar:
+
+- equilíbrio visual;
+- hierarquia de informação;
+- ritmo e clareza das animações;
+- consistência de espaçamentos;
+- legibilidade;
+- microinterações;
+- acabamento responsivo;
+- percepção de qualidade.
+
+Preservar integralmente:
+
+- arquitetura da aplicação;
+- rotas;
+- conteúdo aprovado;
+- SEO;
+- Analytics;
+- Clarity;
+- acessibilidade;
+- performance;
+- identidade em azul-marinho, ciano e fundo escuro.
+
+---
+
+# 1. Fluxo da SAP Commerce Integration Platform
+
+Revisar as versões resumida e detalhada criadas na Fase 2.6.
+
+Avaliar:
+
+- proporção dos cards de etapa;
+- distribuição horizontal no desktop;
+- ritmo vertical no mobile e tablet;
+- legibilidade de títulos e chips técnicos;
+- alinhamento dos conectores;
+- visibilidade do pedido em deslocamento;
+- duração de cada etapa;
+- tempo de permanência nos estados de sucesso e quarentena;
+- clareza da segunda passagem;
+- contraste do ramo de exceção;
+- equilíbrio entre animação e conteúdo estático;
+- posição e hierarquia do CTA da Home.
+
+Os ajustes não podem:
+
+- transformar o fluxo em vídeo ou GIF;
+- adicionar dependências sem necessidade;
+- exibir métricas, dados internos ou detalhes confidenciais;
+- tornar a animação indispensável para compreender o conteúdo;
+- aumentar significativamente o JavaScript enviado ao navegador.
+
+Manter:
+
+- orientação horizontal no desktop;
+- orientação vertical no mobile e tablet;
+- pausa fora da viewport;
+- `prefers-reduced-motion`;
+- alternativa textual acessível;
+- estado de sucesso;
+- desvio para quarentena;
+- conciliação identificada como “em desenvolvimento”.
+
+---
+
+# 2. Hierarquia e Densidade Visual
+
+Revisar o encaixe da animação com o conteúdo ao redor.
+
+Validar:
+
+- alinhamento entre texto e painel na seção do projeto principal;
+- respiro entre título, resumo, fases, decisões e CTAs;
+- densidade do fluxo detalhado dentro da página do case;
+- equilíbrio entre títulos, descrições e chips;
+- quebras de linha em 1366, 1440 e 1920 pixels;
+- comprimento das linhas de texto;
+- consistência dos raios de borda e sombras;
+- ausência de competição visual entre os dois CTAs da Home.
+
+Não reescrever o conteúdo sem aprovação específica.
+
+---
+
+# 3. LinkedIn
+
+Revisar o acabamento do card profissional.
+
+Validar:
+
+- avatar perfeitamente circular;
+- borda e glow discretos;
+- ausência de fundo quadrado visível;
+- proporção entre avatar, nome e descrição;
+- alinhamento do ícone do LinkedIn;
+- peso visual do botão;
+- contraste e foco visível;
+- leitura adequada no mobile.
+
+Não substituir a fotografia nesta fase.
+
+---
+
+# 4. GitHub
+
+Revisar as ocorrências do símbolo do GitHub.
+
+Validar:
+
+- tamanho consistente;
+- alinhamento óptico com textos e CTAs;
+- contraste no tema escuro e em botões claros;
+- uso moderado do símbolo;
+- coerência entre seção institucional, perfil, repositório e página do projeto;
+- foco visível e links com texto compreensível.
+
+Não carregar dados pela API do GitHub.
+
+---
+
+# 5. Microinterações
+
+Revisar somente interações já existentes.
+
+Avaliar:
+
+- hover de cards;
+- hover de links;
+- transição de botões;
+- feedback de foco;
+- destaque das etapas ativas;
+- suavidade dos conectores animados;
+- comportamento do menu mobile.
+
+As microinterações devem ser discretas e não podem produzir movimento excessivo.
+
+Não adicionar efeitos decorativos sem função clara.
+
+---
+
+# 6. Consistência Visual
+
+Comparar Home, catálogo e case principal.
+
+Validar:
+
+- paleta;
+- tipografia;
+- espaçamentos;
+- bordas;
+- sombras;
+- ícones;
+- badges de status;
+- CTAs primários e secundários;
+- fundos alternados das seções;
+- linguagem visual entre componentes antigos e componentes da Fase 2.6.
+
+Corrigir apenas inconsistências comprovadas por comparação visual.
+
+---
+
+# 7. Acessibilidade
+
+Garantir:
+
+- navegação completa por teclado;
+- ordem de foco coerente;
+- foco visível em todos os links e botões;
+- contraste adequado;
+- ícones decorativos com `aria-hidden="true"`;
+- links com nomes acessíveis explícitos;
+- avatar com texto alternativo descritivo;
+- descrição textual dos fluxos;
+- nenhuma atualização animada excessiva para leitores de tela;
+- comportamento estático com movimento reduzido.
+
+---
+
+# 8. Responsividade
+
+Validar obrigatoriamente:
+
+- 360 × 800;
+- 390 × 844;
+- 768 × 1024;
+- 1024 × 768;
+- 1366 × 768;
+- 1440 × 900;
+- 1920 × 1080;
+- 1152 × 720, equivalente a 125%;
+- 960 × 600, equivalente a 150%.
+
+Confirmar:
+
+- nenhum overflow horizontal;
+- nenhum conteúdo cortado;
+- cards equilibrados;
+- chips legíveis;
+- conectores alinhados;
+- CTAs sem colisão;
+- avatar sem deformação;
+- ícones sem quebra de alinhamento;
+- menu mobile funcional.
+
+---
+
+# 9. Performance
+
+Comparar com a referência da Fase 2.6.
+
+Validar:
+
+- ausência de novas dependências;
+- ausência de imagens ou vídeos pesados;
+- animações limitadas a propriedades adequadas;
+- pausa efetiva fora da viewport;
+- JavaScript adicional justificado;
+- ausência de layout shift;
+- carregamento inicial preservado;
+- nenhuma regressão relevante de Lighthouse.
+
+Não remover Analytics ou Clarity para melhorar nota sintética.
+
+---
+
+# 10. Processo de Aprovação
+
+Antes de editar a aplicação:
+
+1. apresentar os ajustes visuais propostos;
+2. listar os arquivos que seriam alterados;
+3. indicar o impacto esperado;
+4. aguardar aprovação explícita.
+
+Implementar somente os ajustes aprovados.
+
+Evitar alterações oportunistas fora do escopo.
+
+---
+
+# 11. Validações Finais
+
+Executar:
+
+- `npm.cmd run lint`;
+- `npm.cmd run typecheck`;
+- `npm.cmd run build`;
+- `git diff --check`;
+- validação de rotas;
+- validação de overflow;
+- validação de runtime;
+- teste de teclado;
+- teste de movimento reduzido;
+- teste de pausa fora da viewport.
+
+---
+
+# 12. Evidências
+
+Apresentar:
+
+- comparação visual antes e depois;
+- screenshots desktop e mobile;
+- estado de sucesso;
+- estado de quarentena;
+- modo com movimento reduzido;
+- card do LinkedIn;
+- seção do GitHub;
+- matriz de responsividade;
+- arquivos alterados;
+- `git status`;
+- `git diff --stat`;
+- regressões encontradas e respectivas correções.
+
+---
+
+# Critérios de Aceite
+
+✓ Ajustes previamente aprovados
+
+✓ Sem redesign
+
+✓ Conteúdo e posicionamento preservados
+
+✓ Fluxos compreensíveis sem depender da animação
+
+✓ Responsividade aprovada
+
+✓ Acessibilidade preservada
+
+✓ Performance preservada
+
+✓ SEO preservado
+
+✓ Analytics preservado
+
+✓ Clarity preservado
+
+✓ Sem novas dependências desnecessárias
+
+✓ Sem dados confidenciais
+
+✓ Sem regressões de runtime
+
+✓ Build aprovado
+
+✓ Typecheck aprovado
+
+✓ Lint aprovado
+
+✓ Nenhum commit
+
+✓ Nenhum push
+
+✓ Nenhum Pull Request
+
+---
+
+# Entrega Esperada
+
+Ao final da Fase 2.8 apresentar:
+
+- resumo dos ajustes aprovados;
+- comparação antes e depois;
+- validações técnicas;
+- evidências visuais;
+- arquivos alterados;
+- pendências remanescentes;
+- recomendação objetiva sobre avanço para a próxima fase.
+
+Parar e aguardar aprovação.
+
+Não realizar commit.
+
+Não realizar push.
+
+Não abrir Pull Request.

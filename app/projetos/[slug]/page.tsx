@@ -5,14 +5,16 @@ import {
   ArrowLeft,
   ArrowRight,
   Check,
-  Code2,
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";
-import { ArchitectureMap } from "@/components/projects/architecture-map";
+import { IntegrationFlowAnimation } from "@/components/projects/integration-flow-animation";
 import { ProjectContentSection } from "@/components/projects/project-content-section";
 import { ProjectGallery } from "@/components/projects/project-gallery";
+import { RelatedEditorial } from "@/components/projects/related-editorial";
+import { ProjectRelatedProjects } from "@/components/projects/related-projects";
 import { ProjectStatus } from "@/components/projects/project-status";
+import { GitHubIcon, LinkedInIcon } from "@/components/ui/brand-icons";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
 import {
@@ -23,6 +25,7 @@ import {
 import { siteConfig } from "@/config/site";
 import {
   createBreadcrumbStructuredData,
+  createFaqStructuredData,
   createProjectStructuredData,
   createWebPageStructuredData,
   serializeStructuredData,
@@ -58,7 +61,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       modifiedTime: project.updatedAt,
       images: [
         {
-          url: project.seo?.image ?? "/opengraph-image",
+          url: project.seo?.image ?? `${path}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: project.title,
@@ -69,7 +72,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       card: "summary_large_image",
       title,
       description,
-      images: [project.seo?.image ?? "/opengraph-image"],
+      images: [project.seo?.image ?? `${path}/opengraph-image`],
     },
   };
 }
@@ -99,6 +102,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     { name: "Projetos", url: `${siteConfig.url}/projetos` },
     { name: project.title, url: `${siteConfig.url}${path}` },
   ]);
+  const faqStructuredData = createFaqStructuredData(project);
 
   return (
     <main className="min-h-screen bg-[#0A1628] text-white">
@@ -110,6 +114,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ),
         }}
       />
+      {faqStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeStructuredData(faqStructuredData),
+          }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeStructuredData(breadcrumb) }}
@@ -159,15 +171,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   href={project.repositoryUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-4 font-black text-[#020D1F] transition hover:bg-[#DCE8ED] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                  data-analytics-event="github_click"
+                  data-analytics-category="project"
+                  data-analytics-label={project.slug}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-4 font-black text-[#020D1F] transition duration-200 hover:-translate-y-0.5 hover:bg-[#DCE8ED] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071426] motion-reduce:transform-none motion-reduce:transition-none"
                 >
-                  <Code2 aria-hidden="true" size={18} />
+                  <GitHubIcon aria-hidden="true" size={18} className="shrink-0" />
                   Repositório público
                   <ExternalLink aria-hidden="true" size={15} />
                 </a>
               )}
+              <a
+                href={siteConfig.linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                data-analytics-event="linkedin_click"
+                data-analytics-category="project"
+                data-analytics-label={project.slug}
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#0A66C2]/55 px-5 py-4 font-black text-[#DCEBFA] transition hover:border-[#0A66C2] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+              >
+                <LinkedInIcon aria-hidden="true" size={17} />
+                Perfil no LinkedIn
+                <ExternalLink aria-hidden="true" size={15} />
+              </a>
               <Link
                 href="/projetos"
+                data-analytics-event="projects_click"
+                data-analytics-category="project"
+                data-analytics-label="all_projects"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-5 py-4 font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
               >
                 <ArrowLeft aria-hidden="true" size={17} />
@@ -208,7 +239,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <p className="text-base leading-relaxed text-[#C7D1D9] sm:text-lg">{project.architecture}</p>
           {project.featured && (
             <div className="mt-8">
-              <ArchitectureMap />
+              <IntegrationFlowAnimation variant="detailed" />
             </div>
           )}
           {project.architectureLayers && (
@@ -300,6 +331,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </ProjectContentSection>
       )}
 
+      {project.limitations && project.limitations.length > 0 && (
+        <ProjectContentSection eyebrow="Limitações" title="O que esta publicação não afirma">
+          <TextList items={project.limitations} />
+        </ProjectContentSection>
+      )}
+
       {project.gallery.length > 0 && (
         <ProjectContentSection eyebrow="Galeria" title="Interfaces e fluxos do projeto">
           <ProjectGallery assets={project.gallery} />
@@ -319,11 +356,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </ProjectContentSection>
       )}
 
+      {project.faq && project.faq.length > 0 && (
+        <ProjectContentSection eyebrow="Perguntas frequentes" title="Respostas sobre a arquitetura">
+          <div className="space-y-3">
+            {project.faq.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-2xl border border-white/9 bg-[#101F34] p-5 open:border-[#00B4D8]/30"
+              >
+                <summary className="cursor-pointer pr-5 font-black text-white marker:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]">
+                  {item.question}
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-[#C2CCD4] sm:text-base">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </ProjectContentSection>
+      )}
+
       {project.repositoryUrl && (
         <section className="bg-[#071426] px-6 py-16 sm:py-20">
           <Container>
             <div className="rounded-[32px] border border-white/10 bg-[#101F34] p-7 sm:p-10">
-              <Code2 aria-hidden="true" size={28} className="text-[#00B4D8]" />
+              <GitHubIcon aria-hidden="true" size={28} className="text-[#00B4D8]" />
               <h2 className="mt-5 text-3xl font-black text-white">Documentação pública no GitHub</h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#B9C5CE]">
                 Consulte arquitetura, fluxos, decisões, segurança, observabilidade e roadmap na versão pública e sanitizada do projeto.
@@ -332,14 +389,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.repositoryUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3.5 font-black text-[#020D1F] transition hover:bg-[#DCE8ED] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                data-analytics-event="github_click"
+                data-analytics-category="project"
+                data-analytics-label={`${project.slug}_documentation`}
+                className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3.5 font-black text-[#020D1F] transition duration-200 hover:-translate-y-0.5 hover:bg-[#DCE8ED] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#101F34] motion-reduce:transform-none motion-reduce:transition-none"
               >
+                <GitHubIcon aria-hidden="true" size={17} className="shrink-0" />
                 Abrir repositório
                 <ExternalLink aria-hidden="true" size={16} />
               </a>
             </div>
           </Container>
         </section>
+      )}
+
+      <RelatedEditorial projectSlug={project.slug} />
+
+      {project.relatedProjectSlugs && (
+        <ProjectRelatedProjects slugs={project.relatedProjectSlugs} />
       )}
 
       <section className="bg-[#0A1628] px-6 py-16 sm:py-20">
@@ -358,6 +425,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noreferrer"
+              data-analytics-event="contact_click"
+              data-analytics-category="project"
+              data-analytics-label={`${project.slug}_whatsapp`}
               className="mt-7 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#00B4D8] px-6 py-4 font-black text-[#020D1F] transition hover:bg-[#2EC4B6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white lg:mt-0"
             >
               Conversar sobre o projeto

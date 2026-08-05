@@ -1,4 +1,5 @@
 import type { HomeIconName } from "@/types/home";
+import type { EditorialFaq } from "@/types/insight";
 
 export type ProjectStatus =
   | "production"
@@ -69,6 +70,8 @@ export type Project = {
   results?: string[];
   limitations?: string[];
   roadmap?: string[];
+  faq?: EditorialFaq[];
+  relatedProjectSlugs?: string[];
   gallery: ProjectAsset[];
   repositoryUrl?: string;
   publishedAt?: string;

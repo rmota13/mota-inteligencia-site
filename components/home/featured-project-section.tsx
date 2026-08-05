@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, Check, Code2 } from "lucide-react";
-import { ArchitectureMap } from "@/components/projects/architecture-map";
+import { ArrowRight, Check } from "lucide-react";
+import { IntegrationFlowAnimation } from "@/components/projects/integration-flow-animation";
 import { ProjectStatus } from "@/components/projects/project-status";
+import { GitHubIcon } from "@/components/ui/brand-icons";
 import { Container } from "@/components/ui/container";
 import { getFeaturedProject } from "@/content/projects";
 
@@ -43,7 +44,7 @@ export function FeaturedProjectSection() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={`/projetos/${project.slug}`}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#00B4D8] px-6 py-4 font-black text-[#020D1F] transition hover:bg-[#2EC4B6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#00B4D8] px-6 py-4 font-black text-[#020D1F] transition duration-200 hover:-translate-y-0.5 hover:bg-[#2EC4B6] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#020D1F] motion-reduce:transform-none motion-reduce:transition-none"
               >
                 Explorar o case completo
                 <ArrowRight aria-hidden="true" size={18} />
@@ -53,9 +54,9 @@ export function FeaturedProjectSection() {
                   href={project.repositoryUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-6 py-4 font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-6 py-4 font-black text-[#E0E1DD] transition duration-200 hover:-translate-y-0.5 hover:border-[#00B4D8] hover:text-[#00B4D8] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#020D1F] motion-reduce:transform-none motion-reduce:transition-none"
                 >
-                  <Code2 aria-hidden="true" size={18} />
+                  <GitHubIcon aria-hidden="true" size={18} className="shrink-0" />
                   Ver repositório
                 </a>
               )}
@@ -63,7 +64,7 @@ export function FeaturedProjectSection() {
           </div>
 
           <div>
-            <ArchitectureMap />
+            <IntegrationFlowAnimation />
             <p className="mt-4 text-center text-xs leading-relaxed text-[#8293A1]">
               Visão institucional simplificada. A documentação pública não expõe
               credenciais, endpoints, dados corporativos ou regras proprietárias.

@@ -1,18 +1,19 @@
 import Link from "next/link";
-import { ArrowUpRight, Code2, GitBranch, TerminalSquare } from "lucide-react";
+import { ArrowUpRight, Code2, GitBranch } from "lucide-react";
+import { GitHubIcon } from "@/components/ui/brand-icons";
 import { Container } from "@/components/ui/container";
 import { siteConfig } from "@/config/site";
 
 export function GithubSection() {
   return (
-    <section className="bg-[#071426] px-6 py-20 sm:py-24">
+    <section id="github" className="bg-[#071426] px-6 py-20 sm:py-24">
       <Container>
         <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#0D1B2A] p-7 sm:p-10 lg:p-12">
           <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#00B4D8]/10 blur-3xl" />
           <div className="relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#020D1F]">
-                <TerminalSquare aria-hidden="true" size={29} />
+                <GitHubIcon aria-hidden="true" size={29} className="shrink-0" />
               </div>
               <p className="mt-7 text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">
                 Portfólio técnico público
@@ -38,6 +39,9 @@ export function GithubSection() {
                 </p>
                 <Link
                   href="/projetos/sap-commerce-integration-platform"
+                  data-analytics-event="projects_click"
+                  data-analytics-category="home_github"
+                  data-analytics-label="sap-commerce-integration-platform"
                   className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#00B4D8] hover:text-[#2EC4B6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
                 >
                   Ler o case <ArrowUpRight aria-hidden="true" size={16} />
@@ -48,15 +52,21 @@ export function GithubSection() {
                 href={siteConfig.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-white/8 bg-[#071426] p-6 transition hover:border-[#00B4D8]/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                data-analytics-event="github_click"
+                data-analytics-category="home"
+                data-analytics-label="profile"
+                className="group rounded-2xl border border-white/8 bg-[#071426] p-6 transition duration-200 hover:-translate-y-0.5 hover:border-[#00B4D8]/50 hover:bg-[#0A1B2E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1B2A] motion-reduce:transform-none motion-reduce:transition-none"
               >
-                <TerminalSquare aria-hidden="true" size={22} className="text-[#00B4D8]" />
+                <GitHubIcon aria-hidden="true" size={22} className="shrink-0 text-[#00B4D8]" />
                 <span className="mt-4 block font-black text-white">Perfil no GitHub</span>
                 <span className="mt-2 block text-sm leading-relaxed text-[#AEBBC5]">Código e documentação pública de Rodrigo Mota.</span>
               </a>
               <Link
                 href="/projetos"
-                className="group rounded-2xl border border-white/8 bg-[#071426] p-6 transition hover:border-[#00B4D8]/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                data-analytics-event="projects_click"
+                data-analytics-category="home_github"
+                data-analytics-label="all_projects"
+                className="group rounded-2xl border border-white/8 bg-[#071426] p-6 transition duration-200 hover:-translate-y-0.5 hover:border-[#00B4D8]/50 hover:bg-[#0A1B2E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1B2A] motion-reduce:transform-none motion-reduce:transition-none"
               >
                 <Code2 aria-hidden="true" size={22} className="text-[#00B4D8]" />
                 <span className="mt-4 block font-black text-white">Projetos públicos</span>

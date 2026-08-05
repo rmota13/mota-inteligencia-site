@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ArrowUpRight, UserRound } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { LinkedInIcon } from "@/components/ui/brand-icons";
 import { professionalCapabilities } from "@/content/home";
 import { siteConfig } from "@/config/site";
 
@@ -13,11 +14,11 @@ export function AboutSection() {
           <div className="relative flex items-center gap-5">
             <Image
               src="/linkedin-rodrigo.png"
-              alt="Rodrigo Mota"
+              alt="Retrato profissional de Rodrigo Mota"
               width={112}
               height={112}
               sizes="112px"
-              className="h-24 w-24 rounded-2xl border-2 border-[#00B4D8]/35 object-cover shadow-[0_0_30px_rgba(0,180,216,0.15)] sm:h-28 sm:w-28"
+              className="h-24 w-24 shrink-0 rounded-full border-2 border-[#00B4D8]/35 object-cover shadow-[0_0_30px_rgba(0,180,216,0.15)] sm:h-28 sm:w-28"
             />
             <div>
               <p className="text-xs font-black uppercase tracking-[0.22em] text-[#00B4D8]">
@@ -42,9 +43,12 @@ export function AboutSection() {
             href={siteConfig.linkedinUrl}
             target="_blank"
             rel="noreferrer"
-            className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-[#0A66C2] px-5 py-3.5 text-sm font-black text-white transition hover:bg-[#0B72D4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            data-analytics-event="linkedin_click"
+            data-analytics-category="home"
+            data-analytics-label="about"
+            className="relative mt-8 inline-flex items-center gap-2 rounded-xl bg-[#0A66C2] px-5 py-3.5 text-sm font-black text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#0B72D4] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#071426] motion-reduce:transform-none motion-reduce:transition-none"
           >
-            <UserRound aria-hidden="true" size={18} />
+            <LinkedInIcon aria-hidden="true" size={18} className="shrink-0" />
             Ver perfil no LinkedIn
             <ArrowUpRight aria-hidden="true" size={16} />
           </a>

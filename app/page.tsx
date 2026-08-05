@@ -4,6 +4,7 @@ import { EcosystemsSection } from "@/components/home/ecosystems-section";
 import { FeaturedProjectSection } from "@/components/home/featured-project-section";
 import { GithubSection } from "@/components/home/github-section";
 import { HeroSection } from "@/components/home/hero-section";
+import { LatestInsightsSection } from "@/components/home/latest-insights-section";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { SolutionsSection } from "@/components/home/solutions-section";
 import { TechnologiesSection } from "@/components/home/technologies-section";
@@ -40,6 +41,7 @@ export default function Home() {
       <WorkMethodSection />
       <AboutSection />
       <GithubSection />
+      <LatestInsightsSection />
       <ContactSection />
     </main>
   );

@@ -26,6 +26,9 @@ export function ContactSection() {
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
+                data-analytics-event="contact_click"
+                data-analytics-category="home"
+                data-analytics-label="whatsapp"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#00B4D8] px-6 py-4 font-black text-[#020D1F] transition hover:bg-[#2EC4B6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <MessageCircle aria-hidden="true" size={18} />
@@ -34,6 +37,9 @@ export function ContactSection() {
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
+                data-analytics-event="contact_click"
+                data-analytics-category="home"
+                data-analytics-label="email"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-6 py-4 font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
               >
                 <Mail aria-hidden="true" size={18} />

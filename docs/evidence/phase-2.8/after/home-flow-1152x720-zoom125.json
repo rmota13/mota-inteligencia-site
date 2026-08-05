@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:3100/",
+  "selector": "#projeto-principal section[aria-describedby]",
+  "width": 1152,
+  "height": 720,
+  "metrics": {
+    "innerWidth": 1152,
+    "innerHeight": 720,
+    "documentWidth": 1152,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "target": {
+      "top": 136,
+      "width": 591,
+      "height": 1214,
+      "clippedLeft": false,
+      "clippedRight": false
+    },
+    "flowOrientation": "vertical",
+    "stageWidths": [
+      541,
+      541,
+      541,
+      541,
+      541
+    ],
+    "clippedChips": [],
+    "unnamedFocusables": 0,
+    "reducedMotion": false,
+    "movingTokens": 0,
+    "avatar": {
+      "width": 112,
+      "height": 112,
+      "borderRadius": "3.35544e+07px"
+    },
+    "linkedinBrandIcons": 2,
+    "githubBrandIcons": 2,
+    "title": "Arquitetura, Integrações e Automação | Mota Inteligência",
+    "offscreenAnimationPaused": true,
+    "keyboardFocus": [
+      {
+        "selector": "a[href*=\"linkedin\"]",
+        "found": true,
+        "text": "Ver perfil no LinkedIn",
+        "focusVisible": true,
+        "hasVisibleIndicator": true
+      },
+      {
+        "selector": "a[href*=\"github.com\"]",
+        "found": true,
+        "text": "Ver repositório",
+        "focusVisible": true,
+        "hasVisibleIndicator": true
+      },
+      {
+        "selector": "#projeto-principal section[aria-describedby] a[href]",
+        "found": true,
+        "text": "Entender a arquitetura completa",
+        "focusVisible": true,
+        "hasVisibleIndicator": true
+      }
+    ],
+    "mobileMenu": null
+  },
+  "errors": [],
+  "consoleErrors": []
+}

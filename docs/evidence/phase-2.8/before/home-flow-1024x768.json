@@ -1,0 +1,48 @@
+{
+  "url": "http://127.0.0.1:3100/",
+  "selector": "#projeto-principal section[aria-describedby]",
+  "width": 1024,
+  "height": 768,
+  "metrics": {
+    "innerWidth": 1024,
+    "innerHeight": 768,
+    "documentWidth": 1024,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "target": {
+      "top": 136,
+      "width": 520,
+      "height": 546,
+      "clippedLeft": false,
+      "clippedRight": false
+    },
+    "flowOrientation": "horizontal",
+    "stageWidths": [
+      73,
+      73,
+      73,
+      73,
+      73
+    ],
+    "clippedChips": [
+      "Canais integráveis",
+      "Webhook e polling",
+      "Normaliza e valida",
+      "Ciclo rastreável"
+    ],
+    "unnamedFocusables": 0,
+    "reducedMotion": false,
+    "movingTokens": 0,
+    "avatar": {
+      "width": 112,
+      "height": 112,
+      "borderRadius": "3.35544e+07px"
+    },
+    "linkedinBrandIcons": 2,
+    "githubBrandIcons": 2,
+    "title": "Arquitetura, Integrações e Automação | Mota Inteligência",
+    "offscreenAnimationPaused": true
+  },
+  "errors": [],
+  "consoleErrors": []
+}

@@ -1,0 +1,178 @@
+# FASE 2.9 — Correção Final do Primeiro Viewport
+
+## Objetivo
+
+Corrigir exclusivamente três problemas visuais ainda presentes na Home:
+
+1. enquadramento da logo no Header;
+2. selo do Hero em uma única linha no desktop;
+3. painel de arquitetura completamente visível e com margem direita adequada.
+
+Não alterar textos, estrutura, animações, conteúdo editorial, rotas, SEO, Analytics, Clarity ou demais seções.
+
+---
+
+## 1. Logo no Header
+
+### Problema observado
+
+A imagem da marca possui uma sobra inferior ou área transparente que ultrapassa visualmente a base do Header.
+
+### Correção
+
+Inspecionar o componente `Brand` e o asset utilizado.
+
+Aplicar um enquadramento visual controlado:
+
+- manter o tamanho aparente atual da logo;
+- envolver a imagem em um wrapper com altura explícita;
+- usar `overflow-hidden`;
+- manter `object-contain`;
+- ajustar `object-position` verticalmente, se necessário;
+- remover apenas a sobra inferior visível;
+- não utilizar `translate`, margem negativa ou aumento da altura do Header;
+- não deformar a imagem;
+- não reduzir perceptivelmente a marca.
+
+Se o espaço transparente estiver incorporado ao asset e não puder ser corrigido adequadamente por CSS, criar uma nova versão recortada preservando o arquivo original.
+
+Resultado esperado:
+
+- logo inteiramente contida dentro do Header;
+- nenhuma sobra abaixo da linha divisória;
+- Header mantendo a altura atual;
+- menu e WhatsApp permanecendo centralizados.
+
+---
+
+## 2. Selo do Hero em uma linha
+
+Texto:
+
+`Arquitetura · Integrações · Automação · Dados`
+
+### Problema observado
+
+“Dados” quebra para a segunda linha em desktop, mesmo existindo espaço horizontal disponível.
+
+### Correção
+
+No desktop:
+
+- utilizar `w-fit` ou `max-w-max`;
+- aplicar `whitespace-nowrap`;
+- remover qualquer `max-width` excessivamente restritivo;
+- reduzir discretamente o `letter-spacing`, se necessário;
+- reduzir discretamente o padding horizontal;
+- manter a legibilidade;
+- manter o texto completo;
+- não usar largura fixa rígida.
+
+Em mobile:
+
+- permitir adaptação sem overflow;
+- se necessário, usar `whitespace-normal` somente em breakpoints menores.
+
+Resultado esperado:
+
+- uma única linha em 1024 px ou mais;
+- cápsula ajustada ao conteúdo;
+- sem espaço vazio desnecessário;
+- sem overflow em mobile.
+
+---
+
+## 3. Painel da arquitetura
+
+### Problema observado
+
+O painel “Integration Control Plane” fica excessivamente próximo da borda direita. A coluna “Operação” parece parcialmente cortada.
+
+### Correção
+
+Revisar a Grid do Hero e o wrapper do painel.
+
+Aplicar uma solução estrutural:
+
+- utilizar `minmax(0, ...)` nas colunas;
+- garantir `min-w-0` na coluna direita;
+- aplicar `w-full`;
+- limitar o painel com `max-w-*` adequado;
+- centralizar com `justify-self-center`;
+- adicionar margem ou padding lateral direito real;
+- reduzir discretamente a largura máxima do painel, se necessário;
+- preservar todos os conteúdos internos;
+- não esconder overflow;
+- não usar translate;
+- não reduzir textos internos.
+
+Resultado esperado:
+
+- painel totalmente visível;
+- margem direita de pelo menos 24 px dentro do container;
+- coluna “Operação” sem corte;
+- alinhamento equilibrado com o conteúdo esquerdo;
+- funcionamento preservado em zoom 125% e 150%.
+
+---
+
+## 4. Restrições
+
+Não alterar:
+
+- título do Hero;
+- subtítulo;
+- animação;
+- cores;
+- conteúdo do painel;
+- navegação;
+- outras seções;
+- SEO;
+- schemas;
+- rotas;
+- dependências;
+- assets sensíveis;
+- Analytics ou Clarity.
+
+Não realizar commit, push ou deploy.
+
+---
+
+## 5. Validação obrigatória
+
+Validar visualmente:
+
+- 1024 × 768;
+- 1152 × 720;
+- 1366 × 768;
+- 1440 × 900;
+- 1920 × 1080;
+- 390 × 844;
+- equivalente a zoom 125%;
+- equivalente a zoom 150%.
+
+Confirmar:
+
+- logo contida;
+- selo em uma linha no desktop;
+- painel completamente visível;
+- zero overflow horizontal;
+- nenhum erro de runtime;
+- menu mobile preservado.
+
+Executar:
+
+```text
+npm.cmd run lint
+npm.cmd run typecheck
+npm.cmd run build
+git diff --check
+```
+
+---
+
+## Status da execução
+
+Concluída em 04/08/2026, sem publicação.
+
+Relatório e evidências: `docs/audits/phase-2.9-validation.md`.

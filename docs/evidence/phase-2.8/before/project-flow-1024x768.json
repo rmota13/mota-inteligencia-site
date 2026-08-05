@@ -1,0 +1,47 @@
+{
+  "url": "http://127.0.0.1:3100/projetos/sap-commerce-integration-platform",
+  "selector": "#fluxo-integracao",
+  "width": 1024,
+  "height": 768,
+  "metrics": {
+    "innerWidth": 1024,
+    "innerHeight": 768,
+    "documentWidth": 1024,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "target": {
+      "top": 136,
+      "width": 604,
+      "height": 507,
+      "clippedLeft": false,
+      "clippedRight": false
+    },
+    "flowOrientation": "horizontal",
+    "stageWidths": [
+      74,
+      74,
+      74,
+      74,
+      74,
+      74
+    ],
+    "clippedChips": [
+      "Mercado LivreNuvemshopShopee",
+      "WebhookPolling",
+      "NormalizaçãoValidação",
+      "FilaIdempotênciaProcessamento",
+      "SAP Business OnePedido de Venda",
+      "Módulo financeiroObservabilidadeConciliação · em desenvolvimento"
+    ],
+    "unnamedFocusables": 0,
+    "reducedMotion": false,
+    "movingTokens": 0,
+    "avatar": null,
+    "linkedinBrandIcons": 0,
+    "githubBrandIcons": 4,
+    "title": "SAP Commerce Integration Platform | Mota Inteligência de Negócio",
+    "offscreenAnimationPaused": true
+  },
+  "errors": [],
+  "consoleErrors": []
+}

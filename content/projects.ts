@@ -203,6 +203,32 @@ export const projects: Project[] = [
       "Evoluir métricas de SLA, painel operacional e gestão de reprocessamentos.",
       "Adicionar novos conectores de forma progressiva.",
     ],
+    faq: [
+      {
+        question: "Como a plataforma integra os canais ao SAP Business One?",
+        answer:
+          "Eventos chegam por webhook ou polling, são normalizados e validados, passam pelos serviços de domínio e produzem documentos no SAP exclusivamente pelo Service Layer.",
+      },
+      {
+        question: "Como a plataforma evita pedidos duplicados?",
+        answer:
+          "A combinação entre canal e identificador externo funciona como chave lógica única. Estado, referências e tentativas permanecem em um banco de integração separado para permitir retomada segura.",
+      },
+      {
+        question: "O que acontece com uma inconsistência de negócio?",
+        answer:
+          "Falhas não resolvíveis automaticamente são persistidas com contexto sanitizado e correlation ID em quarentena. Depois da correção, o registro pode ser reprocessado sem criar documentos duplicados.",
+      },
+      {
+        question: "Qual é o estado atual da conciliação financeira?",
+        answer:
+          "A arquitetura e o modelo de staging estão definidos, mas ingestão, matching, tolerâncias, integração, alertas e homologação permanecem em desenvolvimento no roadmap público.",
+      },
+    ],
+    relatedProjectSlugs: [
+      "pedidos-mais-48-horas",
+      "gestao-inteligente-pedidos-abertos",
+    ],
     gallery: [],
     repositoryUrl:
       "https://github.com/rmota13/sap-business-one-integration-platform",

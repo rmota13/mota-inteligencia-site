@@ -1,0 +1,28 @@
+{
+  "url": "http://127.0.0.1:3100/",
+  "selector": "#github",
+  "width": 390,
+  "height": 844,
+  "metrics": {
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "scrollWidth": 390,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "targetTop": 96,
+    "targetWidth": 390,
+    "targetHeight": 1314,
+    "flowOrientation": null,
+    "reducedMotion": false,
+    "visibleOrderTokens": 0,
+    "avatar": {
+      "width": 96,
+      "height": 96,
+      "borderRadius": "3.35544e+07px"
+    },
+    "linkedinBrandIcons": 2,
+    "githubBrandIcons": 2,
+    "documentTitle": "Arquitetura, Integrações e Automação | Mota Inteligência"
+  },
+  "errors": []
+}

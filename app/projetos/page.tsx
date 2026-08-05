@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                 Projetos construídos para conectar tecnologia e operação.
               </h1>
               <p className="mt-7 max-w-3xl text-base leading-relaxed text-[#C2CCD4] sm:text-xl">
-                Cases organizados por capacidade, com contexto, papel desempenhado,
+                Projetos organizados por capacidade, com contexto, papel desempenhado,
                 arquitetura, tecnologias, estado atual e próximos passos quando
                 publicamente documentados.
               </p>
@@ -125,7 +125,7 @@ export default function ProjectsPage() {
 
       <section id="todos-projetos" aria-labelledby="todos-projetos-title" className="bg-[#0A1628] px-6 py-16 sm:py-20">
         <Container>
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">Cases</p>
+          <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">Portfólio</p>
           <h2 id="todos-projetos-title" className="mt-4 text-3xl font-black text-white sm:text-4xl">Todos os projetos</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project) => (

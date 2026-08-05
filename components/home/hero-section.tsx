@@ -7,9 +7,9 @@ export function HeroSection() {
   return (
     <section id="inicio" className="relative overflow-hidden bg-[#071426]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_15%_85%,rgba(46,196,182,0.08),transparent_28%)]" />
-      <Container className="relative grid min-h-[calc(100vh-var(--site-header-height))] items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:py-20">
+      <Container className="relative grid min-h-[calc(100vh-var(--site-header-height))] items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-8 lg:py-20 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:gap-12">
         <div className="relative z-10 min-w-0">
-          <p className="inline-flex max-w-full rounded-full border border-[#00B4D8]/30 bg-[#00B4D8]/8 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#72D7E9] sm:text-sm">
+          <p className="inline-flex w-fit max-w-full whitespace-normal rounded-full border border-[#00B4D8]/30 bg-[#00B4D8]/8 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#72D7E9] sm:text-sm lg:max-w-max lg:whitespace-nowrap lg:px-3 lg:tracking-[0.1em]">
             Arquitetura · Integrações · Automação · Dados
           </p>
 
@@ -55,7 +55,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative z-10 min-w-0">
+        <div className="relative z-10 w-full min-w-0 max-w-[44rem] justify-self-center">
           <ArchitectureMap />
         </div>
       </Container>

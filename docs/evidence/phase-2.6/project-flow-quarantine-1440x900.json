@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:3100/projetos/sap-commerce-integration-platform",
+  "selector": "#fluxo-integracao",
+  "width": 1440,
+  "height": 900,
+  "metrics": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "scrollWidth": 1440,
+    "hasHorizontalOverflow": false,
+    "h1Count": 1,
+    "targetTop": 136,
+    "targetWidth": 799,
+    "targetHeight": 469,
+    "flowOrientation": "horizontal",
+    "reducedMotion": false,
+    "visibleOrderTokens": 0,
+    "avatar": null,
+    "linkedinBrandIcons": 0,
+    "githubBrandIcons": 4,
+    "documentTitle": "SAP Commerce Integration Platform | Mota Inteligência de Negócio"
+  },
+  "errors": []
+}

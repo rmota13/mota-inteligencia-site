@@ -11,23 +11,33 @@ const destinations = ["SAP Business One", "Ciclo financeiro", "Observabilidade"]
 function FlowColumn({
   eyebrow,
   items,
+  constrained = false,
 }: {
   eyebrow: string;
   items: string[];
+  constrained?: boolean;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#071827]/80 p-4">
+    <div
+      className={`rounded-2xl border border-white/10 bg-[#071827]/80 p-4 ${
+        constrained ? "min-w-0 lg:p-3 xl:p-4" : ""
+      }`}
+    >
       <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#72D7E9]">
         {eyebrow}
       </p>
       <div className="space-y-2.5">
         {items.map((item, index) => (
           <div key={item}>
-            <div className="flex items-center gap-2 rounded-xl border border-white/8 bg-[#10283B] px-3 py-2.5 text-xs font-bold text-white sm:text-sm">
+            <div
+              className={`flex items-center gap-2 rounded-xl border border-white/8 bg-[#10283B] px-3 py-2.5 text-xs font-bold text-white sm:text-sm ${
+                constrained ? "lg:px-2 xl:px-3" : ""
+              }`}
+            >
               {eyebrow === "Entrada" && <Radio aria-hidden="true" size={14} className="text-[#00B4D8]" />}
               {eyebrow === "Plataforma" && <Database aria-hidden="true" size={14} className="text-[#2EC4B6]" />}
               {eyebrow === "Operação" && <CircleCheck aria-hidden="true" size={14} className="text-[#2EC4B6]" />}
-              <span>{item}</span>
+              <span className={constrained ? "min-w-0" : undefined}>{item}</span>
             </div>
             {index < items.length - 1 && eyebrow === "Plataforma" && (
               <ArrowDown aria-hidden="true" size={14} className="mx-auto my-1 text-[#00B4D8]" />
@@ -43,7 +53,7 @@ export function ArchitectureMap({ compact = false }: ArchitectureMapProps) {
   return (
     <div
       className={`relative overflow-hidden rounded-[28px] border border-[#00B4D8]/25 bg-[#0D1B2A]/95 shadow-[0_30px_90px_rgba(0,0,0,0.35)] ${
-        compact ? "p-4" : "p-5 sm:p-6"
+        compact ? "p-4" : "w-full min-w-0 p-5 sm:p-6 lg:p-4 xl:p-6"
       }`}
     >
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#00B4D8]/15 blur-3xl" />
@@ -60,14 +70,24 @@ export function ArchitectureMap({ compact = false }: ArchitectureMapProps) {
         </span>
       </div>
 
-      <div className="relative grid gap-3 lg:grid-cols-[1fr_auto_1.08fr_auto_1fr] lg:items-center">
-        <FlowColumn eyebrow="Entrada" items={sources} />
-        <ArrowRight aria-hidden="true" className="mx-auto hidden text-[#00B4D8] lg:block" size={22} />
-        <div className="rounded-2xl border border-[#2EC4B6]/30 bg-[#0B2634] p-1 shadow-[0_0_35px_rgba(46,196,182,0.08)]">
-          <FlowColumn eyebrow="Plataforma" items={platform} />
+      <div
+        className={`relative grid gap-3 lg:items-center ${
+          compact
+            ? "lg:grid-cols-[1fr_auto_1.08fr_auto_1fr]"
+            : "lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.05fr)_auto_minmax(0,1.25fr)] lg:gap-1.5 xl:gap-3"
+        }`}
+      >
+        <FlowColumn eyebrow="Entrada" items={sources} constrained={!compact} />
+        <ArrowRight aria-hidden="true" className="mx-auto hidden text-[#00B4D8] lg:block" size={compact ? 22 : 16} />
+        <div
+          className={`rounded-2xl border border-[#2EC4B6]/30 bg-[#0B2634] p-1 shadow-[0_0_35px_rgba(46,196,182,0.08)] ${
+            compact ? "" : "min-w-0"
+          }`}
+        >
+          <FlowColumn eyebrow="Plataforma" items={platform} constrained={!compact} />
         </div>
-        <ArrowRight aria-hidden="true" className="mx-auto hidden text-[#00B4D8] lg:block" size={22} />
-        <FlowColumn eyebrow="Operação" items={destinations} />
+        <ArrowRight aria-hidden="true" className="mx-auto hidden text-[#00B4D8] lg:block" size={compact ? 22 : 16} />
+        <FlowColumn eyebrow="Operação" items={destinations} constrained={!compact} />
       </div>
 
       {!compact && (
