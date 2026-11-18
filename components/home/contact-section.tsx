@@ -11,14 +11,15 @@ export function ContactSection() {
           <div className="relative grid gap-9 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">
-                Próximo desafio
+                Vamos conversar
               </p>
               <h2 className="mt-5 max-w-4xl text-3xl font-black leading-tight text-white sm:text-5xl">
-                Sua operação precisa conectar sistemas, reduzir etapas manuais ou ganhar rastreabilidade?
+                Onde sua operação perde tempo, controle ou capacidade de crescer?
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#B9C5CE] sm:text-lg">
-                A conversa começa pelo processo e pelo contexto técnico. A partir daí,
-                é possível avaliar arquitetura, riscos e um caminho de implementação.
+                Traga o problema. A conversa começa pelo processo e pelo impacto no negócio.
+                A partir daí, avaliamos se integração, automação, dados, BI ou IA realmente
+                fazem sentido.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
@@ -32,7 +33,7 @@ export function ContactSection() {
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#00B4D8] px-6 py-4 font-black text-[#020D1F] transition hover:bg-[#2EC4B6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <MessageCircle aria-hidden="true" size={18} />
-                Falar no WhatsApp
+                Quero avaliar uma solução
                 <ArrowRight aria-hidden="true" size={17} />
               </a>
               <a
