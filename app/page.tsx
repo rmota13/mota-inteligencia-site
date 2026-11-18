@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/home/about-section";
+import { CommercialModelSection } from "@/components/home/commercial-model-section";
 import { ContactSection } from "@/components/home/contact-section";
 import { EcosystemsSection } from "@/components/home/ecosystems-section";
 import { FeaturedProjectSection } from "@/components/home/featured-project-section";
@@ -25,18 +26,19 @@ export default function Home() {
           __html: serializeStructuredData(
             createWebPageStructuredData({
               path: "",
-              name: "Arquitetura, Integrações e Automação",
+              name: "Integrações, Automação, Dados, BI e IA",
               description: siteConfig.description,
             }),
           ),
         }}
       />
       <HeroSection />
-      <ValuePropositionSection />
-      <EcosystemsSection />
-      <FeaturedProjectSection />
-      <ProjectsSection />
       <SolutionsSection />
+      <CommercialModelSection />
+      <ValuePropositionSection />
+      <ProjectsSection />
+      <FeaturedProjectSection />
+      <EcosystemsSection />
       <TechnologiesSection />
       <WorkMethodSection />
       <AboutSection />
