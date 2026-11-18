@@ -14,9 +14,9 @@ type ProjectCardProps = {
 export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#00B4D8]/15 bg-[#122238] transition duration-300 hover:-translate-y-1.5 hover:border-[#00B4D8]/55 hover:shadow-[0_24px_70px_rgba(0,180,216,0.10)] focus-within:border-[#00B4D8]">
-      <div className={`relative overflow-hidden bg-[#071827] ${compact ? "h-48" : "h-64 lg:h-72"}`}>
+      <div className="relative aspect-video overflow-hidden bg-[#071827]">
         {project.featured ? (
-          <div className="absolute inset-0 origin-top scale-[0.63] p-3 sm:scale-[0.72]">
+          <div className="absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-50 p-3 xl:h-[180%] xl:w-[180%] xl:scale-[0.555]">
             <ArchitectureMap compact />
           </div>
         ) : (
@@ -25,13 +25,13 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
             alt={project.gallery[0]?.alt ?? project.title}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover object-center opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
+            className="object-cover object-center opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100 motion-reduce:transform-none motion-reduce:transition-none"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#122238] via-[#122238]/5 to-transparent" />
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className={`flex flex-1 flex-col ${compact ? "p-5 sm:p-6" : "p-6"}`}>
         <div className="flex items-start justify-between gap-4">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00B4D8]/10 text-[#00B4D8]">
             <ContentIcon name={project.icon} size={22} />
@@ -41,7 +41,10 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.categories.slice(0, 2).map((category) => (
-            <span key={category} className="text-[11px] font-black uppercase tracking-[0.16em] text-[#72D7E9]">
+            <span
+              key={category}
+              className="rounded-full border border-[#00B4D8]/20 bg-[#00B4D8]/7 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.13em] text-[#72D7E9]"
+            >
               {getProjectCategory(category)?.label}
             </span>
           ))}

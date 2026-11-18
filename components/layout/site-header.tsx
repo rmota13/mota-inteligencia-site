@@ -21,7 +21,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Navegação principal"
-          className="hidden items-center justify-center gap-7 text-[15px] font-semibold text-[#E0E1DD] lg:flex xl:gap-10"
+          className="hidden items-center justify-center gap-5 text-sm font-semibold text-[#E0E1DD] xl:flex 2xl:gap-8 2xl:text-[15px]"
         >
           {primaryNavigation.map((item) => (
             <Link
