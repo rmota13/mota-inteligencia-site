@@ -12,6 +12,8 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project, compact = false }: ProjectCardProps) {
+  const preserveCoverIdentity = project.showCoverInHero;
+
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#00B4D8]/15 bg-[#122238] transition duration-300 hover:-translate-y-1.5 hover:border-[#00B4D8]/55 hover:shadow-[0_24px_70px_rgba(0,180,216,0.10)] focus-within:border-[#00B4D8]">
       <div className="relative aspect-video overflow-hidden bg-[#071827]">
@@ -25,7 +27,9 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
             alt={project.gallery[0]?.alt ?? project.title}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover object-center opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100 motion-reduce:transform-none motion-reduce:transition-none"
+            className={`object-cover opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100 motion-reduce:transform-none motion-reduce:transition-none ${
+              preserveCoverIdentity ? "origin-top object-top" : "object-center"
+            }`}
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#122238] via-[#122238]/5 to-transparent" />

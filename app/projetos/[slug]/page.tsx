@@ -192,7 +192,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     fill
                     priority
                     sizes="(min-width: 1024px) 42vw, 100vw"
-                    className="object-cover object-center"
+                    className="object-cover object-top"
                   />
                 </div>
               )}
