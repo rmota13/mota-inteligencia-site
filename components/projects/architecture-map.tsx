@@ -30,14 +30,14 @@ function FlowColumn({
         {items.map((item, index) => (
           <div key={item}>
             <div
-              className={`flex items-center gap-2 rounded-xl border border-white/8 bg-[#10283B] px-3 py-2.5 text-xs font-bold text-white sm:text-sm ${
+              className={`flex min-w-0 items-center justify-center gap-2 rounded-xl border border-white/8 bg-[#10283B] px-3 py-2.5 text-center text-xs font-bold leading-snug text-white sm:text-sm ${
                 constrained ? "lg:px-2 xl:px-3" : ""
               }`}
             >
               {eyebrow === "Entrada" && <Radio aria-hidden="true" size={14} className="text-[#00B4D8]" />}
               {eyebrow === "Plataforma" && <Database aria-hidden="true" size={14} className="text-[#2EC4B6]" />}
               {eyebrow === "Operação" && <CircleCheck aria-hidden="true" size={14} className="text-[#2EC4B6]" />}
-              <span className={constrained ? "min-w-0" : undefined}>{item}</span>
+              <span className={constrained ? "min-w-0 max-w-full whitespace-normal break-words" : undefined}>{item}</span>
             </div>
             {index < items.length - 1 && eyebrow === "Plataforma" && (
               <ArrowDown aria-hidden="true" size={14} className="mx-auto my-1 text-[#00B4D8]" />
@@ -74,7 +74,7 @@ export function ArchitectureMap({ compact = false }: ArchitectureMapProps) {
         className={`relative grid gap-3 lg:items-center ${
           compact
             ? "lg:grid-cols-[1fr_auto_1.08fr_auto_1fr]"
-            : "lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.05fr)_auto_minmax(0,1.25fr)] lg:gap-1.5 xl:gap-3"
+            : "lg:grid-cols-[minmax(0,0.95fr)_auto_minmax(0,1.18fr)_auto_minmax(0,1.22fr)] lg:gap-2 xl:gap-3"
         }`}
       >
         <FlowColumn eyebrow="Entrada" items={sources} constrained={!compact} />
