@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div>
           <Brand footer />
           <p className="mt-5 max-w-[300px] text-sm leading-relaxed text-[#E0E1DD]">
-            Arquitetura, integrações, automação e dados para operações empresariais que precisam escalar com controle.
+            Integrações, automação, dados, BI e IA para empresas que precisam operar com mais controle e capacidade de evolução.
           </p>
         </div>
 
@@ -29,14 +29,13 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="font-bold text-white">Capacidades</h2>
+          <h2 className="font-bold text-white">Soluções</h2>
           <ul className="mt-4 space-y-3 text-sm text-[#E0E1DD]">
-            <li>Arquitetura de integrações</li>
+            <li>Integrações & Automação</li>
+            <li>Dados, BI & Confiabilidade</li>
+            <li>IA aplicada ao negócio</li>
+            <li>Sustentação & Evolução</li>
             <li>SAP Business One</li>
-            <li>Automação corporativa</li>
-            <li>APIs e serviços de domínio</li>
-            <li>Dados e Business Intelligence</li>
-            <li>Observabilidade e deploy</li>
           </ul>
         </div>
 
@@ -74,7 +73,7 @@ export function SiteFooter() {
 
       <Container className="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#AEB8C2] md:flex-row">
         <p>© 2026 Mota Inteligência de Negócio. Todos os direitos reservados.</p>
-        <p>Arquitetura • Integrações • Automação • Dados</p>
+        <p>Integrações • Automação • Dados & BI • IA</p>
       </Container>
     </footer>
   );
