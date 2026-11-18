@@ -44,7 +44,7 @@ export function SiteHeader() {
             data-analytics-label="whatsapp"
             className="rounded-full bg-[#00B4D8] px-3 py-2 text-xs font-bold text-[#020D1F] transition hover:bg-[#2EC4B6] hover:shadow-[0_12px_35px_rgba(0,180,216,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:px-4 md:px-5 md:py-2.5 md:text-sm"
           >
-            WhatsApp
+            Avaliar solução
           </a>
           <MobileNavigation items={primaryNavigation} />
         </div>
