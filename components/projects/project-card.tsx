@@ -14,7 +14,7 @@ type ProjectCardProps = {
 export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#00B4D8]/15 bg-[#122238] transition duration-300 hover:-translate-y-1.5 hover:border-[#00B4D8]/55 hover:shadow-[0_24px_70px_rgba(0,180,216,0.10)] focus-within:border-[#00B4D8]">
-      <div className={`relative overflow-hidden bg-[#071827] ${compact ? "h-48" : "h-56"}`}>
+      <div className={`relative overflow-hidden bg-[#071827] ${compact ? "h-48" : "h-64 lg:h-72"}`}>
         {project.featured ? (
           <div className="absolute inset-0 origin-top scale-[0.63] p-3 sm:scale-[0.72]">
             <ArchitectureMap compact />
