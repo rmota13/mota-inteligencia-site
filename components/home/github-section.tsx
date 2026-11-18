@@ -22,9 +22,9 @@ export function GithubSection() {
                 Engenharia que pode ser examinada.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-[#B9C5CE]">
-                O GitHub reúne documentação sanitizada de projetos, decisões
-                arquiteturais, fluxos e roadmaps. Nenhuma métrica é carregada por API
-                nesta fase.
+                O GitHub reúne documentação pública e sanitizada de cases, decisões
+                arquiteturais, fluxos e provas de engenharia que podem ser examinadas
+                sem expor dados ou regras proprietárias.
               </p>
             </div>
 

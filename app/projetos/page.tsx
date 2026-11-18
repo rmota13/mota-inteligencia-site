@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, FolderKanban } from "lucide-react";
-import { ProjectCard } from "@/components/projects/project-card";
+import { FolderKanban } from "lucide-react";
+import { ProjectCatalog } from "@/components/projects/project-catalog";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
 import { projectCategories, projects } from "@/content/projects";
@@ -13,9 +12,9 @@ import {
   serializeStructuredData,
 } from "@/lib/structured-data";
 
-const title = "Projetos de arquitetura, integração, automação e dados";
+const title = "Projetos de integrações, automação, dados, BI e IA aplicada";
 const description =
-  "Projetos empresariais de Rodrigo Mota envolvendo SAP Business One, APIs, automação, dados, infraestrutura e aplicações.";
+  "Portfólio técnico de integrações, automação, Business Intelligence, IA aplicada e confiabilidade de dados, com contexto, arquitetura e papel desempenhado.";
 
 export const metadata: Metadata = {
   title: "Projetos",
@@ -87,51 +86,16 @@ export default function ProjectsPage() {
         </Container>
       </section>
 
-      <section aria-labelledby="categorias-title" className="bg-[#101F34] px-6 py-16 sm:py-20">
-        <Container>
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">Organização</p>
-          <h2 id="categorias-title" className="mt-4 text-3xl font-black text-white sm:text-4xl">Explorar por categoria</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {projectCategories.map((category) => {
-              const categoryProjects = projects.filter((project) => project.categories.includes(category.slug));
-              return (
-                <article key={category.slug} className="rounded-2xl border border-white/8 bg-[#0A1628] p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-black text-white">{category.label}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-[#9DADB9]">{category.description}</p>
-                    </div>
-                    <span className="rounded-full bg-[#00B4D8]/10 px-3 py-1 text-xs font-black text-[#72D7E9]">{categoryProjects.length}</span>
-                  </div>
-                  <ul className="mt-5 space-y-2 border-t border-white/8 pt-5">
-                    {categoryProjects.map((project) => (
-                      <li key={project.slug}>
-                        <Link
-                          href={`/projetos/${project.slug}`}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-[#C7D1D9] transition hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
-                        >
-                          <ArrowRight aria-hidden="true" size={14} className="text-[#2EC4B6]" />
-                          {project.shortTitle ?? project.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      <section id="todos-projetos" aria-labelledby="todos-projetos-title" className="bg-[#0A1628] px-6 py-16 sm:py-20">
+      <section id="todos-projetos" aria-labelledby="todos-projetos-title" className="bg-[#101F34] px-6 py-16 sm:py-20">
         <Container>
           <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">Portfólio</p>
-          <h2 id="todos-projetos-title" className="mt-4 text-3xl font-black text-white sm:text-4xl">Todos os projetos</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} compact />
-            ))}
-          </div>
+          <h2 id="todos-projetos-title" className="mt-4 text-3xl font-black text-white sm:text-4xl">
+            Explore por capacidade
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#B9C5CE]">
+            Use os filtros para encontrar cases relacionados ao problema ou à capacidade técnica que deseja avaliar.
+          </p>
+          <ProjectCatalog projects={projects} categories={projectCategories} />
         </Container>
       </section>
     </main>

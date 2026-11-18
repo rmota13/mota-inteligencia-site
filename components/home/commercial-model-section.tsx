@@ -20,7 +20,7 @@ const engagementModels = [
     title: "Sustentação recorrente",
     description:
       "Para empresas que precisam manter soluções críticas acompanhadas e evoluindo depois do go-live.",
-    items: ["Monitoramento e diagnóstico", "Correções e melhorias contínuas", "Pacote mensal de horas e prioridades"],
+    items: ["Monitoramento e diagnóstico", "Correções e melhorias contínuas", "Capacidade recorrente e prioridades acordadas"],
   },
 ];
 

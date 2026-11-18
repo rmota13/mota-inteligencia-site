@@ -125,6 +125,8 @@ export const projects: Project[] = [
       "A fase financeira cria adiantamento, recebimento e referência da transação.",
       "Cada resultado é persistido com correlation ID para auditoria e reprocessamento.",
     ],
+    flowEyebrow: "Fluxo de integração",
+    flowTitle: "Do evento ao registro no ERP",
     phases: [
       {
         title: "Fase Comercial",
@@ -247,7 +249,7 @@ export const projects: Project[] = [
       "Camada de auditoria e monitoramento para validar cargas, reconciliar indicadores e aumentar a confiabilidade do produto analítico entregue ao usuário.",
     description:
       "Uma abordagem de confiabilidade aplicada ao BI: acompanhar a cadeia de dados, validar o resultado final e transformar divergências em exceções observáveis.",
-    status: "production",
+    status: "rollout",
     categories: ["dados", "automacao", "infraestrutura"],
     technologies: ["Qlik Cloud", "Qlik Automate", "AWS", "Amazon S3", "Python", "Slack"],
     stackLabel: "Qlik Cloud · Qlik Automate · AWS · Python · Slack",
@@ -295,6 +297,8 @@ export const projects: Project[] = [
       "Divergências são registradas com contexto suficiente para investigação.",
       "Alertas são enviados apenas quando existe uma exceção que exige ação.",
     ],
+    flowEyebrow: "Fluxo de confiabilidade",
+    flowTitle: "Da origem à validação da entrega analítica",
     engineeringDecisions: [
       "Validar o produto final, não apenas o sucesso técnico de uma carga.",
       "Separar monitoramento operacional de auditoria de indicador.",
@@ -318,6 +322,7 @@ export const projects: Project[] = [
         alt: "Ilustração conceitual de pipeline de dados com validação, reconciliação e monitoramento de qualidade",
       },
     ],
+    showCoverInHero: true,
     publishedAt: "2026-11-18",
     updatedAt: "2026-11-18",
     seo: {
@@ -334,7 +339,7 @@ export const projects: Project[] = [
       "Pipeline com Python e IA para classificar, enriquecer e padronizar dados textuais preservando integridade, reaproveitamento e supervisão.",
     description:
       "Aplicação de IA em uma tarefa operacional concreta, com controles para evitar reprocessamento desnecessário e manter a classificação utilizável no fluxo de dados.",
-    status: "production",
+    status: "completed",
     categories: ["dados", "automacao", "aplicacoes"],
     technologies: ["Python", "LLMs", "JSON", "APIs", "Qlik Cloud"],
     stackLabel: "Python · LLMs · APIs · JSON · Qlik Cloud",
@@ -382,6 +387,8 @@ export const projects: Project[] = [
       "Erros ou saídas inconsistentes permanecem identificáveis para revisão.",
       "O resultado estruturado passa a compor a análise de dados.",
     ],
+    flowEyebrow: "Fluxo de processamento",
+    flowTitle: "Do dado textual à informação estruturada",
     engineeringDecisions: [
       "Não enviar novamente à IA registros já classificados sem necessidade.",
       "Manter identificadores para preservar rastreabilidade entre entrada e resultado.",
@@ -405,6 +412,7 @@ export const projects: Project[] = [
         alt: "Ilustração conceitual de fluxo de IA transformando dados textuais em dados estruturados e enriquecidos",
       },
     ],
+    showCoverInHero: true,
     publishedAt: "2026-11-18",
     updatedAt: "2026-11-18",
     seo: {
