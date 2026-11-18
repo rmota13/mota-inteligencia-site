@@ -13,7 +13,7 @@ export function FeaturedProjectSection() {
   return (
     <section id="projeto-principal" className="bg-[#020D1F] px-6 py-20 sm:py-24">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.28fr)] lg:items-center xl:gap-12">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">
               Projeto principal

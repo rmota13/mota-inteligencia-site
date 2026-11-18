@@ -63,6 +63,8 @@ export type Project = {
   architecture?: string;
   architectureLayers?: { title: string; description: string }[];
   flow?: string[];
+  flowEyebrow?: string;
+  flowTitle?: string;
   phases?: ProjectPhase[];
   engineeringDecisions?: string[];
   security?: string[];
@@ -73,6 +75,7 @@ export type Project = {
   faq?: EditorialFaq[];
   relatedProjectSlugs?: string[];
   gallery: ProjectAsset[];
+  showCoverInHero?: boolean;
   repositoryUrl?: string;
   publishedAt?: string;
   updatedAt?: string;

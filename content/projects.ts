@@ -125,6 +125,8 @@ export const projects: Project[] = [
       "A fase financeira cria adiantamento, recebimento e referência da transação.",
       "Cada resultado é persistido com correlation ID para auditoria e reprocessamento.",
     ],
+    flowEyebrow: "Fluxo de integração",
+    flowTitle: "Do evento ao registro no ERP",
     phases: [
       {
         title: "Fase Comercial",
@@ -237,6 +239,186 @@ export const projects: Project[] = [
       title: "SAP Commerce Integration Platform",
       description:
         "Case técnico de integração entre canais de comércio digital e SAP Business One com Service Layer, n8n, FastAPI, SQL Server, Redis e observabilidade.",
+    },
+  },
+  {
+    slug: "bi-reliability-data-quality",
+    title: "BI Reliability & Data Quality",
+    shortTitle: "BI Reliability",
+    summary:
+      "Camada de auditoria e monitoramento para validar cargas, reconciliar indicadores e aumentar a confiabilidade do produto analítico entregue ao usuário.",
+    description:
+      "Uma abordagem de confiabilidade aplicada ao BI: acompanhar a cadeia de dados, validar o resultado final e transformar divergências em exceções observáveis.",
+    status: "rollout",
+    categories: ["dados", "automacao", "infraestrutura"],
+    technologies: ["Qlik Cloud", "Qlik Automate", "AWS", "Amazon S3", "Python", "Slack"],
+    stackLabel: "Qlik Cloud · Qlik Automate · AWS · Python · Slack",
+    icon: "shield",
+    image: "/cases/pipeline_de_dados_neon_confiável.png",
+    problem:
+      "Uma carga concluir tecnicamente não garante que o dashboard entregue ao usuário esteja atualizado ou que os indicadores continuem coerentes entre origem, transformação e visualização.",
+    context:
+      "Case público e sanitizado baseado em experiência real de operação de BI em ambiente corporativo. Não expõe clientes, bases, credenciais, regras proprietárias ou arquitetura interna identificável.",
+    businessRelevance:
+      "A confiabilidade do BI reduz o risco de decisões tomadas sobre dados incompletos, desatualizados ou divergentes e melhora a capacidade de resposta quando uma etapa da cadeia falha.",
+    role:
+      "Coordenação técnica e implementação de mecanismos de auditoria, reconciliação e monitoramento, conectando operação de BI, dados e comunicação de exceções.",
+    solution:
+      "Auditorias automatizadas recalculam e comparam indicadores entre camadas, enquanto rotinas de monitoramento acompanham dependências de carga e verificam se o produto analítico final chegou ao estado esperado.",
+    architecture:
+      "A solução observa a cadeia de origem, transformação e consumo. Evidências de execução, valores de controle e estados esperados são comparados e registrados; divergências relevantes geram alertas direcionados para análise.",
+    architectureLayers: [
+      {
+        title: "Origem",
+        description: "Bases e arquivos que alimentam o ciclo analítico.",
+      },
+      {
+        title: "Transformação",
+        description: "Camadas de preparação e regras responsáveis pela formação dos indicadores.",
+      },
+      {
+        title: "Consumo",
+        description: "Aplicações e dashboards efetivamente utilizados pelo usuário final.",
+      },
+      {
+        title: "Auditoria",
+        description: "Recalculo, comparação, histórico e validação dos valores esperados.",
+      },
+      {
+        title: "Operação",
+        description: "Alertas e evidências para localizar rapidamente a etapa que exige atenção.",
+      },
+    ],
+    flow: [
+      "A rotina identifica o estado esperado da cadeia analítica.",
+      "As etapas de origem e transformação são verificadas.",
+      "Indicadores de controle são recalculados ou comparados com referências válidas.",
+      "O estado da aplicação final é validado antes de considerar a entrega concluída.",
+      "Divergências são registradas com contexto suficiente para investigação.",
+      "Alertas são enviados apenas quando existe uma exceção que exige ação.",
+    ],
+    flowEyebrow: "Fluxo de confiabilidade",
+    flowTitle: "Da origem à validação da entrega analítica",
+    engineeringDecisions: [
+      "Validar o produto final, não apenas o sucesso técnico de uma carga.",
+      "Separar monitoramento operacional de auditoria de indicador.",
+      "Registrar histórico para diferenciar falha pontual de comportamento recorrente.",
+      "Tratar divergências como exceções observáveis e acionáveis.",
+      "Evitar dependência de conferências manuais como mecanismo principal de controle.",
+    ],
+    results: [
+      "Maior visibilidade sobre o estado real das cadeias de BI.",
+      "Detecção mais rápida de divergências entre dados e aplicações analíticas.",
+      "Redução da dependência de conferências manuais no fechamento e na sustentação.",
+      "Base mais estruturada para governança, observabilidade e evolução do ambiente.",
+    ],
+    limitations: [
+      "A versão pública não apresenta nomes de clientes, aplicações internas, valores reais, credenciais ou regras proprietárias.",
+      "Os componentes descritos representam padrões aplicados ao problema e não uma reprodução da arquitetura interna de qualquer organização.",
+    ],
+    gallery: [
+      {
+        src: "/cases/pipeline_de_dados_neon_confiável.png",
+        alt: "Ilustração conceitual de pipeline de dados com validação, reconciliação e monitoramento de qualidade",
+      },
+    ],
+    showCoverInHero: true,
+    publishedAt: "2026-11-18",
+    updatedAt: "2026-11-18",
+    seo: {
+      title: "BI Reliability & Data Quality",
+      description:
+        "Case de confiabilidade em BI com auditoria de indicadores, reconciliação, monitoramento de cargas e validação do produto analítico final.",
+    },
+  },
+  {
+    slug: "ia-classificacao-enriquecimento-dados",
+    title: "IA aplicada à classificação e enriquecimento de dados",
+    shortTitle: "IA aplicada a dados",
+    summary:
+      "Pipeline com Python e IA para classificar, enriquecer e padronizar dados textuais preservando integridade, reaproveitamento e supervisão.",
+    description:
+      "Aplicação de IA em uma tarefa operacional concreta, com controles para evitar reprocessamento desnecessário e manter a classificação utilizável no fluxo de dados.",
+    status: "completed",
+    categories: ["dados", "automacao", "aplicacoes"],
+    technologies: ["Python", "LLMs", "JSON", "APIs", "Qlik Cloud"],
+    stackLabel: "Python · LLMs · APIs · JSON · Qlik Cloud",
+    icon: "sparkles",
+    image: "/cases/fluxo_de_ia_texto_em_dados_estruturados.png",
+    problem:
+      "Dados textuais não estruturados exigem leitura e classificação recorrente, criando esforço manual, inconsistência de critérios e dificuldade para transformar comentários em informação analítica.",
+    context:
+      "Case público e sanitizado de IA aplicada a dados corporativos. O material descreve somente o padrão de solução e não contém textos reais, taxonomias proprietárias, clientes ou prompts internos.",
+    businessRelevance:
+      "Estruturar dados textuais permite incorporar informações antes difíceis de medir aos indicadores e análises, reduzindo esforço repetitivo sem remover a necessidade de controle humano.",
+    role:
+      "Desenho do fluxo, implementação em Python, definição dos controles de integridade e integração do resultado ao processo analítico.",
+    solution:
+      "O pipeline identifica registros que realmente precisam de análise, reaproveita classificações já validadas quando aplicável, envia somente o necessário ao modelo e persiste o resultado estruturado para consumo analítico.",
+    architecture:
+      "Python coordena preparação, chamadas de IA, validação e persistência. O processamento mantém identificadores e estados para evitar duplicidade e permite que resultados classificados sejam incorporados às camadas de dados e BI.",
+    architectureLayers: [
+      {
+        title: "Entrada",
+        description: "Registros textuais preparados com identificadores e contexto mínimo necessário.",
+      },
+      {
+        title: "Controle",
+        description: "Verificação do que já foi processado e do que precisa ser analisado novamente.",
+      },
+      {
+        title: "IA",
+        description: "Classificação e enriquecimento a partir de instruções e categorias controladas.",
+      },
+      {
+        title: "Validação",
+        description: "Checagem de estrutura, consistência e tratamento de respostas inválidas.",
+      },
+      {
+        title: "Consumo",
+        description: "Resultado estruturado incorporado ao fluxo analítico e às visualizações.",
+      },
+    ],
+    flow: [
+      "Os registros candidatos são identificados e normalizados.",
+      "Classificações existentes são reaproveitadas quando continuam válidas.",
+      "Somente itens necessários são submetidos ao modelo.",
+      "A resposta é validada antes de ser persistida.",
+      "Erros ou saídas inconsistentes permanecem identificáveis para revisão.",
+      "O resultado estruturado passa a compor a análise de dados.",
+    ],
+    flowEyebrow: "Fluxo de processamento",
+    flowTitle: "Do dado textual à informação estruturada",
+    engineeringDecisions: [
+      "Não enviar novamente à IA registros já classificados sem necessidade.",
+      "Manter identificadores para preservar rastreabilidade entre entrada e resultado.",
+      "Validar a estrutura da resposta antes de aceitar a classificação.",
+      "Usar IA como etapa controlada do pipeline, não como fonte irrestrita de verdade.",
+      "Preservar possibilidade de revisão humana em casos ambíguos.",
+    ],
+    results: [
+      "Menor esforço repetitivo na leitura e categorização de dados textuais.",
+      "Maior consistência na estrutura utilizada para análise.",
+      "Reaproveitamento de conhecimento já validado em processamentos futuros.",
+      "Dados textuais transformados em informação utilizável por BI e análises.",
+    ],
+    limitations: [
+      "A versão pública não apresenta dados reais, categorias proprietárias, prompts internos ou respostas de modelos utilizadas em produção.",
+      "Não são divulgadas métricas de acurácia ou volume sem medição pública verificável.",
+    ],
+    gallery: [
+      {
+        src: "/cases/fluxo_de_ia_texto_em_dados_estruturados.png",
+        alt: "Ilustração conceitual de fluxo de IA transformando dados textuais em dados estruturados e enriquecidos",
+      },
+    ],
+    showCoverInHero: true,
+    publishedAt: "2026-11-18",
+    updatedAt: "2026-11-18",
+    seo: {
+      title: "IA aplicada à classificação e enriquecimento de dados",
+      description:
+        "Case de uso de Python e IA para classificação, enriquecimento e estruturação de dados textuais com controles de integridade e reaproveitamento.",
     },
   },
   {

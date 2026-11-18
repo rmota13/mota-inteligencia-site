@@ -26,13 +26,13 @@ export function AboutSection() {
               </p>
               <h2 className="mt-2 text-3xl font-black text-white">Rodrigo Mota</h2>
               <p className="mt-2 text-sm font-semibold leading-relaxed text-[#B9C5CE]">
-                Arquitetura · Integrações · Automação · Dados
+                Dados & BI · Arquitetura · Automação · IA
               </p>
             </div>
           </div>
 
           <div className="relative mt-8 grid grid-cols-2 gap-3">
-            {["Projetos técnicos", "Arquitetura", "Integrações", "Engenharia aplicada"].map((item) => (
+            {["Coordenação de BI", "Arquitetura", "Integrações", "Engenharia aplicada"].map((item) => (
               <span key={item} className="rounded-xl border border-white/8 bg-white/[0.035] px-3 py-3 text-xs font-bold text-[#D5DCE2]">
                 {item}
               </span>
@@ -56,21 +56,21 @@ export function AboutSection() {
 
         <div>
           <p className="text-sm font-black uppercase tracking-[0.28em] text-[#00B4D8]">
-            Engenharia orientada ao negócio
+            Tecnologia orientada ao negócio
           </p>
           <h2 className="mt-5 max-w-3xl text-3xl font-black leading-tight text-white sm:text-5xl">
-            Traduzir processos complexos em sistemas que as empresas conseguem operar.
+            Experiência técnica para transformar problemas operacionais em soluções que funcionam no dia a dia.
           </h2>
           <div className="mt-7 space-y-5 text-base leading-relaxed text-[#C2CCD4] sm:text-lg">
             <p>
-              A Mota Inteligência de Negócio reúne experiência técnica e entendimento
-              operacional para projetar plataformas empresariais, integrações e
-              automações que atravessam diferentes áreas e sistemas.
+              A Mota Inteligência de Negócio reúne experiência prática em dados, BI,
+              integrações, automação e sistemas empresariais para construir soluções
+              conectadas ao processo real de cada empresa.
             </p>
             <p>
-              BI faz parte dessa competência, mas não a limita. O trabalho conecta
-              arquitetura, APIs, ERP, dados, infraestrutura e observabilidade para
-              acompanhar a solução durante todo o ciclo de vida.
+              A atuação evoluiu de Power BI, SQL Server, SAP Business One, APIs e n8n
+              para coordenação de BI, Qlik Cloud, AWS, confiabilidade de dados e IA
+              aplicada — ampliando a visão sem abandonar a profundidade técnica.
             </p>
           </div>
 

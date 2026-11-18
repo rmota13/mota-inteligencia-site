@@ -10,7 +10,7 @@ Mota Inteligência de Negócio
 
 <p align="center">
 
-Arquitetura de Software • Integrações Corporativas • Automação • Dados • Inteligência Artificial
+Integrações • Automação • Dados & BI • Inteligência Artificial
 
 </p>
 
@@ -32,121 +32,51 @@ Arquitetura de Software • Integrações Corporativas • Automação • Dados
 
 ---
 
-<p align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
-![SEO](https://img.shields.io/badge/SEO-100-brightgreen?style=flat-square)
-![Lighthouse](https://img.shields.io/badge/Lighthouse-100-7E57C2?style=flat-square)
-![License](https://img.shields.io/badge/License-Portfolio-blue?style=flat-square)
-
-</p>
-
----
-
-# Transformando tecnologia em vantagem competitiva
+# Tecnologia aplicada a problemas reais de negócio
 
 Este repositório contém o código-fonte oficial do site da **Mota Inteligência de Negócio**.
 
-Mais do que um portfólio, esta é uma plataforma institucional criada para apresentar soluções de arquitetura de software, integração de sistemas, automação corporativa, Business Intelligence e Inteligência Artificial aplicada aos negócios.
+A plataforma apresenta soluções e cases em quatro frentes principais:
 
-O projeto foi desenvolvido com foco em:
+- **Integrações & Automação**
+- **Dados, BI & Confiabilidade**
+- **IA aplicada ao negócio**
+- **Sustentação & Evolução**
 
-- Arquitetura corporativa
-- Performance
-- SEO avançado
-- Acessibilidade
-- Conteúdo técnico
-- Engenharia de Software
-- Escalabilidade
+O objetivo do site não é apenas mostrar stack ou portfólio técnico, mas conectar problemas empresariais a soluções que podem ser diagnosticadas, implementadas e evoluídas.
 
 ---
 
-## Preview
+## Posicionamento
 
-<p align="center">
+A Mota Inteligência de Negócio atua conectando sistemas, dados e processos para reduzir trabalho manual, aumentar rastreabilidade e transformar informação em decisão.
 
-<img src="public/readme/home-preview.png" width="100%"/>
-
-</p>
+A especialidade em SAP Business One continua presente, mas faz parte de uma atuação mais ampla envolvendo APIs, automação, BI, dados, cloud e IA aplicada.
 
 ---
 
-# Tecnologias
+## Tecnologias do site
 
-| Front-end | Arquitetura | Integração | Observabilidade |
-|------------|-------------|------------|-----------------|
-| Next.js | TypeScript | REST APIs | Google Analytics |
-| React | Server Components | SAP Business One | Microsoft Clarity |
-| Tailwind | Modular Architecture | FastAPI | JSON-LD |
-| Metadata API | SEO | n8n | RSS |
-
----
-
-# Destaques
-
-✅ Arquitetura modular
-
-✅ Plataforma editorial
-
-✅ SAP Commerce Integration Platform
-
-✅ Cases técnicos
-
-✅ Open Graph
-
-✅ RSS Feed
-
-✅ Schema.org
-
-✅ Lighthouse otimizado
-
-✅ Responsividade
-
-✅ Acessibilidade
+| Front-end | Conteúdo | Observabilidade | Integração |
+|---|---|---|---|
+| Next.js 16 | TypeScript | Google Analytics | REST APIs |
+| React 19 | Conteúdo modular | Microsoft Clarity | SAP Business One |
+| Tailwind CSS 4 | SEO / JSON-LD | Eventos de conversão | FastAPI / n8n |
+| Metadata API | Artigos e cases | RSS | Webhooks |
 
 ---
 
-# Projeto em Destaque
+## Projeto em destaque
 
-## SAP Commerce Integration Platform
+### SAP Commerce Integration Platform
 
-Integração entre:
+Plataforma de integração ponta a ponta entre canais de comércio digital e SAP Business One, com normalização, validação, idempotência, ciclo financeiro, quarentena, observabilidade e reprocessamento seguro.
 
-- Mercado Livre
-- Shopee
-- Nuvemshop
-
-↓
-
-FastAPI
-
-↓
-
-n8n
-
-↓
-
-Redis
-
-↓
-
-SAP Business One
-
-↓
-
-SQL Server
-
-↓
-
-Observabilidade
+🔗 [Ver case](https://www.motainteligencia.com.br/projetos/sap-commerce-integration-platform)
 
 ---
 
-# Estrutura
+## Estrutura
 
 ```text
 app/
@@ -161,7 +91,7 @@ types/
 
 ---
 
-# Executando
+## Executando
 
 ```bash
 git clone https://github.com/rmota13/mota-inteligencia-site.git
@@ -175,32 +105,24 @@ npm run dev
 
 ---
 
-# Roadmap
+## Roadmap
 
 - ✅ Plataforma institucional
-- ✅ SEO Enterprise
-- ✅ SAP Commerce Integration Platform
-- ✅ Plataforma Editorial
-- 🔄 Biblioteca Técnica
-- 🔄 Estudos de Arquitetura
-- 🔄 Novos Cases Corporativos
+- ✅ Cases técnicos
+- ✅ SEO e conteúdo editorial
+- ✅ Analytics e Clarity
+- 🔄 Reposicionamento comercial
+- 🔄 Novos cases de Dados, BI e IA
+- 🔄 Ofertas recorrentes de sustentação e evolução
 
 ---
 
-# Sobre
+## Rodrigo Mota
 
-<p align="center">
+**Coordenador de BI · Arquitetura de Soluções · Automação & IA Aplicada**
 
-<img src="public/logo-mota.png" width="120"/>
+Experiência em Qlik Cloud, AWS, Power BI, SQL Server, Python, n8n, APIs e SAP Business One.
 
-</p>
-
-**Rodrigo Mota**
-
-Business Systems • Enterprise Integration • SAP Business One • BI • APIs • Automação Corporativa • Arquitetura de Software
-
-🌐 https://motainteligencia.com.br
-
-💼 https://www.linkedin.com/in/rodrigo-mota-2619b422/
-
+🌐 https://motainteligencia.com.br  
+💼 https://www.linkedin.com/in/rodrigo-mota-2619b422/  
 🐙 https://github.com/rmota13

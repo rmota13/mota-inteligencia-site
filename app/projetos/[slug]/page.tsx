@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -97,6 +98,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const path = `/projetos/${project.slug}`;
   const description = project.seo?.description ?? project.summary;
+  const heroCover = project.showCoverInHero
+    ? {
+        src: project.image,
+        alt:
+          project.gallery.find((asset) => asset.src === project.image)?.alt ??
+          `Capa do case ${project.title}`,
+      }
+    : undefined;
+  const galleryAssets = heroCover
+    ? project.gallery.filter((asset) => asset.src !== heroCover.src)
+    : project.gallery;
   const breadcrumb = createBreadcrumbStructuredData([
     { name: "Início", url: siteConfig.url },
     { name: "Projetos", url: `${siteConfig.url}/projetos` },
@@ -144,8 +156,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             ]}
           />
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
-            <div>
+          <div
+            className={`mt-10 grid gap-10 ${
+              heroCover
+                ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:items-center"
+                : "lg:grid-cols-[0.72fr_0.28fr] lg:items-end"
+            }`}
+          >
+            <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-3">
                 {project.status && <ProjectStatus status={project.status} />}
                 {project.categories.map((category) => (
@@ -165,45 +183,60 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 lg:items-stretch">
-              {project.repositoryUrl && (
+            <div className="flex min-w-0 flex-col gap-5">
+              {heroCover && (
+                <div className="relative aspect-video overflow-hidden rounded-3xl border border-[#00B4D8]/20 bg-[#0A1628] shadow-[0_24px_70px_rgba(0,0,0,0.24)]">
+                  <Image
+                    src={heroCover.src}
+                    alt={heroCover.alt}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 42vw, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+              )}
+
+              <div className="flex flex-col gap-3 lg:items-stretch">
+                {project.repositoryUrl && (
+                  <a
+                    href={project.repositoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-analytics-event="github_click"
+                    data-analytics-category="project"
+                    data-analytics-label={project.slug}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-4 font-black text-[#020D1F] transition duration-200 hover:-translate-y-0.5 hover:bg-[#DCE8ED] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071426] motion-reduce:transform-none motion-reduce:transition-none"
+                  >
+                    <GitHubIcon aria-hidden="true" size={18} className="shrink-0" />
+                    Repositório público
+                    <ExternalLink aria-hidden="true" size={15} />
+                  </a>
+                )}
                 <a
-                  href={project.repositoryUrl}
+                  href={siteConfig.linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  data-analytics-event="github_click"
+                  data-analytics-event="linkedin_click"
                   data-analytics-category="project"
                   data-analytics-label={project.slug}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-4 font-black text-[#020D1F] transition duration-200 hover:-translate-y-0.5 hover:bg-[#DCE8ED] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071426] motion-reduce:transform-none motion-reduce:transition-none"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#0A66C2]/55 px-5 py-4 font-black text-[#DCEBFA] transition hover:border-[#0A66C2] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
                 >
-                  <GitHubIcon aria-hidden="true" size={18} className="shrink-0" />
-                  Repositório público
+                  <LinkedInIcon aria-hidden="true" size={17} />
+                  Perfil no LinkedIn
                   <ExternalLink aria-hidden="true" size={15} />
                 </a>
-              )}
-              <a
-                href={siteConfig.linkedinUrl}
-                target="_blank"
-                rel="noreferrer"
-                data-analytics-event="linkedin_click"
-                data-analytics-category="project"
-                data-analytics-label={project.slug}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#0A66C2]/55 px-5 py-4 font-black text-[#DCEBFA] transition hover:border-[#0A66C2] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
-              >
-                <LinkedInIcon aria-hidden="true" size={17} />
-                Perfil no LinkedIn
-                <ExternalLink aria-hidden="true" size={15} />
-              </a>
-              <Link
-                href="/projetos"
-                data-analytics-event="projects_click"
-                data-analytics-category="project"
-                data-analytics-label="all_projects"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-5 py-4 font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
-              >
-                <ArrowLeft aria-hidden="true" size={17} />
-                Todos os projetos
-              </Link>
+                <Link
+                  href="/projetos"
+                  data-analytics-event="projects_click"
+                  data-analytics-category="project"
+                  data-analytics-label="all_projects"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00B4D8]/35 px-5 py-4 font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00B4D8]"
+                >
+                  <ArrowLeft aria-hidden="true" size={17} />
+                  Todos os projetos
+                </Link>
+              </div>
             </div>
           </div>
         </Container>
@@ -256,7 +289,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       )}
 
       {project.flow && project.flow.length > 0 && (
-        <ProjectContentSection eyebrow="Fluxo" title="Do evento ao registro no ERP">
+        <ProjectContentSection
+          eyebrow={project.flowEyebrow ?? "Fluxo do projeto"}
+          title={project.flowTitle ?? "Da entrada ao resultado operacional"}
+        >
           <ol className="space-y-3">
             {project.flow.map((step, index) => (
               <li key={step} className="grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-white/8 bg-[#101F34] p-5">
@@ -337,9 +373,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </ProjectContentSection>
       )}
 
-      {project.gallery.length > 0 && (
+      {galleryAssets.length > 0 && (
         <ProjectContentSection eyebrow="Galeria" title="Interfaces e fluxos do projeto">
-          <ProjectGallery assets={project.gallery} />
+          <ProjectGallery assets={galleryAssets} />
         </ProjectContentSection>
       )}
 

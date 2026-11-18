@@ -8,21 +8,21 @@ import type {
 
 export const valuePillars: ValuePillar[] = [
   {
-    title: "Arquitetura antes da ferramenta",
+    title: "Problema antes da ferramenta",
     description:
-      "Cada solução começa pelo fluxo de negócio, pelas fronteiras entre sistemas e pelos riscos que precisam ser controlados.",
+      "Cada solução começa pelo processo, pelo impacto no negócio e pelos riscos que precisam ser controlados.",
     icon: "layers",
   },
   {
     title: "Integração ponta a ponta",
     description:
-      "Dados percorrem canais, APIs, automações e ERP com validação, rastreabilidade e tratamento explícito de exceções.",
+      "Sistemas, dados e equipes conectados com validação, rastreabilidade e tratamento explícito de exceções.",
     icon: "network",
   },
   {
     title: "Engenharia para operar",
     description:
-      "Deploy, observabilidade, segurança e evolução fazem parte da entrega — não são etapas deixadas para depois.",
+      "Deploy, monitoramento, segurança e evolução fazem parte da entrega — não ficam para depois.",
     icon: "shield",
   },
 ];
@@ -50,77 +50,42 @@ export const ecosystems: Ecosystem[] = [
     icon: "cloud",
   },
   {
-    title: "Dados e inteligência",
+    title: "Dados, BI e IA",
     description:
-      "Modelos, indicadores e automações que transformam eventos operacionais em contexto para decisão.",
-    examples: ["Power BI", "Engenharia de dados", "IA aplicada"],
+      "Pipelines, indicadores e análises que transformam dados operacionais em contexto confiável para decisão.",
+    examples: ["Qlik Cloud", "Power BI", "AWS e IA aplicada"],
     icon: "brain",
   },
 ];
 
 export const solutions: Solution[] = [
   {
-    title: "Integração ERP",
+    title: "Integrações & Automação",
     description:
-      "Conectar sistemas ao ERP respeitando contratos, validações, sessões e regras de negócio.",
-    outcome: "Menos digitação e maior consistência transacional.",
-    icon: "plug",
-  },
-  {
-    title: "Automação",
-    description:
-      "Orquestrar tarefas, eventos, aprovações e exceções entre áreas e plataformas.",
-    outcome: "Processos repetíveis, rastreáveis e recuperáveis.",
+      "Conectar ERP, APIs, e-commerce, Microsoft 365 e sistemas internos para eliminar tarefas manuais e fluxos frágeis.",
+    outcome: "Menos retrabalho, mais rastreabilidade e processos preparados para escalar.",
     icon: "workflow",
   },
   {
-    title: "APIs",
+    title: "Dados, BI & Confiabilidade",
     description:
-      "Criar fronteiras estáveis para serviços, integrações e aplicações corporativas.",
-    outcome: "Contratos claros e evolução desacoplada.",
-    icon: "api",
-  },
-  {
-    title: "Dados e BI",
-    description:
-      "Organizar dados operacionais e indicadores para leitura financeira, comercial e executiva.",
-    outcome: "Decisões apoiadas por contexto confiável.",
+      "Estruturar indicadores, pipelines, auditorias e monitoramento para que a decisão seja feita sobre dados realmente confiáveis.",
+    outcome: "Dashboards que não apenas atualizam: entregam informação validada e utilizável.",
     icon: "bar-chart",
   },
   {
-    title: "Power Platform",
+    title: "IA aplicada ao negócio",
     description:
-      "Construir fluxos, aplicações e pontos de colaboração conectados ao Microsoft 365.",
-    outcome: "Operações internas mais fluidas e acessíveis.",
-    icon: "cloud",
-  },
-  {
-    title: "Infraestrutura",
-    description:
-      "Preparar ambientes, containers, redes e rotinas de deploy para aplicações empresariais.",
-    outcome: "Operação previsível e evolução controlada.",
-    icon: "server",
-  },
-  {
-    title: "IA aplicada",
-    description:
-      "Aplicar modelos de inteligência artificial onde há contexto, supervisão e ganho operacional real.",
-    outcome: "Assistência inteligente sem perder governança.",
+      "Aplicar IA em classificação, análise, geração de insights e automações onde há contexto, supervisão e ganho operacional real.",
+    outcome: "Inteligência incorporada ao processo sem abrir mão de controle e governança.",
     icon: "sparkles",
   },
   {
-    title: "Observabilidade",
+    title: "Sustentação & Evolução",
     description:
-      "Estruturar logs, estados, alertas e trilhas de auditoria para acompanhar cada execução.",
-    outcome: "Falhas localizáveis e reprocessamento seguro.",
-    icon: "eye",
-  },
-  {
-    title: "Arquitetura",
-    description:
-      "Traduzir objetivos, restrições e riscos em componentes, fluxos e decisões técnicas sustentáveis.",
-    outcome: "Soluções preparadas para crescer sem perder clareza.",
-    icon: "layers",
+      "Acompanhar integrações, automações e soluções críticas depois do go-live, com diagnóstico, correções e melhorias contínuas.",
+    outcome: "Menos dependência de conhecimento isolado e uma operação que continua evoluindo.",
+    icon: "activity",
   },
 ];
 
@@ -132,9 +97,9 @@ export const technologyGroups: TechnologyGroup[] = [
     icon: "database",
     items: [
       { name: "SAP Business One", role: "ERP e processos empresariais" },
-      { name: "Service Layer", role: "Fronteira oficial de integração" },
       { name: "SQL Server", role: "Dados, staging e rastreabilidade" },
-      { name: "Power BI", role: "Análise e leitura operacional" },
+      { name: "Qlik Cloud", role: "BI, cargas e soluções analíticas" },
+      { name: "Power BI", role: "Análise e inteligência operacional" },
     ],
   },
   {
@@ -145,19 +110,19 @@ export const technologyGroups: TechnologyGroup[] = [
     items: [
       { name: "n8n", role: "Orquestração de eventos e workflows" },
       { name: "FastAPI", role: "Serviços de domínio e APIs" },
-      { name: "Python", role: "Automação e processamento" },
+      { name: "Python", role: "Automação, dados e processamento" },
       { name: "REST e Webhooks", role: "Contratos entre plataformas" },
     ],
   },
   {
     title: "Operação e plataforma",
     description:
-      "A infraestrutura que permite implantar, observar, comunicar exceções e evoluir a solução com segurança.",
+      "Infraestrutura, observabilidade e serviços que permitem implantar, monitorar e evoluir soluções com segurança.",
     icon: "server",
     items: [
+      { name: "AWS", role: "Dados, serviços e arquitetura cloud" },
       { name: "Docker e Linux", role: "Execução e isolamento de serviços" },
-      { name: "Redis", role: "Fila, cache e coordenação" },
-      { name: "Microsoft Teams", role: "Operação e Adaptive Cards" },
+      { name: "Microsoft Teams", role: "Operação, alertas e colaboração" },
       { name: "Power Platform", role: "Fluxos e aplicações internas" },
     ],
   },
@@ -202,10 +167,10 @@ export const workSteps: WorkStep[] = [
 ];
 
 export const professionalCapabilities = [
+  "Dados, BI e confiabilidade",
   "Arquitetura de integrações",
-  "SAP Business One e Service Layer",
-  "APIs REST e FastAPI",
-  "Automação com n8n e Power Platform",
-  "SQL Server e engenharia de dados",
+  "Automação de processos",
+  "IA aplicada ao negócio",
+  "SAP Business One e APIs",
   "Observabilidade e operação",
 ] as const;

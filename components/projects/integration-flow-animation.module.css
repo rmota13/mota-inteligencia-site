@@ -152,7 +152,11 @@
   color: white;
   font-size: 0.88rem;
   font-weight: 900;
+  hyphens: none;
   line-height: 1.25;
+  overflow-wrap: normal;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 .stageItems {
@@ -407,10 +411,12 @@
 
 @keyframes token-travel-horizontal {
   from {
-    transform: translate(-0.1rem, -50%);
+    left: -0.1rem;
+    transform: translateY(-50%);
   }
   to {
-    transform: translate(1.2rem, -50%);
+    left: calc(100% - 0.6rem);
+    transform: translateY(-50%);
   }
 }
 
@@ -442,16 +448,16 @@
 }
 
 @media (min-width: 64rem) {
-  @container integration-flow (min-width: 35rem) {
+  @container integration-flow (min-width: 44rem) {
     .sequenceCompact {
       grid-template-columns:
-        minmax(0, 1fr) 1.65rem minmax(0, 1fr) 1.65rem minmax(0, 1fr)
-        1.65rem minmax(0, 1fr) 1.65rem minmax(0, 1fr);
+        minmax(0, 1fr) 0.9rem minmax(0, 1fr) 0.9rem minmax(0, 1fr)
+        0.9rem minmax(0, 1fr) 0.9rem minmax(0, 1fr);
       align-items: stretch;
     }
 
     .sequenceCompact .stage {
-      min-height: 9.1rem;
+      min-height: 9.5rem;
       padding: 0.8rem;
     }
 
@@ -540,7 +546,7 @@
     }
   }
 
-  @container integration-flow (min-width: 35rem) {
+  @container integration-flow (min-width: 44rem) {
     [data-variant="compact"] .exceptionLane {
       grid-template-columns: auto minmax(3rem, 7rem) auto;
       justify-content: center;

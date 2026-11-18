@@ -19,6 +19,8 @@ export const globalStructuredData = {
       knowsAbout: [
         "Arquitetura de Sistemas",
         "Business Intelligence",
+        "Confiabilidade de Dados",
+        "Inteligência Artificial aplicada",
         "Automação Corporativa",
         "Integração de Sistemas",
         "SAP Business One",
@@ -39,7 +41,11 @@ export const globalStructuredData = {
       areaServed: "Brasil",
       founder: { "@id": personId },
       serviceType: [
+        "Integração de Sistemas",
+        "Automação de Processos",
         "Business Intelligence",
+        "Confiabilidade de Dados",
+        "Inteligência Artificial aplicada",
         "Power BI",
         "Automação Corporativa",
         "Integração ERP",
@@ -114,7 +120,7 @@ export function createProjectListStructuredData(projects: Project[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Projetos de arquitetura, integração, automação e dados",
+    name: "Projetos de integrações, automação, dados, BI e IA aplicada",
     itemListElement: projects.map((project, index) => ({
       "@type": "ListItem",
       position: index + 1,

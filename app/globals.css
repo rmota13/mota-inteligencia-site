@@ -10,7 +10,7 @@
   --success: #2ec4b6;
   --light: #e0e1dd;
   --muted: #6c757d;
-  --site-header-height: 6rem;
+  --site-header-height: 5.25rem;
 }
 
 @theme inline {
@@ -21,19 +21,19 @@
 
 @media (min-width: 40rem) {
   :root {
-    --site-header-height: 6.5rem;
+    --site-header-height: 5.5rem;
   }
 }
 
 @media (min-width: 48rem) {
   :root {
-    --site-header-height: 7rem;
+    --site-header-height: 6rem;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   :root {
-    --site-header-height: 8.5rem;
+    --site-header-height: 6.75rem;
   }
 }
 

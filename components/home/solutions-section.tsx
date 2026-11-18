@@ -1,24 +1,25 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { ContentIcon } from "@/components/ui/content-icon";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { solutions } from "@/content/home";
+import { siteConfig } from "@/config/site";
 
 export function SolutionsSection() {
   return (
     <section id="solucoes" className="bg-[#122238] px-6 py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Capacidades empresariais"
-          title="Problemas resolvidos por uma combinação de arquitetura, software e operação."
+          eyebrow="Soluções"
+          title="Tecnologia aplicada a problemas que custam tempo, controle e capacidade de crescer."
           className="max-w-4xl"
         />
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-[#B9C5CE] md:text-lg">
-          A capacidade vem antes da ferramenta. Cada tecnologia assume um papel
-          específico dentro do processo e da arquitetura necessária para sustentá-lo.
+          A contratação começa pelo problema. A tecnologia entra depois, combinando
+          integração, automação, dados, BI e IA conforme a realidade da operação.
         </p>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {solutions.map((item) => (
             <article key={item.title} className="group rounded-3xl border border-white/8 bg-[#0A1628] p-6 transition hover:border-[#00B4D8]/40">
               <div className="flex items-center justify-between">
@@ -34,6 +35,21 @@ export function SolutionsSection() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            data-analytics-event="contact_click"
+            data-analytics-category="solutions"
+            data-analytics-label="solution_assessment"
+            className="inline-flex items-center gap-2 rounded-xl border border-[#00B4D8]/35 px-5 py-3.5 text-sm font-black text-[#E0E1DD] transition hover:border-[#00B4D8] hover:text-[#00B4D8]"
+          >
+            Conversar sobre um problema da sua operação
+            <ArrowRight aria-hidden="true" size={17} />
+          </a>
         </div>
       </Container>
     </section>

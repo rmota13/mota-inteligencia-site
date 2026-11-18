@@ -11,7 +11,7 @@ export function Brand({ footer = false, priority = false }: BrandProps) {
       className={
         footer
           ? "flex w-full flex-col gap-5"
-          : "h-[var(--site-header-height)] w-[100px] overflow-hidden sm:w-[116px] lg:w-[150px]"
+          : "h-[var(--site-header-height)] w-[88px] overflow-hidden sm:w-[104px] xl:w-[132px]"
       }
     >
       <Image
@@ -22,7 +22,7 @@ export function Brand({ footer = false, priority = false }: BrandProps) {
         sizes={
           footer
             ? "(min-width: 768px) 300px, 220px"
-            : "(min-width: 1024px) 150px, (min-width: 640px) 116px, 100px"
+            : "(min-width: 1280px) 132px, (min-width: 640px) 104px, 88px"
         }
         className={
           footer
