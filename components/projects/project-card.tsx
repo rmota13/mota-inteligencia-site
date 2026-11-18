@@ -25,10 +25,10 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
             alt={project.gallery[0]?.alt ?? project.title}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover opacity-75 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-90"
+            className="object-cover object-center opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#122238] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#122238] via-[#122238]/5 to-transparent" />
       </div>
 
       <div className="flex flex-1 flex-col p-6">
