@@ -5,16 +5,18 @@ import { siteConfig } from "@/config/site";
 import { editorialKindConfig, getEditorialPath } from "@/lib/editorial";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const commercialV2UpdatedAt = new Date("2026-11-18");
+
   return [
     {
       url: siteConfig.url,
-      lastModified: new Date("2026-08-03"),
+      lastModified: commercialV2UpdatedAt,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${siteConfig.url}/projetos`,
-      lastModified: new Date("2026-08-03"),
+      lastModified: commercialV2UpdatedAt,
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -26,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...(["insight", "guide", "article"] as const).map((kind) => ({
       url: `${siteConfig.url}${editorialKindConfig[kind].path}`,
-      lastModified: new Date("2026-08-04"),
+      lastModified: commercialV2UpdatedAt,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
