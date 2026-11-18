@@ -252,7 +252,7 @@ export const projects: Project[] = [
     technologies: ["Qlik Cloud", "Qlik Automate", "AWS", "Amazon S3", "Python", "Slack"],
     stackLabel: "Qlik Cloud · Qlik Automate · AWS · Python · Slack",
     icon: "shield",
-    image: "/logo-mota.png",
+    image: "/cases/pipeline_de_dados_neon_confiável.png",
     problem:
       "Uma carga concluir tecnicamente não garante que o dashboard entregue ao usuário esteja atualizado ou que os indicadores continuem coerentes entre origem, transformação e visualização.",
     context:
@@ -312,7 +312,12 @@ export const projects: Project[] = [
       "A versão pública não apresenta nomes de clientes, aplicações internas, valores reais, credenciais ou regras proprietárias.",
       "Os componentes descritos representam padrões aplicados ao problema e não uma reprodução da arquitetura interna de qualquer organização.",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/cases/pipeline_de_dados_neon_confiável.png",
+        alt: "Ilustração conceitual de pipeline de dados com validação, reconciliação e monitoramento de qualidade",
+      },
+    ],
     publishedAt: "2026-11-18",
     updatedAt: "2026-11-18",
     seo: {
@@ -334,7 +339,7 @@ export const projects: Project[] = [
     technologies: ["Python", "LLMs", "JSON", "APIs", "Qlik Cloud"],
     stackLabel: "Python · LLMs · APIs · JSON · Qlik Cloud",
     icon: "sparkles",
-    image: "/logo-mota.png",
+    image: "/cases/fluxo_de_ia_texto_em_dados_estruturados.png",
     problem:
       "Dados textuais não estruturados exigem leitura e classificação recorrente, criando esforço manual, inconsistência de critérios e dificuldade para transformar comentários em informação analítica.",
     context:
@@ -394,7 +399,12 @@ export const projects: Project[] = [
       "A versão pública não apresenta dados reais, categorias proprietárias, prompts internos ou respostas de modelos utilizadas em produção.",
       "Não são divulgadas métricas de acurácia ou volume sem medição pública verificável.",
     ],
-    gallery: [],
+    gallery: [
+      {
+        src: "/cases/fluxo_de_ia_texto_em_dados_estruturados.png",
+        alt: "Ilustração conceitual de fluxo de IA transformando dados textuais em dados estruturados e enriquecidos",
+      },
+    ],
     publishedAt: "2026-11-18",
     updatedAt: "2026-11-18",
     seo: {
