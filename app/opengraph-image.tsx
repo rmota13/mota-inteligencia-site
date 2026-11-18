@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Mota Inteligência de Negócio — arquitetura, integrações, automação e dados";
+export const alt = "Mota Inteligência de Negócio — integrações, automação, dados, BI e IA";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,18 +37,18 @@ export default function OpenGraphImage() {
           <div
             style={{
               display: "flex",
-              fontSize: 68,
+              fontSize: 64,
               fontWeight: 800,
               letterSpacing: -3,
               lineHeight: 1.05,
               marginTop: 34,
-              maxWidth: 980,
+              maxWidth: 1000,
             }}
           >
-            Arquitetura de Integrações, Automação e Dados.
+            Integrações, automação, dados e IA para resolver problemas reais de operação.
           </div>
           <div style={{ display: "flex", gap: 18, marginTop: 46 }}>
-            {["ERP", "APIs", "Marketplaces", "Microsoft 365", "IA aplicada"].map((item) => (
+            {["Integrações", "Automação", "Dados & BI", "IA aplicada"].map((item) => (
               <span
                 key={item}
                 style={{
