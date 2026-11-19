@@ -77,7 +77,7 @@ export const projects: Project[] = [
     stackLabel:
       "SAP Business One · Service Layer · n8n · FastAPI · SQL Server · Docker · Redis",
     icon: "network",
-    image: "/logo-mota.png",
+    image: "/cases/integracao-sap.png",
     problem:
       "Pedidos de comércio digital precisam chegar ao ERP com cliente, itens, entrega e pagamento consistentes. Sem uma camada de integração, o ciclo depende de lançamentos, planilhas e conferências manuais, ampliando o risco de duplicidade e perda de rastreabilidade.",
     context:
