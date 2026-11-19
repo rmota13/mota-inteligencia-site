@@ -5,8 +5,18 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { projects } from "@/content/projects";
 
+const selectedProjectSlugs = [
+  "sap-commerce-integration-platform",
+  "bi-reliability-data-quality",
+  "ia-classificacao-enriquecimento-dados",
+  "gestao-inteligente-pedidos-abertos",
+] as const;
+
 export function ProjectsSection() {
-  const selectedProjects = projects.filter((project) => !project.featured).slice(0, 4);
+  const selectedProjects = selectedProjectSlugs.flatMap((slug) => {
+    const project = projects.find((candidate) => candidate.slug === slug);
+    return project ? [project] : [];
+  });
 
   return (
     <section id="projetos" className="bg-[#0A1628] px-6 py-20 sm:py-24">
